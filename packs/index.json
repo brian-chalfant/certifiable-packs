@@ -244,11 +244,11 @@
   },
   "comptia-server-plus-sk0-006": {
    "format": 1,
-   "hash": "07562519b5271a1fa0c14cf82289ecdf6958e772de2d7b3b14dbb27526bc87dc",
-   "published": 202611240109,
+   "hash": "db2329c22ae1ff90f1daa43f57f0e5aed79791bcf5787cf2f0c76f3c24bcb08c",
+   "published": 202611240325,
    "files": {
     "pack.json": "ca5832fdd9bfd03cc3cfafecf46f902511f941d2f5597db5142c7c9c199a0b49",
-    "questions/original.json": "c0c4f576c6a9ac309b83c7d6cbda3d98ccd7fa20c1c6e5cea68147bfec0b5d1a"
+    "questions/original.json": "c10c36d047b115d640d0261e5ed0ceb75d999938d49f32a078b69794e49ed366"
    }
   },
   "comptia-tech-plus-fc0-u71": {
@@ -416,11 +416,11 @@
   },
   "microsoft-windows-server-administrator-az-802": {
    "format": 1,
-   "hash": "006a8a4f7b77c634847b30e004232d9f24178ce135766c7a6538b44e0c4a5941",
-   "published": 202611240109,
+   "hash": "c11befc9b1fabf2bbe1bccbef8d656dffce8eaf00b7cec30809024d82a43f7b4",
+   "published": 202611240325,
    "files": {
     "pack.json": "c20f6d46ee6fa9e458419d3497b889d199d8f98fdd22e9d3d812bad1a62229a8",
-    "questions/original.json": "b2d7f94038fca574e0d5314469ee604043e902c7a342608178da7ede31ec01f2"
+    "questions/original.json": "f5af2bff89dba3bcdb71e2b87928bae998bce3d92c3d78c984a3a988dfa90171"
    }
   }
  }
