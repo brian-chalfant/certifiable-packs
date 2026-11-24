@@ -1,0 +1,144 @@
+{
+ "format": 1,
+ "id": "comptia-data-plus-da0-002",
+ "title": "CompTIA Data+ DA0-002",
+ "subtitle": "Exam objectives document version 1.1",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 675,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Data Concepts and Environments",
+   "weight": 20,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Explain data concepts."
+    },
+    {
+     "id": "1.2",
+     "title": "Identify types of data sources."
+    },
+    {
+     "id": "1.3",
+     "title": "Identify infrastructure concepts."
+    },
+    {
+     "id": "1.4",
+     "title": "Identify common data analysis tools."
+    },
+    {
+     "id": "1.5",
+     "title": "Identify artificial intelligence (AI) concepts."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Data Acquisition and Preparation",
+   "weight": 22,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, use data acquisition methods."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, perform data exploration to identify possible inconsistencies with a data set."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, perform appropriate data transformation and cleansing techniques."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Data Analysis",
+   "weight": 24,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Given a set of requirements, determine the appropriate communication approach for data analysis."
+    },
+    {
+     "id": "3.2",
+     "title": "Given a scenario, select the appropriate statistical method or function."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, troubleshoot basic issues using the appropriate tool or method."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Visualization and Reporting",
+   "weight": 20,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Given a scenario, use the appropriate visual elements."
+    },
+    {
+     "id": "4.2",
+     "title": "Given a scenario, use the appropriate delivery or consumption method."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, troubleshoot issues using report validation techniques."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Data Governance",
+   "weight": 14,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Explain data management concepts."
+    },
+    {
+     "id": "5.2",
+     "title": "Summarize concepts related to data compliance."
+    },
+    {
+     "id": "5.3",
+     "title": "Compare and contrast data privacy and protection practices."
+    },
+    {
+     "id": "5.4",
+     "title": "Compare and contrast data quality assurance practices."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan Data+ DA0-002 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/data-plus",
+   "url": "https://github.com/prof-rizwan/data-plus",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json"
+ ],
+ "questionCount": 616,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Fewer than 10 questions for 1 of 18 objectives",
+   "All questions come from a single source"
+  ]
+ },
+ "icon": "assets/icons/data-plus.webp"
+}

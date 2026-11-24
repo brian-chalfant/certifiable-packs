@@ -1,0 +1,165 @@
+{
+ "format": 1,
+ "id": "comptia-cloudnetx-cnx-001",
+ "title": "CompTIA CloudNetX CNX-001",
+ "subtitle": "Exam objectives document version 5.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 165,
+  "passScore": null,
+  "scaleMin": 0,
+  "scaleMax": 100
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Network Architecture Design",
+   "weight": 31,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a scenario, analyze business requirements to apply core networking concepts to a network design."
+    },
+    {
+     "id": "1.2",
+     "title": "Given a scenario, analyze business requirements to select and implement the appropriate network architectures and topologies."
+    },
+    {
+     "id": "1.3",
+     "title": "Given a scenario, analyze requirements to select appropriate connectivity solutions in a hybrid environment."
+    },
+    {
+     "id": "1.4",
+     "title": "Given a scenario, analyze availability requirements to recommend technologies that meet business needs."
+    },
+    {
+     "id": "1.5",
+     "title": "Given a scenario, evaluate business requirements to make recommendations for physical campus installations."
+    },
+    {
+     "id": "1.6",
+     "title": "Given a scenario, analyze business requirements to select the appropriate campus wired network components."
+    },
+    {
+     "id": "1.7",
+     "title": "Given a scenario, analyze business requirements to select the appropriate campus wireless network components."
+    },
+    {
+     "id": "1.8",
+     "title": "Given a scenario, analyze requirements to select the appropriate artifacts for architecture documentation."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Network Security",
+   "weight": 28,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Explain common cloud and network threats, vulnerabilities, and mitigations."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, analyze requirements to select the appropriate technology to secure a network."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, configure the appropriate access controls to secure a network."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, analyze requirements to apply the appropriate Zero Trust architecture (ZTA) principles to secure a network."
+    },
+    {
+     "id": "2.5",
+     "title": "Given a scenario, apply identity and access management to secure a network environment."
+    },
+    {
+     "id": "2.6",
+     "title": "Given a scenario, use the appropriate wireless security method or configuration."
+    },
+    {
+     "id": "2.7",
+     "title": "Given a scenario, implement the appropriate appliance-hardening technique."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Network Operations, Monitoring, and Performance",
+   "weight": 16,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Explain concepts related to operating and maintaining a network environment."
+    },
+    {
+     "id": "3.2",
+     "title": "Given a scenario, use tools and techniques related to monitoring and performance."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, apply automation and scripting to administer a hybrid cloud environment."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Network Troubleshooting",
+   "weight": 25,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain the troubleshooting methodology."
+    },
+    {
+     "id": "4.2",
+     "title": "Given a scenario, use the appropriate tool or command."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, analyze output from network tools and commands to resolve issues."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, troubleshoot connectivity issues."
+    },
+    {
+     "id": "4.5",
+     "title": "Given a scenario, troubleshoot network performance issues."
+    },
+    {
+     "id": "4.6",
+     "title": "Given a scenario, troubleshoot Wi-Fi performance issues."
+    },
+    {
+     "id": "4.7",
+     "title": "Given a scenario, troubleshoot access and security issues."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://www.comptia.org/en-us/certifications/cloudnetx/",
+   "note": "Written for this app by an AI model against the official CNX-001 objectives; not independently reviewed. No openly licensed question bank was available for this exam."
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json"
+ ],
+ "questionCount": 370,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Only 370 questions for a 90-question exam",
+   "All questions come from a single source"
+  ]
+ },
+ "icon": "assets/icons/cloudnetx.webp"
+}

@@ -1,0 +1,212 @@
+{
+ "format": 1,
+ "id": "comptia-linux-plus-xk0-006",
+ "title": "CompTIA Linux+ XK0-006",
+ "subtitle": "V8 exam objectives, document version 5.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 720,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "System Management",
+   "weight": 23,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Explain basic Linux concepts."
+    },
+    {
+     "id": "1.2",
+     "title": "Summarize Linux device management concepts and tools."
+    },
+    {
+     "id": "1.3",
+     "title": "Given a scenario, manage storage in a Linux system."
+    },
+    {
+     "id": "1.4",
+     "title": "Given a scenario, manage network services and configurations on a Linux server."
+    },
+    {
+     "id": "1.5",
+     "title": "Given a scenario, manage a Linux system using common shell operations."
+    },
+    {
+     "id": "1.6",
+     "title": "Given a scenario, perform backup and restore operations for a Linux server."
+    },
+    {
+     "id": "1.7",
+     "title": "Summarize virtualization on Linux systems."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Services and User Management",
+   "weight": 20,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, manage files and directories on a Linux system."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, perform local account management in a Linux environment."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, manage processes and jobs in a Linux environment."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, configure and manage software in a Linux environment."
+    },
+    {
+     "id": "2.5",
+     "title": "Given a scenario, manage Linux using systemd."
+    },
+    {
+     "id": "2.6",
+     "title": "Given a scenario, manage applications in a container on a Linux server."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Security",
+   "weight": 18,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Summarize authorization, authentication, and accounting methods."
+    },
+    {
+     "id": "3.2",
+     "title": "Given a scenario, configure and implement firewalls on a Linux system."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, apply operating system (OS) hardening techniques on a Linux system."
+    },
+    {
+     "id": "3.4",
+     "title": "Explain account hardening techniques and best practices."
+    },
+    {
+     "id": "3.5",
+     "title": "Explain cryptographic concepts and technologies in a Linux environment."
+    },
+    {
+     "id": "3.6",
+     "title": "Explain the importance of compliance and audit procedures."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Automation, Orchestration, and Scripting",
+   "weight": 17,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Summarize the use cases and techniques of automation and orchestration in a Linux environment."
+    },
+    {
+     "id": "4.2",
+     "title": "Given a scenario, perform automated tasks using shell scripting."
+    },
+    {
+     "id": "4.3",
+     "title": "Summarize Python basics used for Linux system administration."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, implement version control using Git."
+    },
+    {
+     "id": "4.5",
+     "title": "Summarize best practices and responsible uses of artificial intelligence (AI)."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Troubleshooting",
+   "weight": 22,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Summarize monitoring concepts and configurations in a Linux system."
+    },
+    {
+     "id": "5.2",
+     "title": "Given a scenario, analyze and troubleshoot hardware, storage, and Linux OS issues."
+    },
+    {
+     "id": "5.3",
+     "title": "Given a scenario, analyze and troubleshoot networking issues on a Linux system."
+    },
+    {
+     "id": "5.4",
+     "title": "Given a scenario, analyze and troubleshoot security issues on a Linux system."
+    },
+    {
+     "id": "5.5",
+     "title": "Given a scenario, analyze and troubleshoot performance issues."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "unixerius",
+   "title": "Unixerius Linux+ class quizzes and practice exams",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Unixerius, https://github.com/unixerius/XK0-005",
+   "url": "https://github.com/unixerius/XK0-005",
+   "note": "Written for XK0-005. Published without answer keys; keys in this pack are added separately."
+  },
+  {
+   "id": "original",
+   "title": "Original practice sets 1-5",
+   "license": "Personal",
+   "attribution": "Written for this app",
+   "url": null
+  },
+  {
+   "id": "skunkworks",
+   "title": "Skunkworks Academy Linux+ mock exam",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Skunkworks Academy",
+   "url": "https://github.com/skunkworks-academy/comptia"
+  },
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan Linux+ XK0-006 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/linux-plus",
+   "url": "https://github.com/prof-rizwan/linux-plus",
+   "note": "Explanation markup converted to plain text."
+  }
+ ],
+ "questionFiles": [
+  "questions/unixerius.json",
+  "questions/original.json",
+  "questions/skunkworks.json",
+  "questions/rizwan.json"
+ ],
+ "questionCount": 841,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Every objective is well covered, from several sources"
+  ]
+ },
+ "icon": "assets/icons/linux-plus.webp"
+}

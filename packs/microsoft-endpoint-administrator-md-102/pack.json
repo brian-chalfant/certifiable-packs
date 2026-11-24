@@ -1,0 +1,132 @@
+{
+ "format": 1,
+ "id": "microsoft-endpoint-administrator-md-102",
+ "title": "Microsoft 365 Endpoint Administrator MD-102",
+ "subtitle": "Skills measured as of October 27, 2026",
+ "exam": {
+  "questions": 50,
+  "minutes": 100,
+  "passScore": 700,
+  "scaleMin": 1,
+  "scaleMax": 1000
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Prepare infrastructure for devices",
+   "weight": 22,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Add devices to Microsoft Entra ID"
+    },
+    {
+     "id": "1.2",
+     "title": "Enroll devices to Microsoft Intune"
+    },
+    {
+     "id": "1.3",
+     "title": "Implement identity and compliance"
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Manage and maintain devices",
+   "weight": 28,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Deploy and upgrade Windows clients by using cloud-based tools"
+    },
+    {
+     "id": "2.2",
+     "title": "Plan and implement device configuration profiles"
+    },
+    {
+     "id": "2.3",
+     "title": "Implement Intune Suite add-on capabilities"
+    },
+    {
+     "id": "2.4",
+     "title": "Perform remote actions on devices"
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Protect devices",
+   "weight": 18,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Configure endpoint security"
+    },
+    {
+     "id": "3.2",
+     "title": "Manage device updates"
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Manage and secure applications",
+   "weight": 18,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Deploy and update apps"
+    },
+    {
+     "id": "4.2",
+     "title": "Plan and implement app protection and app configuration policies"
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Optimize endpoint operations by using automation, monitoring, and reporting",
+   "weight": 14,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Automate management tasks"
+    },
+    {
+     "id": "5.2",
+     "title": "Monitor and optimize health"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://learn.microsoft.com/en-us/credentials/certifications/",
+   "note": "Written for this app by an AI model against the official MD-102 skills outline and Microsoft Learn documentation; not independently reviewed."
+  },
+  {
+   "id": "azhar",
+   "title": "MD-102 Microsoft 365 Endpoint Administrator practice questions",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 AzharBhad",
+   "url": "https://github.com/AzharBhad/MD-102-Microsoft-365-Endpoint-Administrator",
+   "note": "Yes/No series are split into one question per statement."
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json",
+  "questions/azhar.json"
+ ],
+ "questionCount": 328,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Every objective is well covered, from several sources"
+  ]
+ },
+ "icon": "assets/icons/ms-associate.svg"
+}

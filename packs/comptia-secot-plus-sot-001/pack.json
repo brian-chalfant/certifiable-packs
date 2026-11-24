@@ -1,0 +1,203 @@
+{
+ "format": 1,
+ "id": "comptia-secot-plus-sot-001",
+ "title": "CompTIA SecOT+ SOT-001",
+ "subtitle": "Exam objectives document version 2.1",
+ "exam": {
+  "questions": 95,
+  "minutes": 90,
+  "passScore": 750,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "OT Systems and Safety Foundations",
+   "weight": 14,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a scenario, apply safety techniques to the job environment."
+    },
+    {
+     "id": "1.2",
+     "title": "Explain the unique elements in OT environments."
+    },
+    {
+     "id": "1.3",
+     "title": "Explain control theory concepts."
+    },
+    {
+     "id": "1.4",
+     "title": "Explain OT communication mediums and protocols."
+    },
+    {
+     "id": "1.5",
+     "title": "Compare and contrast infrastructure considerations for OT."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "OT Risk Management",
+   "weight": 17,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Explain the importance of governance, risk, and compliance."
+    },
+    {
+     "id": "2.2",
+     "title": "Explain the elements of cybersecurity program management."
+    },
+    {
+     "id": "2.3",
+     "title": "Explain risk assessment concepts."
+    },
+    {
+     "id": "2.4",
+     "title": "Explain risk monitoring and disposition."
+    },
+    {
+     "id": "2.5",
+     "title": "Explain the importance of the change management process."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "OT Threat Intelligence",
+   "weight": 14,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Summarize the foundations of threat intelligence."
+    },
+    {
+     "id": "3.2",
+     "title": "Explain the relevance of historical cyber events impacting OT environments."
+    },
+    {
+     "id": "3.3",
+     "title": "Explain key components of OT threat landscapes."
+    },
+    {
+     "id": "3.4",
+     "title": "Given a scenario, analyze OT threat intelligence for cyberdefense."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "OT Cybersecurity Architecture, Design, and Engineering",
+   "weight": 18,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain secure OT architectural principles."
+    },
+    {
+     "id": "4.2",
+     "title": "Summarize physical security concepts."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, determine the applicable hardware security controls and settings."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, apply appropriate host and application security practices."
+    },
+    {
+     "id": "4.5",
+     "title": "Given a scenario, recommend appropriate network security controls and designs."
+    },
+    {
+     "id": "4.6",
+     "title": "Given a scenario, recommend the appropriate identification, authentication, and authorization controls."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "OT Security Operations",
+   "weight": 22,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Summarize the purpose of asset management tasks."
+    },
+    {
+     "id": "5.2",
+     "title": "Given a scenario, analyze data in support of security operations."
+    },
+    {
+     "id": "5.3",
+     "title": "Explain the role of vulnerability remediation in an OT security program."
+    },
+    {
+     "id": "5.4",
+     "title": "Given a scenario, apply the appropriate techniques to facilitate vulnerability management."
+    },
+    {
+     "id": "5.5",
+     "title": "Explain the importance of portable device security in OT environments."
+    }
+   ]
+  },
+  {
+   "id": "6.0",
+   "title": "OT Incident Management",
+   "weight": 15,
+   "children": [
+    {
+     "id": "6.1",
+     "title": "Describe incident management frameworks."
+    },
+    {
+     "id": "6.2",
+     "title": "Summarize overarching incident management considerations."
+    },
+    {
+     "id": "6.3",
+     "title": "Given a scenario, perform activities to prepare for incidents."
+    },
+    {
+     "id": "6.4",
+     "title": "Explain IR and handling."
+    },
+    {
+     "id": "6.5",
+     "title": "Given a scenario, analyze common data sets collected during IR."
+    },
+    {
+     "id": "6.6",
+     "title": "Compare and contrast concepts related to the containment, eradication, and recovery processes."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://www.comptia.org/en-us/certifications/secot/",
+   "note": "Written for this app by an AI model against the official SOT-001 objectives; not independently reviewed. No openly licensed question bank was available for this exam."
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json"
+ ],
+ "questionCount": 390,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Only 390 questions for a 95-question exam",
+   "All questions come from a single source"
+  ]
+ },
+ "icon": "assets/icons/secot-plus.webp"
+}

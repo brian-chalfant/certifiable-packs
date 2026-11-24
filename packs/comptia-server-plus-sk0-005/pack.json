@@ -1,0 +1,173 @@
+{
+ "format": 1,
+ "id": "comptia-server-plus-sk0-005",
+ "title": "CompTIA Server+ SK0-005",
+ "subtitle": "Exam objectives document version 7.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 750,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Server Hardware Installation and Management",
+   "weight": 18,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a scenario, install physical hardware."
+    },
+    {
+     "id": "1.2",
+     "title": "Given a scenario, deploy and manage storage."
+    },
+    {
+     "id": "1.3",
+     "title": "Given a scenario, perform server hardware maintenance."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Server Administration",
+   "weight": 30,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, install server operating systems."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, configure servers to use network infrastructure services."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, configure and maintain server functions and features."
+    },
+    {
+     "id": "2.4",
+     "title": "Explain the key concepts of high availability for servers."
+    },
+    {
+     "id": "2.5",
+     "title": "Summarize the purpose and operation of virtualization."
+    },
+    {
+     "id": "2.6",
+     "title": "Summarize scripting basics for server administration."
+    },
+    {
+     "id": "2.7",
+     "title": "Explain the importance of asset management and documentation."
+    },
+    {
+     "id": "2.8",
+     "title": "Explain licensing concepts."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Security and Disaster Recovery",
+   "weight": 24,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Summarize data security concepts."
+    },
+    {
+     "id": "3.2",
+     "title": "Summarize physical security concepts."
+    },
+    {
+     "id": "3.3",
+     "title": "Explain important concepts pertaining to identity and access management for server administration."
+    },
+    {
+     "id": "3.4",
+     "title": "Explain data security risks and mitigation strategies."
+    },
+    {
+     "id": "3.5",
+     "title": "Given a scenario, apply server hardening methods."
+    },
+    {
+     "id": "3.6",
+     "title": "Summarize proper server decommissioning concepts."
+    },
+    {
+     "id": "3.7",
+     "title": "Explain the importance of backups and restores."
+    },
+    {
+     "id": "3.8",
+     "title": "Explain the importance of disaster recovery."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Troubleshooting",
+   "weight": 28,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain the troubleshooting theory and methodology."
+    },
+    {
+     "id": "4.2",
+     "title": "Given a scenario, troubleshoot common hardware failures."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, troubleshoot storage problems."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, troubleshoot common OS and software problems."
+    },
+    {
+     "id": "4.5",
+     "title": "Given a scenario, troubleshoot network connectivity issues."
+    },
+    {
+     "id": "4.6",
+     "title": "Given a scenario, troubleshoot security problems."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan Server+ SK0-005 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/server-plus",
+   "url": "https://github.com/prof-rizwan/server-plus",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  },
+  {
+   "id": "trevor",
+   "title": "CompTIA Certifications Study",
+   "license": "CC BY-SA 4.0",
+   "attribution": "Copyright (c) 2026 Trevor Dunn, https://github.com/trevorwdunn/comptia-certifications-study",
+   "url": "https://github.com/trevorwdunn/comptia-certifications-study"
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json",
+  "questions/trevor.json"
+ ],
+ "questionCount": 568,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Fewer than 10 questions for 2 of 25 objectives",
+   "88% of the questions come from one source"
+  ]
+ },
+ "icon": "assets/icons/server-plus.webp"
+}

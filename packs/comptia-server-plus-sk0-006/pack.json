@@ -1,0 +1,180 @@
+{
+ "format": 1,
+ "id": "comptia-server-plus-sk0-006",
+ "title": "CompTIA Server+ SK0-006",
+ "subtitle": "Exam objectives document version 1.1 (draft)",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 750,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Planning and Deployment",
+   "weight": 20,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a scenario, deploy physical hardware."
+    },
+    {
+     "id": "1.2",
+     "title": "Compare and contrast concepts related to scaling infrastructure."
+    },
+    {
+     "id": "1.3",
+     "title": "Given a scenario, install server operating systems (OSs)."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Configuration and Administration",
+   "weight": 20,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, analyze requirements to configure servers."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, configure and maintain common services."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, apply virtualization to a workload."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, implement high availability in a server environment."
+    },
+    {
+     "id": "2.5",
+     "title": "Explain concepts related to scripting, automation, and orchestration."
+    },
+    {
+     "id": "2.6",
+     "title": "Given a scenario, use AI to improve server management workflows."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Security and Compliance",
+   "weight": 20,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Explain common data security concepts."
+    },
+    {
+     "id": "3.2",
+     "title": "Summarize concepts related to policies, procedures, and compliance."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, implement appropriate backup, data retention, and recovery strategies."
+    },
+    {
+     "id": "3.4",
+     "title": "Given a scenario, troubleshoot basic identity and access management (IAM) issues."
+    },
+    {
+     "id": "3.5",
+     "title": "Given a scenario, implement server hardening."
+    },
+    {
+     "id": "3.6",
+     "title": "Given a scenario, apply patch management best practices."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Data Center Operations",
+   "weight": 20,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain the importance of environmental considerations."
+    },
+    {
+     "id": "4.2",
+     "title": "Explain safety and health considerations."
+    },
+    {
+     "id": "4.3",
+     "title": "Explain the importance of power considerations according to best practices."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, apply the appropriate connectivity solutions."
+    },
+    {
+     "id": "4.5",
+     "title": "Explain the importance of security and access solutions."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Performance Management and Troubleshooting",
+   "weight": 20,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Given a scenario, use observability strategies to manage servers."
+    },
+    {
+     "id": "5.2",
+     "title": "Given a scenario, use the appropriate tool to identify server issues."
+    },
+    {
+     "id": "5.3",
+     "title": "Given a scenario, troubleshoot common hardware issues."
+    },
+    {
+     "id": "5.4",
+     "title": "Given a scenario, troubleshoot common OS and software issues."
+    },
+    {
+     "id": "5.5",
+     "title": "Given a scenario, troubleshoot common storage-related issues."
+    },
+    {
+     "id": "5.6",
+     "title": "Given a scenario, troubleshoot common network connectivity issues."
+    },
+    {
+     "id": "5.7",
+     "title": "Given a scenario, troubleshoot common security issues."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://www.comptia.org/en-us/resources/comptia-exam-objectives-under-development/",
+   "note": "Written for this app by an AI model against the official SK0-006 (draft 1.1) objectives; not independently reviewed. No openly licensed question bank was available for this exam. The exam is in beta and the objectives are a draft, so details may change."
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json"
+ ],
+ "questionCount": 380,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Only 380 questions for a 90-question exam",
+   "All questions come from a single source"
+  ]
+ },
+ "icon": "assets/icons/server-plus.webp"
+}

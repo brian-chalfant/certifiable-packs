@@ -1,0 +1,228 @@
+{
+ "format": 1,
+ "id": "comptia-network-plus-n10-009",
+ "title": "CompTIA Network+ N10-009",
+ "subtitle": "Exam objectives document version 6.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 720,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Networking Concepts",
+   "weight": 23,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Explain concepts related to the Open Systems Interconnection (OSI) reference model."
+    },
+    {
+     "id": "1.2",
+     "title": "Compare and contrast networking appliances, applications, and functions."
+    },
+    {
+     "id": "1.3",
+     "title": "Summarize cloud concepts and connectivity options."
+    },
+    {
+     "id": "1.4",
+     "title": "Explain common networking ports, protocols, services, and traffic types."
+    },
+    {
+     "id": "1.5",
+     "title": "Compare and contrast transmission media and transceivers."
+    },
+    {
+     "id": "1.6",
+     "title": "Compare and contrast network topologies, architectures, and types."
+    },
+    {
+     "id": "1.7",
+     "title": "Given a scenario, use appropriate IPv4 network addressing."
+    },
+    {
+     "id": "1.8",
+     "title": "Summarize evolving use cases for modern network environments."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Network Implementation",
+   "weight": 20,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Explain characteristics of routing technologies."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, configure switching technologies and features."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, select and configure wireless devices and technologies."
+    },
+    {
+     "id": "2.4",
+     "title": "Explain important factors of physical installations."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Network Operations",
+   "weight": 19,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Explain the purpose of organizational processes and procedures."
+    },
+    {
+     "id": "3.2",
+     "title": "Given a scenario, use network monitoring technologies."
+    },
+    {
+     "id": "3.3",
+     "title": "Explain disaster recovery (DR) concepts."
+    },
+    {
+     "id": "3.4",
+     "title": "Given a scenario, implement IPv4 and IPv6 network services."
+    },
+    {
+     "id": "3.5",
+     "title": "Compare and contrast network access and management methods."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Network Security",
+   "weight": 14,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain the importance of basic network security concepts."
+    },
+    {
+     "id": "4.2",
+     "title": "Summarize various types of attacks and their impact to the network."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, apply network security features, defense techniques, and solutions."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Network Troubleshooting",
+   "weight": 24,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Explain the troubleshooting methodology."
+    },
+    {
+     "id": "5.2",
+     "title": "Given a scenario, troubleshoot common cabling and physical interface issues."
+    },
+    {
+     "id": "5.3",
+     "title": "Given a scenario, troubleshoot common issues with network services."
+    },
+    {
+     "id": "5.4",
+     "title": "Given a scenario, troubleshoot common performance issues."
+    },
+    {
+     "id": "5.5",
+     "title": "Given a scenario, use the appropriate tool or protocol to solve networking issues."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan Network+ N10-009 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/network-plus",
+   "url": "https://github.com/prof-rizwan/network-plus",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  },
+  {
+   "id": "labbench",
+   "title": "Network Lab Bench",
+   "license": "CC BY-SA 4.0",
+   "attribution": "Network Lab Bench contributors, https://github.com/CatFlowers28g/Network-Lab-Bench",
+   "url": "https://github.com/CatFlowers28g/Network-Lab-Bench"
+  },
+  {
+   "id": "ojing",
+   "title": "Network+ Quiz",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 ojinguh",
+   "url": "https://github.com/oJingUH/network-plus-quiz"
+  },
+  {
+   "id": "derian",
+   "title": "Derian's Cyber Class",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Derian Farley",
+   "url": "https://github.com/derianfarley/derians-cyber-class"
+  },
+  {
+   "id": "trevor",
+   "title": "CompTIA Certifications Study",
+   "license": "CC BY-SA 4.0",
+   "attribution": "Copyright (c) 2026 Trevor Dunn, https://github.com/trevorwdunn/comptia-certifications-study",
+   "url": "https://github.com/trevorwdunn/comptia-certifications-study"
+  },
+  {
+   "id": "quizcert",
+   "title": "QUIZCERT",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Matteo Zordan",
+   "url": "https://github.com/Kashim0-afk/QUIZCERT",
+   "note": "English text of a bilingual (Italian/English) bank."
+  },
+  {
+   "id": "techrevise",
+   "title": "Tech.Revise network fundamentals quiz",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2025 SaltyHash.tech | Tech.Revise Educational Platform",
+   "url": "https://github.com/curiousboey/tech.revise"
+  },
+  {
+   "id": "proletarinet",
+   "title": "Proletarinet",
+   "license": "CC0 1.0",
+   "attribution": "internationalgentleman-collab",
+   "url": "https://github.com/internationalgentleman-collab/proletarinet"
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json",
+  "questions/labbench.json",
+  "questions/ojing.json",
+  "questions/derian.json",
+  "questions/trevor.json",
+  "questions/quizcert.json",
+  "questions/techrevise.json",
+  "questions/proletarinet.json"
+ ],
+ "questionCount": 1871,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Every objective is well covered, from several sources"
+  ]
+ },
+ "icon": "assets/icons/network-plus.webp"
+}

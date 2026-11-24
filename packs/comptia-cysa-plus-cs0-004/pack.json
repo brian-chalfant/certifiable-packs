@@ -1,0 +1,151 @@
+{
+ "format": 1,
+ "id": "comptia-cysa-plus-cs0-004",
+ "title": "CompTIA CySA+ CS0-004",
+ "subtitle": "Exam objectives document version 2.0",
+ "exam": {
+  "questions": 85,
+  "minutes": 165,
+  "passScore": 750,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Security Operations",
+   "weight": 34,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Explain concepts related to system and network architecture in security operations."
+    },
+    {
+     "id": "1.2",
+     "title": "Given a scenario, analyze indicators of potential malicious activity."
+    },
+    {
+     "id": "1.3",
+     "title": "Given a scenario, use tools to determine malicious activity."
+    },
+    {
+     "id": "1.4",
+     "title": "Explain threat intelligence and threat-hunting concepts."
+    },
+    {
+     "id": "1.5",
+     "title": "Explain the importance of efficiency and process improvement in security operations."
+    },
+    {
+     "id": "1.6",
+     "title": "Summarize concepts related to the use of AI in security operations."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Vulnerability Management",
+   "weight": 26,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, implement the appropriate vulnerability scanning method."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, analyze output from vulnerability assessment tools."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, analyze data to prioritize and mitigate vulnerabilities."
+    },
+    {
+     "id": "2.4",
+     "title": "Explain concepts related to control types, risks, and vulnerability management."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Incident Response and Management",
+   "weight": 24,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Summarize concepts related to attack methodology frameworks."
+    },
+    {
+     "id": "3.2",
+     "title": "Summarize the incident response process."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, implement incident response techniques."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Reporting and Communication",
+   "weight": 16,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain the importance of vulnerability management reporting and communication."
+    },
+    {
+     "id": "4.2",
+     "title": "Explain the importance of security operations and incident response reporting and communication."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan CySA+ CS0-004 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/cysa-plus",
+   "url": "https://github.com/prof-rizwan/cysa-plus",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  },
+  {
+   "id": "sentry",
+   "title": "Sentry CySA+ question bank",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Richard Skerritt",
+   "url": "https://github.com/richard-skerritt/sentry-cysa-cs0-003",
+   "note": "Written for CS0-003; mapped to the CS0-004 objectives."
+  },
+  {
+   "id": "alphabet",
+   "title": "AlphabetSoup quiz decks",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2024 thestateofcybersecurity",
+   "url": "https://github.com/thestateofcybersecurity/AlphabetSoup",
+   "note": "Not written for a specific exam version; mapped to the CS0-004 objectives."
+  },
+  {
+   "id": "quizcert",
+   "title": "QUIZCERT",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Matteo Zordan",
+   "url": "https://github.com/Kashim0-afk/QUIZCERT",
+   "note": "English text of a bilingual (Italian/English) bank. Written for CS0-003; mapped to the CS0-004 objectives."
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json",
+  "questions/sentry.json",
+  "questions/alphabet.json",
+  "questions/quizcert.json"
+ ],
+ "questionCount": 684,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Fewer than 10 questions for 1 of 15 objectives"
+  ]
+ },
+ "icon": "assets/icons/cysa-plus.webp"
+}

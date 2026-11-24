@@ -1,0 +1,219 @@
+{
+ "format": 1,
+ "id": "comptia-tech-plus-fc0-u71",
+ "title": "CompTIA Tech+ FC0-U71",
+ "subtitle": "Exam objectives document version 4.0",
+ "exam": {
+  "questions": 70,
+  "minutes": 60,
+  "passScore": 650,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "IT Concepts and Terminology",
+   "weight": 13,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Explain the basics of computing."
+    },
+    {
+     "id": "1.2",
+     "title": "Identify notational systems."
+    },
+    {
+     "id": "1.3",
+     "title": "Compare and contrast common units of measure."
+    },
+    {
+     "id": "1.4",
+     "title": "Explain the troubleshooting methodology."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Infrastructure",
+   "weight": 24,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Explain common computing devices and their purposes."
+    },
+    {
+     "id": "2.2",
+     "title": "Explain the purpose of common internal computing components."
+    },
+    {
+     "id": "2.3",
+     "title": "Compare and contrast storage types."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, install and configure common peripheral devices."
+    },
+    {
+     "id": "2.5",
+     "title": "Compare and contrast common types of input/output device interfaces."
+    },
+    {
+     "id": "2.6",
+     "title": "Compare and contrast virtualization and cloud technologies."
+    },
+    {
+     "id": "2.7",
+     "title": "Compare and contrast common internet service types."
+    },
+    {
+     "id": "2.8",
+     "title": "Identify basic networking concepts."
+    },
+    {
+     "id": "2.9",
+     "title": "Explain the basic capabilities of a small wireless network."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Applications and Software",
+   "weight": 18,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Identify components of an OS."
+    },
+    {
+     "id": "3.2",
+     "title": "Explain the purpose of operating systems."
+    },
+    {
+     "id": "3.3",
+     "title": "Explain the purpose and proper use of software."
+    },
+    {
+     "id": "3.4",
+     "title": "Given a scenario, configure and use web browser features."
+    },
+    {
+     "id": "3.5",
+     "title": "Identify common uses of artificial intelligence (AI)."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Software Development Concepts",
+   "weight": 13,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Compare and contrast programming language categories."
+    },
+    {
+     "id": "4.2",
+     "title": "Identify fundamental data types and their characteristics."
+    },
+    {
+     "id": "4.3",
+     "title": "Explain the purpose and use of programming concepts."
+    },
+    {
+     "id": "4.4",
+     "title": "Identify programming organizational techniques and logic concepts."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Data and Database Fundamentals",
+   "weight": 13,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Explain the value of data and information."
+    },
+    {
+     "id": "5.2",
+     "title": "Explain database concepts and the purpose of a database."
+    },
+    {
+     "id": "5.3",
+     "title": "Compare and contrast various database structures."
+    },
+    {
+     "id": "5.4",
+     "title": "Explain basic data backup concepts."
+    }
+   ]
+  },
+  {
+   "id": "6.0",
+   "title": "Security",
+   "weight": 19,
+   "children": [
+    {
+     "id": "6.1",
+     "title": "Explain fundamental security concepts and frameworks."
+    },
+    {
+     "id": "6.2",
+     "title": "Explain methods to secure devices and security best practices."
+    },
+    {
+     "id": "6.3",
+     "title": "Explain password best practices."
+    },
+    {
+     "id": "6.4",
+     "title": "Identify common use cases for encryption."
+    },
+    {
+     "id": "6.5",
+     "title": "Given a scenario, configure security settings for a small wireless network."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://www.comptia.org/en-us/certifications/tech/",
+   "note": "Written for this app by an AI model against the official FC0-U71 objectives; not independently reviewed."
+  },
+  {
+   "id": "trevor",
+   "title": "CompTIA Certifications Study",
+   "license": "CC BY-SA 4.0",
+   "attribution": "Copyright (c) 2026 Trevor Dunn, https://github.com/trevorwdunn/comptia-certifications-study",
+   "url": "https://github.com/trevorwdunn/comptia-certifications-study",
+   "note": "Written for ITF+ (FC0-U61), the exam Tech+ replaced; mapped to the FC0-U71 objectives."
+  },
+  {
+   "id": "savemycert",
+   "title": "FC0-U71 study guide sample questions",
+   "license": "CC BY 4.0",
+   "attribution": "SaveMyCert, https://github.com/savemycert/fc0-u71-study-guide",
+   "url": "https://github.com/savemycert/fc0-u71-study-guide"
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json",
+  "questions/trevor.json",
+  "questions/savemycert.json"
+ ],
+ "questionCount": 423,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "81% of the questions come from one source"
+  ]
+ },
+ "icon": "assets/icons/tech-plus.webp"
+}

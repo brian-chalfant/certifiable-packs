@@ -1,0 +1,168 @@
+{
+ "format": 1,
+ "id": "comptia-secai-plus-cy0-001",
+ "title": "CompTIA SecAI+ CY0-001",
+ "subtitle": "Exam objectives document version 4.0",
+ "exam": {
+  "questions": 60,
+  "minutes": 60,
+  "passScore": 600,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Basic AI Concepts Related to Cybersecurity",
+   "weight": 17,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Compare and contrast various AI types and techniques used in cybersecurity."
+    },
+    {
+     "id": "1.2",
+     "title": "Explain the importance of data security in relation to AI."
+    },
+    {
+     "id": "1.3",
+     "title": "Explain the importance of security throughout the life cycle of AI."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Securing AI Systems",
+   "weight": 40,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, use AI threat-modeling resources."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a set of requirements, implement security controls for AI systems."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, implement appropriate access controls for AI systems."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, implement data security controls for AI systems."
+    },
+    {
+     "id": "2.5",
+     "title": "Given a scenario, implement monitoring and auditing for AI systems."
+    },
+    {
+     "id": "2.6",
+     "title": "Given a scenario, analyze the evidence of an attack and suggest compensating controls for AI systems."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "AI-assisted Security",
+   "weight": 24,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Given a scenario, use AI-enabled tools to facilitate security tasks."
+    },
+    {
+     "id": "3.2",
+     "title": "Explain how AI enables or enhances attack vectors."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, use AI to automate security tasks."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "AI Governance, Risk, and Compliance",
+   "weight": 19,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain organizational governance structures that support AI."
+    },
+    {
+     "id": "4.2",
+     "title": "Explain risks associated with AI."
+    },
+    {
+     "id": "4.3",
+     "title": "Summarize the impact of compliance on business use and development of AI."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan SecAI+ CY0-001 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/secai-plus",
+   "url": "https://github.com/prof-rizwan/secai-plus",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  },
+  {
+   "id": "furkan",
+   "title": "Breach Protocol question bank",
+   "license": "CC BY 4.0",
+   "attribution": "Furkan Taskin, https://github.com/Furkan-Taskin/breach-protocol",
+   "url": "https://github.com/Furkan-Taskin/breach-protocol",
+   "note": "The author describes the questions as AI-generated from the public exam objectives."
+  },
+  {
+   "id": "keith",
+   "title": "SecAI+ Bootcamp",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 CyberSentinel Services LLC",
+   "url": "https://github.com/keithwilliams0786-stack/secai-bootcamp",
+   "note": "Matching sets and performance-based items are left out."
+  },
+  {
+   "id": "rick",
+   "title": "SecAI+ Study Guide practice tests",
+   "license": "CC BY 4.0",
+   "attribution": "Copyright (c) 2026 SecAI+ Study Guide contributors, https://github.com/rick-rami94/secai-plus-study-guide",
+   "url": "https://github.com/rick-rami94/secai-plus-study-guide"
+  },
+  {
+   "id": "oddduck",
+   "title": "Cert Prep SecAI+ question bank",
+   "license": "CC BY-NC 4.0",
+   "attribution": "Copyright (c) 2026 OddDuckMoose, https://github.com/OddDuckMoose/cert-prep",
+   "url": "https://github.com/OddDuckMoose/cert-prep",
+   "note": "Written to a five-domain draft layout; mapped to the final objectives."
+  },
+  {
+   "id": "kakata",
+   "title": "SecAI+ Exam Sim",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Eddy Ramírez Alvarez",
+   "url": "https://github.com/kakata/secai-exam-sim",
+   "note": "Written against pre-release objectives; mapped to the final objectives."
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json",
+  "questions/furkan.json",
+  "questions/keith.json",
+  "questions/rick.json",
+  "questions/oddduck.json",
+  "questions/kakata.json"
+ ],
+ "questionCount": 1922,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Every objective is well covered, from several sources"
+  ]
+ },
+ "icon": "assets/icons/secai-plus.webp"
+}

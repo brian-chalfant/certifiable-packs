@@ -1,0 +1,5996 @@
+[
+ {
+  "id": "ux-l01-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "\"Open source\" software must always be provided for free, at no cost.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Open source is about access to (and freedom to modify/redistribute) the source code, not price; vendors may charge for it (e.g. RHEL subscriptions).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l01-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "Who can start / create a new Linux distribution?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Only Linus Torvalds"
+   },
+   {
+    "id": "b",
+    "text": "Anyone who pays the license fee"
+   },
+   {
+    "id": "c",
+    "text": "Anyone and everyone"
+   },
+   {
+    "id": "d",
+    "text": "Nobody, there's already too many Linuxen"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The kernel and GNU tools are freely licensed, so anyone can assemble and publish their own distribution; no permission or fee is required.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l01-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "prompt": "In networking, \"NAT\" stands for",
+  "options": [
+   {
+    "id": "a",
+    "text": "Networking Across Terminals"
+   },
+   {
+    "id": "b",
+    "text": "Network Address Translation"
+   },
+   {
+    "id": "c",
+    "text": "No Access Transport"
+   },
+   {
+    "id": "d",
+    "text": "No Affordable Transitions"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "NAT is Network Address Translation: rewriting IP addresses as packets pass through a router.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l01-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "On Fedora Workstation, the default Desktop Environment is ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "KDE"
+   },
+   {
+    "id": "b",
+    "text": "XFCE"
+   },
+   {
+    "id": "c",
+    "text": "Gnome"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "Fedora Workstation ships GNOME by default; KDE and XFCE are available as separate spins.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l01-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "A terminal (virtual or hardware) does what?",
+  "options": [
+   {
+    "id": "a",
+    "text": "It takes your input and shows the output."
+   },
+   {
+    "id": "b",
+    "text": "It reads your input and starts commands and processes."
+   },
+   {
+    "id": "c",
+    "text": "It manages the operating system's memory."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "A terminal only handles input and output. Interpreting input and starting commands is the shell's job; memory management is the kernel's.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l02-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "I want to make an SSH alias for a hostname+port combination, so I can just say \"ssh tess@ABC\". This alias can be made with",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/hosts"
+   },
+   {
+    "id": "b",
+    "text": "~/.ssh/config"
+   },
+   {
+    "id": "c",
+    "text": "DNS"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "A `Host ABC` block in `~/.ssh/config` can set both HostName and Port. /etc/hosts and DNS only map names to addresses, not ports.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l02-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5",
+   "3.3"
+  ],
+  "prompt": "I want to make my server reachable via SSH. Which of these commands is NOT needed?",
+  "options": [
+   {
+    "id": "a",
+    "text": "sudo apt install sshd"
+   },
+   {
+    "id": "b",
+    "text": "sudo systemctl enable sshd"
+   },
+   {
+    "id": "c",
+    "text": "sudo systemctl start sshd"
+   },
+   {
+    "id": "d",
+    "text": "sudo groupadd ssh-users"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Installing, enabling and starting sshd are what make the server reachable; creating an `ssh-users` group is optional hardening, not a requirement.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l02-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "I want to SCP a file from a remote system, to my local machine. Which do I pick?",
+  "options": [
+   {
+    "id": "a",
+    "text": "scp tess@server:/path/to/file ./file"
+   },
+   {
+    "id": "b",
+    "text": "scp ./file tess@server:/path/to/file"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "scp takes source first, then destination: the remote `user@host:/path` is the source and the local path the destination.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l02-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "3.4",
+   "3.1"
+  ],
+  "prompt": "\"Attribution\" means \"proving which person did something\". Like \"Tess deleted this file!\". Which of these make attribution hard or impossible? (Choose One or More)",
+  "options": [
+   {
+    "id": "a",
+    "text": "Data leaks of credentials."
+   },
+   {
+    "id": "b",
+    "text": "Account sharing."
+   },
+   {
+    "id": "c",
+    "text": "MFA (multi-factor authentication)"
+   },
+   {
+    "id": "d",
+    "text": "Constantly using non-personal accounts, like root."
+   },
+   {
+    "id": "e",
+    "text": "Constantly using sudo."
+   }
+  ],
+  "answer": [
+   "a",
+   "b",
+   "d"
+  ],
+  "explanation": "Leaked credentials, shared accounts and working directly as non-personal accounts like root all break the link between an action and one person. MFA strengthens attribution, and sudo logs the invoking personal account.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l02-q05",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.2"
+  ],
+  "prompt": "If I want to add an extra secondary group to a user account, which options do I have? (Choose One or More)",
+  "options": [
+   {
+    "id": "a",
+    "text": "The \"usermod\" command"
+   },
+   {
+    "id": "b",
+    "text": "The \"groupmod\" command"
+   },
+   {
+    "id": "c",
+    "text": "You edit the \"/etc/group\" file."
+   },
+   {
+    "id": "d",
+    "text": "You edit the \"/etc/passwd\" file."
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "`usermod -aG group user` adds a secondary group, and secondary memberships are stored in /etc/group so editing it works too. groupmod changes a group's name/GID, and /etc/passwd only holds the primary GID.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l03-q01",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.5",
+   "2.1"
+  ],
+  "prompt": "I want my shell to \"cd\" back to my home directory. Which options to I have? Choose ALL that apply.",
+  "options": [
+   {
+    "id": "a",
+    "text": "cd ~"
+   },
+   {
+    "id": "b",
+    "text": "cd"
+   },
+   {
+    "id": "c",
+    "text": "cd $HOME"
+   },
+   {
+    "id": "d",
+    "text": "cd /home/tess"
+   }
+  ],
+  "answer": [
+   "a",
+   "b",
+   "c",
+   "d"
+  ],
+  "explanation": "All four work: `cd` alone, `cd ~` and `cd $HOME` go to your home directory, and the form also counts the literal path `/home/tess`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l03-q02",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "Navigating your cursor in \"vi\" and \"vim\" happens with [choose all that apply]",
+  "options": [
+   {
+    "id": "a",
+    "text": "WASD"
+   },
+   {
+    "id": "b",
+    "text": "hjkl"
+   },
+   {
+    "id": "c",
+    "text": "The arrow keys"
+   }
+  ],
+  "answer": [
+   "b",
+   "c"
+  ],
+  "explanation": "vi uses h/j/k/l for left/down/up/right, and vim (and most vi builds) also accept the arrow keys. WASD is for games.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l03-q03",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.5",
+   "2.1"
+  ],
+  "prompt": "My working directory is \"/opt/oracle/11.0/bin\" and I want to \"cd\" to \"/opt/oracle\". What options do I have? Choose all that apply.",
+  "options": [
+   {
+    "id": "a",
+    "text": "cd"
+   },
+   {
+    "id": "b",
+    "text": "cd /opt/oracle"
+   },
+   {
+    "id": "c",
+    "text": "cd ../.."
+   },
+   {
+    "id": "d",
+    "text": "cd ..; cd .."
+   },
+   {
+    "id": "e",
+    "text": "cd ..."
+   }
+  ],
+  "answer": [
+   "b",
+   "c",
+   "d"
+  ],
+  "explanation": "The absolute path works, and going up two levels (`cd ../..` or `cd ..; cd ..`) lands in /opt/oracle. Plain `cd` goes home and `...` is not a valid parent shortcut in bash.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l03-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.1"
+  ],
+  "prompt": "In this \"ls -al\" output, which are the sub-directories? Choose all that apply.",
+  "image": "images/af8fee9a-cfcb-44d4-91ae-a87ae1d964ca.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "test"
+   },
+   {
+    "id": "b",
+    "text": "test2"
+   },
+   {
+    "id": "c",
+    "text": "test3"
+   },
+   {
+    "id": "d",
+    "text": "test4"
+   },
+   {
+    "id": "e",
+    "text": "test5"
+   }
+  ],
+  "answer": [
+   "a",
+   "d"
+  ],
+  "explanation": "Lines starting with `d` are directories: test and test4. test2 and test3 are regular files (`-`) and test5 is a symlink (`l`) to the file test3.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l03-q05",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "3.3",
+   "2.1"
+  ],
+  "prompt": "In this \"ls -al\" output, which most likely is an executable binary? Choose all that apply.",
+  "image": "images/0104f946-68fd-49b7-ae1d-0f83583b4a4b.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "test"
+   },
+   {
+    "id": "b",
+    "text": "test2"
+   },
+   {
+    "id": "c",
+    "text": "test3"
+   },
+   {
+    "id": "d",
+    "text": "test4"
+   },
+   {
+    "id": "e",
+    "text": "test5"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "test2 is the only regular file with execute bits (-rwxr-xr-x). test and test4 are directories, test3 has no x bit, and test5 is a symlink to the non-executable test3.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l03-q06",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "4.4"
+  ],
+  "prompt": "I want to start contributing to a Git project, by fixing a mistake in file \"thefile\".\n\nPut the events into the right order, with the first command at the top and the last command at the bottom.",
+  "options": [
+   {
+    "id": "a",
+    "text": "git add thefile"
+   },
+   {
+    "id": "b",
+    "text": "git clone git@github.com:myteam/project"
+   },
+   {
+    "id": "c",
+    "text": "git commit -m \"Bug fixed in thefile.\""
+   },
+   {
+    "id": "d",
+    "text": "git push"
+   },
+   {
+    "id": "e",
+    "text": "vi thefile"
+   }
+  ],
+  "answer": [
+   "b",
+   "e",
+   "a",
+   "c",
+   "d"
+  ],
+  "explanation": "Clone the repository, edit the file, stage it with `git add`, commit, then push.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l04-q01",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.5",
+   "2.1"
+  ],
+  "prompt": "I want to change my working directory to the \"Downloads\" folder, in my home directory.\n\nWhich options to I have? \"<tab>\" refers to pressing the tab-key, for auto-completion.",
+  "options": [
+   {
+    "id": "a",
+    "text": "cd ~; cd Down<tab>"
+   },
+   {
+    "id": "b",
+    "text": "cd ~/Downloads"
+   },
+   {
+    "id": "c",
+    "text": "cd; cd downloads"
+   },
+   {
+    "id": "d",
+    "text": "cd; cd d<tab>"
+   }
+  ],
+  "answer": [
+   "a",
+   "b"
+  ],
+  "explanation": "`cd ~; cd Down<tab>` completes to Downloads and `cd ~/Downloads` goes there directly. File names are case-sensitive, so `downloads` and completing a lowercase `d` do not match Downloads.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l04-q02",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.2"
+  ],
+  "prompt": "How can I permanently change a user's shell to \"tcsh\"? Choose all that apply.",
+  "options": [
+   {
+    "id": "a",
+    "text": "Ask them to run the \"tcsh\" command."
+   },
+   {
+    "id": "b",
+    "text": "Change it in \"/etc/passwd\"."
+   },
+   {
+    "id": "c",
+    "text": "With the \"usermod\" command."
+   },
+   {
+    "id": "d",
+    "text": "Change it in \"/etc/shells\""
+   }
+  ],
+  "answer": [
+   "b",
+   "c"
+  ],
+  "explanation": "The login shell is the last field in /etc/passwd, changed by editing it or with `usermod -s`. Running `tcsh` only lasts for that session, and /etc/shells merely lists the allowed shells.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l04-q03",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "I have an existing file, \"thefile\". I want to add the following line at the bottom of the file, including the double quotes.\n\nname: \"server1\"\n\nWhich options do I have? Choose all that apply.",
+  "options": [
+   {
+    "id": "a",
+    "text": "echo \"name: \\\"server1\\\" \" > thefile"
+   },
+   {
+    "id": "b",
+    "text": "echo \"name: \\\"server1\\\" \" >> thefile"
+   },
+   {
+    "id": "c",
+    "text": "echo \"name: \"server1\" \" > thefile"
+   },
+   {
+    "id": "d",
+    "text": "echo \"name: \"server1\" \" >> thefile"
+   },
+   {
+    "id": "e",
+    "text": "echo 'name: \"server1\" ' > thefile"
+   },
+   {
+    "id": "f",
+    "text": "echo 'name: \"server1\" ' >> thefile"
+   }
+  ],
+  "answer": [
+   "b",
+   "f"
+  ],
+  "explanation": "Appending needs `>>` (`>` overwrites the file), and the inner double quotes must be escaped or the whole string wrapped in single quotes. Unescaped inner double quotes are removed by the shell.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l04-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "4.2"
+  ],
+  "prompt": "I want to set the value of variable \"PRICE\" to \"$30\". The dollar sign should be part of the actual text.\n\nHow? Choose all that apply.",
+  "options": [
+   {
+    "id": "a",
+    "text": "PRICE='$30'"
+   },
+   {
+    "id": "b",
+    "text": "$PRICE='$30'"
+   },
+   {
+    "id": "c",
+    "text": "PRICE=\"$30\""
+   },
+   {
+    "id": "d",
+    "text": "$PRICE=\"$30\""
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Assignment uses the bare name (no leading `$`), and single quotes keep `$30` literal. In double quotes the shell expands `$3` (empty) and leaves just `0`.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l04-q05",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.5",
+   "3.3"
+  ],
+  "prompt": "What's going wrong here? I just want to run myshell! :(\n\nChoose all that apply.",
+  "image": "images/87dd0c55-ef34-4b94-8179-68a3f5191cfc.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "The copy of bash failed."
+   },
+   {
+    "id": "b",
+    "text": "I forgot to set the executable flag."
+   },
+   {
+    "id": "c",
+    "text": "I did not specify the right path for \"myshell\"."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The current directory is not in $PATH, so it must be run as `./myshell`. The copy succeeded and cp keeps the execute bit of /bin/bash.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l04-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "prompt": "What's going wrong here?",
+  "image": "images/22f24680-a555-481d-bf22-d46e835cdec9.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "My shell script file is corrupted."
+   },
+   {
+    "id": "b",
+    "text": "I forgot to add an empty line at the bottom of the script."
+   },
+   {
+    "id": "c",
+    "text": "I forgot the closing double quote for echo."
+   },
+   {
+    "id": "d",
+    "text": "The script expected me to respond, but I didn't."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The second echo line has no closing double quote, so bash reaches end-of-file while still looking for the matching `\"`.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l05-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "prompt": "What's going wrong here?! I was expecting three lines, but my screen keeps filling with zeroes!",
+  "image": "images/24d3b85a-7a0c-4b68-83b1-738486e0f490.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "You're using the wrong variable name in the echo."
+   },
+   {
+    "id": "b",
+    "text": "You're using the wrong variable name in the test."
+   },
+   {
+    "id": "c",
+    "text": "You've written the test incorrectly."
+   },
+   {
+    "id": "d",
+    "text": "You're forgetting to increment the variable."
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Nothing in the loop body changes `count`, so `$count -lt 3` stays true forever and 0 is printed endlessly.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l05-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "prompt": "Argh, again?! What's wrong this time?!",
+  "image": "images/1c0b7b17-93a0-4448-b7d7-23cce83a7a6c.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "You're using the wrong variable name in the echo."
+   },
+   {
+    "id": "b",
+    "text": "You're using the wrong variable name in the test."
+   },
+   {
+    "id": "c",
+    "text": "You've written the test incorrectly."
+   },
+   {
+    "id": "d",
+    "text": "Now you're incrementing the wrong variable!"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Variable names are case-sensitive: `((Count++))` increments a different variable than `count`, which stays 0.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l05-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "I want to find all lines in a file that contain the word \"cookies\", which command do I use?",
+  "options": [
+   {
+    "id": "a",
+    "text": "grep"
+   },
+   {
+    "id": "b",
+    "text": "find"
+   },
+   {
+    "id": "c",
+    "text": "select"
+   },
+   {
+    "id": "d",
+    "text": "grab"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`grep cookies file` prints the lines matching a pattern. `find` searches for files, not for text inside them.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l05-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "4.2",
+   "1.5"
+  ],
+  "prompt": "Which of these mathematics tools are built directly into Bash? (Choose all that apply)",
+  "options": [
+   {
+    "id": "a",
+    "text": "bc"
+   },
+   {
+    "id": "b",
+    "text": "let"
+   },
+   {
+    "id": "c",
+    "text": "expr"
+   },
+   {
+    "id": "d",
+    "text": "(( ... ))"
+   }
+  ],
+  "answer": [
+   "b",
+   "d"
+  ],
+  "explanation": "`let` and `(( ... ))` are bash builtins/syntax. `bc` and `expr` are separate external programs.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l05-q05",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "I would like to use \"cut\" to grab the second column from a file, with the following format:\n\nserver100,192.168.2.100,production,webserver\nserver100,192.168.2.100,production,webserver\nserver100,192.168.2.100,production,webserver\n\nSo for example: cat /var/inventory/servers.txt | cut ... ... ...\n\nWhat do I need to enter on the ... ... to only get the second column from this file?\n\nHINT: you will need two flags, each of which takes one value.",
+  "accept": [
+   "-d, -f2",
+   "-d, -f 2",
+   "-d , -f2",
+   "-d , -f 2",
+   "-d',' -f2",
+   "-d',' -f 2",
+   "-d ',' -f2",
+   "-d ',' -f 2",
+   "-d\",\" -f2",
+   "-d\",\" -f 2",
+   "-d \",\" -f2",
+   "-d \",\" -f 2",
+   "-f2 -d,",
+   "-f 2 -d,",
+   "-f2 -d ,",
+   "-f 2 -d ,",
+   "-f2 -d','",
+   "-f 2 -d','",
+   "-f2 -d ','",
+   "-f 2 -d ','",
+   "-f2 -d\",\"",
+   "-f 2 -d\",\"",
+   "-f2 -d \",\"",
+   "-f 2 -d \",\"",
+   "--delimiter=, --fields=2",
+   "--delimiter=',' --fields=2",
+   "--delimiter=\",\" --fields=2",
+   "--fields=2 --delimiter=,",
+   "cut -d, -f2",
+   "cut -d , -f 2",
+   "cut -d ',' -f 2",
+   "cut -d ',' -f2",
+   "cut -d \",\" -f 2",
+   "cut -d \",\" -f2"
+  ],
+  "caseSensitive": true,
+  "explanation": "`-d,` sets the comma as field delimiter and `-f2` selects the second field.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l06-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "prompt": "Which command will always work (on MODERN Linux), to show your IP addresses?",
+  "options": [
+   {
+    "id": "a",
+    "text": "nmcli"
+   },
+   {
+    "id": "b",
+    "text": "ip"
+   },
+   {
+    "id": "c",
+    "text": "ifconfig"
+   },
+   {
+    "id": "d",
+    "text": "con sho ip"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`ip` (iproute2) is present on every modern distribution. ifconfig (net-tools) is deprecated and often not installed, and nmcli only exists where NetworkManager is used.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l06-q02",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.4"
+  ],
+  "prompt": "Which command(s) can you use to see active network traffic and listeners? Choose all that apply.",
+  "options": [
+   {
+    "id": "a",
+    "text": "ip"
+   },
+   {
+    "id": "b",
+    "text": "netstat"
+   },
+   {
+    "id": "c",
+    "text": "ps"
+   },
+   {
+    "id": "d",
+    "text": "ss"
+   }
+  ],
+  "answer": [
+   "b",
+   "d"
+  ],
+  "explanation": "`netstat` and its modern replacement `ss` show open connections and listening sockets. `ip` shows addresses/routes and `ps` shows processes.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l06-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "prompt": "Which of these files is NOT relevant to hostname resolution? \n\nSo for translating \"backups.broehaha.nl\" to \"192.168.100.43\", for example.",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/resolv.conf"
+   },
+   {
+    "id": "b",
+    "text": "/etc/hosts"
+   },
+   {
+    "id": "c",
+    "text": "/etc/nsswitch.conf"
+   },
+   {
+    "id": "d",
+    "text": "/etc/bash.bashrc"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "/etc/bash.bashrc is shell configuration. resolv.conf (DNS servers), hosts (static entries) and nsswitch.conf (lookup order) all take part in name resolution.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l06-q04",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "2.4"
+  ],
+  "prompt": "For the following applications, which network protocols are used? \n\nPut them in the right order. At the top matches the first application, at the bottom matches the last application. \n\n* Using a web browser to visit web sites.\n* Sending email\n* Receiving email\n* Secure access to the shell of a remote Linux system.\n* Hostname resolution\n* Time / clock synchronization\n* Windows file sharing",
+  "options": [
+   {
+    "id": "a",
+    "text": "DNS"
+   },
+   {
+    "id": "b",
+    "text": "HTTP / HTTPS"
+   },
+   {
+    "id": "c",
+    "text": "NTP"
+   },
+   {
+    "id": "d",
+    "text": "POP3"
+   },
+   {
+    "id": "e",
+    "text": "SMB"
+   },
+   {
+    "id": "f",
+    "text": "SMTP"
+   },
+   {
+    "id": "g",
+    "text": "SSH"
+   }
+  ],
+  "answer": [
+   "b",
+   "f",
+   "d",
+   "g",
+   "a",
+   "c",
+   "e"
+  ],
+  "explanation": "Web = HTTP/HTTPS, sending mail = SMTP, receiving mail = POP3, remote shell = SSH, name resolution = DNS, time sync = NTP, Windows file sharing = SMB.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l06-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "Which command makes it so the SSH daemon (service) is started automatically every time the server starts? So, how do I make sure SSH starts after every reboot?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl install sshd"
+   },
+   {
+    "id": "b",
+    "text": "systemctl start sshd"
+   },
+   {
+    "id": "c",
+    "text": "systemctl enable sshd"
+   },
+   {
+    "id": "d",
+    "text": "systemctl autostart sshd"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`systemctl enable` creates the links that start the unit at boot. `start` only starts it now; `install` and `autostart` are not systemctl sub-commands.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l06-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "Which command shows me the configured, default \"target\" for systemd's boot?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl show-default"
+   },
+   {
+    "id": "b",
+    "text": "systemctl set-default"
+   },
+   {
+    "id": "c",
+    "text": "systemctl get-default"
+   },
+   {
+    "id": "d",
+    "text": "systemctl get-target"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`systemctl get-default` prints the default target; `set-default` changes it, and the other two do not exist.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l07-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "I am installing a new kernel version on my Linux server. What is a safe way to make sure I can still boot the old kernel version WITHOUT losing data?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Boot into single-user mode"
+   },
+   {
+    "id": "b",
+    "text": "Keep both versions in my Grub2 configuration."
+   },
+   {
+    "id": "c",
+    "text": "Make a snapshot first."
+   },
+   {
+    "id": "d",
+    "text": "Reinstall the old version."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Keeping both kernels as GRUB2 menu entries lets you simply pick the old one at boot. Reverting to a snapshot would throw away data written since it was taken.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l07-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1",
+   "1.2"
+  ],
+  "prompt": "\"initramfs\" is ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "A boot loader."
+   },
+   {
+    "id": "b",
+    "text": "The tool that prepares RAM."
+   },
+   {
+    "id": "c",
+    "text": "A file system with tools."
+   },
+   {
+    "id": "d",
+    "text": "Part of your motherboard."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "initramfs is a small temporary root file system loaded into RAM, holding the tools and drivers needed to mount the real root file system.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l07-q03",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "The \"systemd\" service has two \"target modes\" which are the most commonly used \"default targets\". These are: (choose TWO)",
+  "options": [
+   {
+    "id": "a",
+    "text": "Networked"
+   },
+   {
+    "id": "b",
+    "text": "Single user"
+   },
+   {
+    "id": "c",
+    "text": "Graphical"
+   },
+   {
+    "id": "d",
+    "text": "Multi-user"
+   }
+  ],
+  "answer": [
+   "c",
+   "d"
+  ],
+  "explanation": "The usual default targets are multi-user.target (servers, text mode) and graphical.target (desktops).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l07-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "Which of these configuration files should you NOT edit by hand? Choose ALL that apply.",
+  "options": [
+   {
+    "id": "a",
+    "text": "/boot/grub/grub.cfg"
+   },
+   {
+    "id": "b",
+    "text": "/boot/grub2/grub.cfg"
+   },
+   {
+    "id": "c",
+    "text": "/boot/efi/EFI/fedora/grub.cfg"
+   },
+   {
+    "id": "d",
+    "text": "/etc/default/grub"
+   },
+   {
+    "id": "e",
+    "text": "/etc/grub.d/*"
+   }
+  ],
+  "answer": [
+   "a",
+   "b",
+   "c"
+  ],
+  "explanation": "All grub.cfg files are generated by grub-mkconfig / grub2-mkconfig and get overwritten. You edit /etc/default/grub and the scripts in /etc/grub.d/ instead.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l07-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "Which command shows me the configured, default \"target\" for systemd's boot?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl show-default"
+   },
+   {
+    "id": "b",
+    "text": "systemctl set-default"
+   },
+   {
+    "id": "c",
+    "text": "systemctl get-default"
+   },
+   {
+    "id": "d",
+    "text": "systemctl get-target"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`systemctl get-default` prints the default target; `set-default` changes it, and the other two do not exist.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l07-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "prompt": "Installing and activating new driver software requires that you reboot Linux.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "False: kernel modules can be loaded into the running kernel with `modprobe`/`insmod`, no reboot needed.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l08-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "prompt": "The most important benefit to CI/CD is ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "Automation of software testing."
+   },
+   {
+    "id": "b",
+    "text": "Automation of software building and packaging."
+   },
+   {
+    "id": "c",
+    "text": "Automation of deployment of software."
+   },
+   {
+    "id": "d",
+    "text": "All three."
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "CI/CD pipelines automate building/packaging, testing and deployment together; the benefit is the whole chain.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l08-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "prompt": "Ansible makes use of SSH to perform its actions on managed hosts. Ansible is ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "Agent-based"
+   },
+   {
+    "id": "b",
+    "text": "Agentless"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Ansible connects over SSH and needs no agent installed on the managed hosts, so it is agentless.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l08-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.7"
+  ],
+  "prompt": "VMWare ESXi is a virtualisation platform which is installed \"bare metal\" on server hardware.",
+  "options": [
+   {
+    "id": "a",
+    "text": "Type 1 hypervisor"
+   },
+   {
+    "id": "b",
+    "text": "Type 2 hypervisor"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "A hypervisor that runs directly on the hardware (bare metal) is Type 1. Type 2 runs as an application on top of a host OS (VirtualBox, VMware Workstation).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l08-q04",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [],
+  "prompt": "I am building a brand-new VM with Vagrant. Put the commands in the right order.",
+  "options": [
+   {
+    "id": "a",
+    "text": "mkdir new-vm; cd new-vm"
+   },
+   {
+    "id": "b",
+    "text": "vagrant destroy"
+   },
+   {
+    "id": "c",
+    "text": "vagrant halt"
+   },
+   {
+    "id": "d",
+    "text": "vagrant init bento/centos-7"
+   },
+   {
+    "id": "e",
+    "text": "vagrant ssh"
+   },
+   {
+    "id": "f",
+    "text": "vagrant up"
+   }
+  ],
+  "answer": [
+   "a",
+   "d",
+   "f",
+   "e",
+   "c",
+   "b"
+  ],
+  "explanation": "Make a project directory, `vagrant init` to create the Vagrantfile, `vagrant up` to build and boot, `vagrant ssh` to use it, then `vagrant halt` and finally `vagrant destroy`.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l08-q05",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "2.6"
+  ],
+  "prompt": "I am building a brand new container using Docker. Put the commands in the right order.",
+  "options": [
+   {
+    "id": "a",
+    "text": "git clone https://git.ter/my-cool-app; cd my-cool-app"
+   },
+   {
+    "id": "b",
+    "text": "sudo docker build -t tess/my-cool-app ."
+   },
+   {
+    "id": "c",
+    "text": "sudo docker kill ${ContainerID}"
+   },
+   {
+    "id": "d",
+    "text": "sudo docker ps | grep \"my-cool-app\""
+   },
+   {
+    "id": "e",
+    "text": "sudo docker run tess/my-cool-app"
+   },
+   {
+    "id": "f",
+    "text": "vi Dockerfile"
+   }
+  ],
+  "answer": [
+   "a",
+   "f",
+   "b",
+   "e",
+   "d",
+   "c"
+  ],
+  "explanation": "Get the source, write the Dockerfile, build the image, run a container from it, find it with `docker ps`, then kill it by container ID.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "RAID offers data backups and protects your data from deletion or accidental changes.",
+  "options": [
+   {
+    "id": "a",
+    "text": "Yes"
+   },
+   {
+    "id": "b",
+    "text": "No"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "RAID gives redundancy against drive failure (availability), not backups: deletions and accidental changes are faithfully written to all member disks.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q02",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Order these from top to bottom: the most flexible/expensive, to the cheapest but least flexible.",
+  "options": [
+   {
+    "id": "a",
+    "text": "Direct Attached Storage (DAS)"
+   },
+   {
+    "id": "b",
+    "text": "Internal drives (HDD, SSD)"
+   },
+   {
+    "id": "c",
+    "text": "Network Attached Storage (NAS)"
+   },
+   {
+    "id": "d",
+    "text": "Storage Area Network (SAN)"
+   }
+  ],
+  "answer": [
+   "d",
+   "c",
+   "a",
+   "b"
+  ],
+  "explanation": "A SAN is the most flexible and most expensive, followed by NAS, then DAS, with plain internal drives the cheapest and least flexible.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "I have four drives of 500GB each. Together they make ONE storage volume of 2TB. This most likely is ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "RAID 0"
+   },
+   {
+    "id": "b",
+    "text": "RAID 1"
+   },
+   {
+    "id": "c",
+    "text": "RAID 1+0"
+   },
+   {
+    "id": "d",
+    "text": "RAID 5"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "RAID 0 stripes across all disks with no redundancy, so 4 x 500GB gives the full 2TB.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "I have four drives of 500GB each. Together they make ONE storage volume of 1.5TB. This most likely is ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "RAID 0"
+   },
+   {
+    "id": "b",
+    "text": "RAID 1"
+   },
+   {
+    "id": "c",
+    "text": "RAID 1+0"
+   },
+   {
+    "id": "d",
+    "text": "RAID 5"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "RAID 5 uses one disk's worth of space for parity: (4-1) x 500GB = 1.5TB.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "I have four drives of 500GB each. Together they make ONE storage volume of 1TB. This most likely is ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "RAID 0"
+   },
+   {
+    "id": "b",
+    "text": "RAID 1"
+   },
+   {
+    "id": "c",
+    "text": "RAID 1+0"
+   },
+   {
+    "id": "d",
+    "text": "RAID 5"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "RAID 1+0 mirrors pairs and stripes across them, leaving half the raw capacity: 1TB. (A four-way RAID 1 mirror would give only 500GB.)",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3",
+   "2.1"
+  ],
+  "prompt": "The third partition, of the third SATA device on my server has which device path?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/dev/sda3"
+   },
+   {
+    "id": "b",
+    "text": "/dev/sdc2"
+   },
+   {
+    "id": "c",
+    "text": "/dev/sdc3"
+   },
+   {
+    "id": "d",
+    "text": "/dev/sata3"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "SATA/SCSI disks are named sda, sdb, sdc... so the third disk is sdc, and its third partition is /dev/sdc3.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Device IDs under /dev/disk/by-partuuid are generated when? ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "When installing the new storage device."
+   },
+   {
+    "id": "b",
+    "text": "When partitioning the new storage device."
+   },
+   {
+    "id": "c",
+    "text": "When applying a file system to the storage device."
+   },
+   {
+    "id": "d",
+    "text": "Manually, by the system administrator."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "A PARTUUID belongs to the partition table entry and is created when the device is partitioned. The file system UUID (by-uuid) is the one created by mkfs.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q08",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "In fdisk, I can pull up the help / documentation with ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "h"
+   },
+   {
+    "id": "b",
+    "text": "i"
+   },
+   {
+    "id": "c",
+    "text": "m"
+   },
+   {
+    "id": "d",
+    "text": "?"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "In fdisk's interactive prompt `m` prints the menu/help.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q09",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Put these events in the right order. The first step at the top of the list.",
+  "options": [
+   {
+    "id": "a",
+    "text": "Add a new storage device to the computer."
+   },
+   {
+    "id": "b",
+    "text": "Applying a file system to the partition(s)."
+   },
+   {
+    "id": "c",
+    "text": "Figure out the new device path / ID."
+   },
+   {
+    "id": "d",
+    "text": "Partitioning the storage device."
+   }
+  ],
+  "answer": [
+   "a",
+   "c",
+   "d",
+   "b"
+  ],
+  "explanation": "Attach the device, find out its device path (e.g. with lsblk), partition it, then create file systems on the partitions.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l09-q10",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "The /etc/fstab file has a number of standard fields, left to right. Put the following field descriptions in the right order (left-most/first at the top, right-most/last at the bottom).",
+  "options": [
+   {
+    "id": "a",
+    "text": "Device path"
+   },
+   {
+    "id": "b",
+    "text": "Dump and fsck order"
+   },
+   {
+    "id": "c",
+    "text": "File system type"
+   },
+   {
+    "id": "d",
+    "text": "Mount options"
+   },
+   {
+    "id": "e",
+    "text": "Mount point"
+   }
+  ],
+  "answer": [
+   "a",
+   "e",
+   "c",
+   "d",
+   "b"
+  ],
+  "explanation": "fstab fields are: device, mount point, file system type, mount options, then the dump and fsck-pass numbers.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l10-q01",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Automount / autofs offers us:",
+  "options": [
+   {
+    "id": "a",
+    "text": "On-demand mounting of shares"
+   },
+   {
+    "id": "b",
+    "text": "Support for SMB, NFS and more"
+   },
+   {
+    "id": "c",
+    "text": "Local caching of remote files"
+   },
+   {
+    "id": "d",
+    "text": "Dynamic mounting, based on directory name"
+   }
+  ],
+  "answer": [
+   "a",
+   "b",
+   "d"
+  ],
+  "explanation": "autofs mounts shares on demand when a path is accessed, supports NFS, SMB/CIFS and others, and can map directory names dynamically (wildcard maps). It does not cache remote files locally.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l10-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Shrinking a file system can always be done while the system is using the disk.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "False: shrinking usually requires the file system to be unmounted (ext4), and some file systems such as XFS cannot be shrunk at all.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l10-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "We can track errors on software RAID devices with mdadm ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "--track"
+   },
+   {
+    "id": "b",
+    "text": "--trace"
+   },
+   {
+    "id": "c",
+    "text": "--monitor"
+   },
+   {
+    "id": "d",
+    "text": "--follow"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`mdadm --monitor` watches arrays and reports events such as failed devices; the other flags do not exist.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l10-q04",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Put into the right order, layered from bottom to top, these LVM concepts. \n\nHow would these build on top of each other? Starting at the BOTTOM with the hardware, ending at the top with the file system.",
+  "options": [
+   {
+    "id": "a",
+    "text": "File system"
+   },
+   {
+    "id": "b",
+    "text": "Logical volume"
+   },
+   {
+    "id": "c",
+    "text": "Mount point"
+   },
+   {
+    "id": "d",
+    "text": "Physical volume"
+   },
+   {
+    "id": "e",
+    "text": "The actual disk (hardware or virtual)"
+   },
+   {
+    "id": "f",
+    "text": "Volume group"
+   }
+  ],
+  "answer": [
+   "c",
+   "a",
+   "b",
+   "f",
+   "d",
+   "e"
+  ],
+  "explanation": "listed as a visual stack with the top layer first: mount point, file system, logical volume, volume group, physical volume, actual disk (hardware at the bottom). This keeps the form's stored order; if the form expects the list to start with the hardware, the correct key is the exact reverse.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l10-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "The LVM commands, e.g. lv*, pv*, vg* are:",
+  "options": [
+   {
+    "id": "a",
+    "text": "..make, ..show, ..remove"
+   },
+   {
+    "id": "b",
+    "text": "..create, ..show, ..remove"
+   },
+   {
+    "id": "c",
+    "text": "..create, ..display, ..remove"
+   },
+   {
+    "id": "d",
+    "text": "..make, ..display, ..delete"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "LVM commands follow the pattern pvcreate/vgcreate/lvcreate, pvdisplay/vgdisplay/lvdisplay and pvremove/vgremove/lvremove.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l10-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.5"
+  ],
+  "prompt": "CIA: Confidentiality is about ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "Keeping things secret"
+   },
+   {
+    "id": "b",
+    "text": "Keeping things unchanged"
+   },
+   {
+    "id": "c",
+    "text": "Keeping things available"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Confidentiality means only authorised parties can read the data. Keeping things unchanged is Integrity, keeping them reachable is Availability.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l10-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.5",
+   "3.3"
+  ],
+  "prompt": "SSH key authentication uses ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "Symmetric encryption"
+   },
+   {
+    "id": "b",
+    "text": "Asymmetric encryption"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "SSH key authentication uses a public/private key pair, which is asymmetric cryptography.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l10-q08",
+  "source": "unixerius",
+  "type": "match",
+  "objectives": [
+   "3.5"
+  ],
+  "prompt": "Which key is used for which purpose? \n\nNote: it's annoying, but I cannot actually score your answers on this type of question/form. :(",
+  "left": [
+   {
+    "id": "1",
+    "text": "I sign MY messages"
+   },
+   {
+    "id": "2",
+    "text": "YOU sign YOUR messages"
+   },
+   {
+    "id": "3",
+    "text": "Checking MY signature"
+   },
+   {
+    "id": "4",
+    "text": "Checking YOUR signature"
+   },
+   {
+    "id": "5",
+    "text": "Sending secrets TO ME"
+   },
+   {
+    "id": "6",
+    "text": "Sending secrets TO YOU"
+   },
+   {
+    "id": "7",
+    "text": "Decrypting secrets TO ME"
+   },
+   {
+    "id": "8",
+    "text": "Decrypting secrets TO YOU"
+   }
+  ],
+  "right": [
+   {
+    "id": "a",
+    "text": "MY private key"
+   },
+   {
+    "id": "b",
+    "text": "MY public key"
+   },
+   {
+    "id": "c",
+    "text": "YOUR private key"
+   },
+   {
+    "id": "d",
+    "text": "YOUR public key"
+   }
+  ],
+  "answer": {
+   "1": "a",
+   "2": "c",
+   "3": "b",
+   "4": "d",
+   "5": "b",
+   "6": "d",
+   "7": "a",
+   "8": "c"
+  },
+  "explanation": "Signing is done with the signer's own private key and checked with the signer's public key. Secrets are encrypted with the recipient's public key and decrypted with the recipient's private key.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l10-q09",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.5"
+  ],
+  "prompt": "Which artefact must be kept secret and safe?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Public key"
+   },
+   {
+    "id": "b",
+    "text": "Private key"
+   },
+   {
+    "id": "c",
+    "text": "Certificate"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "The private key must stay secret. Public keys and certificates (which contain a public key plus a signature) are meant to be shared.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l11-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "prompt": "Which command sends the sleep command to the background?",
+  "options": [
+   {
+    "id": "a",
+    "text": "sleep 120 *"
+   },
+   {
+    "id": "b",
+    "text": "sleep 120 %"
+   },
+   {
+    "id": "c",
+    "text": "sleep 120 &"
+   },
+   {
+    "id": "d",
+    "text": "sleep 120 $"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "A trailing `&` starts the command as a background job.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l11-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "prompt": "How do you ensure the command stays running when the terminal closes?",
+  "options": [
+   {
+    "id": "a",
+    "text": "ensure <command>"
+   },
+   {
+    "id": "b",
+    "text": "nohup <command>"
+   },
+   {
+    "id": "c",
+    "text": "bg <command>"
+   },
+   {
+    "id": "d",
+    "text": "<command> &"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`nohup` makes the command ignore the SIGHUP sent when the terminal closes. A plain `&` job is still tied to the terminal, and `bg` takes a job spec rather than a command.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l11-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "prompt": "Which cron job executes every 1st of the month at 00:00",
+  "options": [
+   {
+    "id": "a",
+    "text": "0 0 * 1 * <command>"
+   },
+   {
+    "id": "b",
+    "text": "* * 1 * * <command>"
+   },
+   {
+    "id": "c",
+    "text": "0 0 * * * <command>"
+   },
+   {
+    "id": "d",
+    "text": "0 0 1 * * <command>"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Cron fields are minute, hour, day-of-month, month, day-of-week: `0 0 1 * *` is 00:00 on day 1 of every month. `0 0 * 1 *` would be every day in January.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l11-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.6"
+  ],
+  "prompt": "Which of these tools are used to create archive files (multiple!)?",
+  "options": [
+   {
+    "id": "a",
+    "text": "dd"
+   },
+   {
+    "id": "b",
+    "text": "tar"
+   },
+   {
+    "id": "c",
+    "text": "cpio"
+   },
+   {
+    "id": "d",
+    "text": "cp"
+   },
+   {
+    "id": "e",
+    "text": "pack"
+   }
+  ],
+  "answer": [
+   "b",
+   "c"
+  ],
+  "explanation": "tar and cpio bundle many files into a single archive file. dd makes raw block-level copies/images, cp just copies files, and `pack` is not a standard archiver.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l11-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "FTP is a safe way to transfer files over the network",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "False: FTP sends credentials and data in clear text. Use SFTP, SCP or FTPS instead.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l11-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Which command is used to show devices and partitions?",
+  "options": [
+   {
+    "id": "a",
+    "text": "lsblk"
+   },
+   {
+    "id": "b",
+    "text": "lspci"
+   },
+   {
+    "id": "c",
+    "text": "lsdisk"
+   },
+   {
+    "id": "d",
+    "text": "lsusb"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`lsblk` lists block devices and their partitions. lspci and lsusb list PCI and USB hardware; lsdisk does not exist.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l11-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "Which command enables and starts a systemd service (in ONE command)?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl start --now service"
+   },
+   {
+    "id": "b",
+    "text": "systemctl enable service"
+   },
+   {
+    "id": "c",
+    "text": "systemctl start service"
+   },
+   {
+    "id": "d",
+    "text": "systemctl enable --now service"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "`systemctl enable --now` enables the unit for boot and starts it immediately. `--now` is not an option of `start`.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l11-q08",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.6"
+  ],
+  "prompt": "Backups should be stored on the same machine it was taken on.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "False: a backup on the same machine is lost together with the original when that machine fails; keep copies off-host/off-site (3-2-1 rule).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.4",
+   "1.1"
+  ],
+  "prompt": "What package manager do RedHat and its forks use?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Dnf/Yum"
+   },
+   {
+    "id": "b",
+    "text": "Pacman"
+   },
+   {
+    "id": "c",
+    "text": "Apt"
+   },
+   {
+    "id": "d",
+    "text": "Xbps"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Red Hat family distributions use RPM packages managed with dnf (formerly yum). Pacman is Arch, apt is Debian/Ubuntu, xbps is Void.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1",
+   "2.4"
+  ],
+  "prompt": "Compiling software on one type of system, so you can use it on another architecture is called cross-compiling.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "True: building on one platform for a different target architecture (e.g. x86_64 to ARM) is cross-compiling.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q03",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.4"
+  ],
+  "prompt": "Which methods are commonly used to host software repositories like Yum and APT? (choose all)",
+  "options": [
+   {
+    "id": "a",
+    "text": "Web server"
+   },
+   {
+    "id": "b",
+    "text": "SSH"
+   },
+   {
+    "id": "c",
+    "text": "Git"
+   },
+   {
+    "id": "d",
+    "text": "FTP"
+   }
+  ],
+  "answer": [
+   "a",
+   "d"
+  ],
+  "explanation": "Yum/DNF and APT repositories are plain directory trees normally served over HTTP(S) by a web server or over FTP. SSH and Git are not standard repository transports.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.4"
+  ],
+  "prompt": "Why is it hard to mix multiple package managers on one Linux system?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Their catalogs and bookkeeping are not synchronized."
+   },
+   {
+    "id": "b",
+    "text": "Their packages only work on their original Linux."
+   },
+   {
+    "id": "c",
+    "text": "Their packages are compiled for a different architecture."
+   },
+   {
+    "id": "d",
+    "text": "One tool will steal control from the other."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Each package manager keeps its own database of installed files and dependencies and knows nothing of the other's, so they overwrite files and miss dependencies.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q05",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [],
+  "prompt": "What is the correct order (left to right) of the values in \"en_US.utf-8\"",
+  "options": [
+   {
+    "id": "a",
+    "text": "Character Set"
+   },
+   {
+    "id": "b",
+    "text": "Country"
+   },
+   {
+    "id": "c",
+    "text": "Language"
+   }
+  ],
+  "answer": [
+   "c",
+   "b",
+   "a"
+  ],
+  "explanation": "A locale name is language_COUNTRY.charset: `en` (language), `US` (country), `utf-8` (character set).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "What is the correct command to synchronize the hardware clock and local time",
+  "options": [
+   {
+    "id": "a",
+    "text": "timedatectl --sethwclock"
+   },
+   {
+    "id": "b",
+    "text": "hwclock --sethwclock"
+   },
+   {
+    "id": "c",
+    "text": "date --systohc"
+   },
+   {
+    "id": "d",
+    "text": "hwclock --systohc"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "`hwclock --systohc` writes the system time to the hardware clock (`--hctosys` does the reverse). The other options are not real flags.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.1",
+   "1.1"
+  ],
+  "prompt": "log files are stored in \"/srv/log\"",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "False: logs live in /var/log. /srv holds data served by the system (web, FTP).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l12-q08",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.1",
+   "2.5"
+  ],
+  "prompt": "What command retrieves logs from a specific service",
+  "options": [
+   {
+    "id": "a",
+    "text": "journalctl -xe <service>"
+   },
+   {
+    "id": "b",
+    "text": "logger -u <service>"
+   },
+   {
+    "id": "c",
+    "text": "journalctl -u <service>"
+   },
+   {
+    "id": "d",
+    "text": "systemctl log <service>"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`journalctl -u <unit>` filters the journal to one systemd unit. `-xe` jumps to the end with explanations but does not filter by service.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l13-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "With sudo, you can run commands as ANY user.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "True: `sudo -u <user> <command>` runs a command as any user the sudoers rules allow, not just root.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l13-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "Su can also be used, like sudo, to run a specific command as ANY user.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "True, `su <user> -c '<command>'` runs a single command as another user (you need that user's password, or to be root). The instructor may have intended False to contrast su's 'switch shell' with sudo's 'run one command'.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l13-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "Which command should you use to SAFELY edit /etc/sudoers?",
+  "options": [
+   {
+    "id": "a",
+    "text": "sudo vi"
+   },
+   {
+    "id": "b",
+    "text": "visudo"
+   },
+   {
+    "id": "c",
+    "text": "sudovi"
+   },
+   {
+    "id": "d",
+    "text": "editsudo"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`visudo` locks the file and syntax-checks it before saving, so a typo cannot lock you out of sudo.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l13-q04",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "2.2",
+   "3.4"
+  ],
+  "prompt": "Which exact command line would you enter, to SEE user \"pete\"s expiry settings?",
+  "accept": [
+   "chage -l pete",
+   "sudo chage -l pete",
+   "chage --list pete",
+   "sudo chage --list pete"
+  ],
+  "caseSensitive": true,
+  "explanation": "`chage -l <user>` lists the password ageing and account expiry settings.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l13-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.2",
+   "3.4"
+  ],
+  "prompt": "Expiring a user's password, blocks the user from logging in.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "False: with an expired password the user can still authenticate but is forced to set a new password at login. Expiring or locking the account is what blocks login.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l13-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "A file has mode \"-rwx-r-x----\" and is owned by pete:users. You want to give group \"sales\" read access.",
+  "options": [
+   {
+    "id": "a",
+    "text": "setfacl -m u:users:r ${Filename}"
+   },
+   {
+    "id": "b",
+    "text": "setfacl -m g:users:r ${Filename}"
+   },
+   {
+    "id": "c",
+    "text": "setfacl -m g:sales:r ${Filename}"
+   },
+   {
+    "id": "d",
+    "text": "setfacl -m g:sales:rx ${Filename}"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`setfacl -m g:sales:r` adds an ACL entry giving group sales read access only. `rx` grants more than asked, and the other two target `users`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l13-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "I want to prevent ONLY user \"pete\" from logging in with SSH. I do this with:",
+  "options": [
+   {
+    "id": "a",
+    "text": "The firewall"
+   },
+   {
+    "id": "b",
+    "text": "SELinux"
+   },
+   {
+    "id": "c",
+    "text": "SSHD configuration"
+   },
+   {
+    "id": "d",
+    "text": "AppArmor"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`DenyUsers pete` in sshd_config blocks just that user over SSH. A firewall filters by address/port rather than user, and SELinux/AppArmor confine processes.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l13-q08",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "Put in the order of strong (top) to low (bottom) security, these SELinux modes.",
+  "options": [
+   {
+    "id": "a",
+    "text": "Disabled"
+   },
+   {
+    "id": "b",
+    "text": "Enforcing"
+   },
+   {
+    "id": "c",
+    "text": "Permissive"
+   }
+  ],
+  "answer": [
+   "b",
+   "c",
+   "a"
+  ],
+  "explanation": "Enforcing blocks and logs violations, Permissive only logs them, Disabled does nothing at all.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l14-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.1"
+  ],
+  "prompt": "PAM stands for ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "Programmable Authentication Modules"
+   },
+   {
+    "id": "b",
+    "text": "Pluggable Authentication Modules"
+   },
+   {
+    "id": "c",
+    "text": "Pluggable Authorization Modules"
+   },
+   {
+    "id": "d",
+    "text": "Practical Authentication Modules"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "PAM stands for Pluggable Authentication Modules.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q02",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "3.1"
+  ],
+  "prompt": "Put the PAM directives in the order from strictest (top) to most open (bottom).",
+  "options": [
+   {
+    "id": "a",
+    "text": "optional"
+   },
+   {
+    "id": "b",
+    "text": "required"
+   },
+   {
+    "id": "c",
+    "text": "requisite"
+   },
+   {
+    "id": "d",
+    "text": "sufficient"
+   }
+  ],
+  "answer": [
+   "c",
+   "b",
+   "d",
+   "a"
+  ],
+  "explanation": "requisite fails immediately, required must pass but the rest of the stack still runs, sufficient can grant success early on its own, and optional barely affects the result.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.1",
+   "3.3"
+  ],
+  "prompt": "Think back to previous class and combine it with what you learned today. \n\nWhich of these lines in the example PAM config could block root from logging in with SSH, without blocking the console?\n\n1: auth      required  pam_securetty.so \n2: auth      required  pam_unix.so shadow nullok \n3: auth      required  pam_nologin.so\n4: account   required  pam_unix.so \n5: password  required  pam_cracklib.so retry=3 \n6: password  required  pam_unix.so shadow nullok use_authtok \n7: session   required  pam_unix.so",
+  "options": [
+   {
+    "id": "a",
+    "text": "Line 1"
+   },
+   {
+    "id": "b",
+    "text": "Line 3"
+   },
+   {
+    "id": "c",
+    "text": "Line 6"
+   },
+   {
+    "id": "d",
+    "text": "Line 7"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "pam_securetty only lets root log in from terminals listed in /etc/securetty (the consoles), so root via SSH's pseudo-terminal is refused while the console still works. pam_nologin blocks all non-root users when /etc/nologin exists.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "3.3",
+   "3.2"
+  ],
+  "prompt": "My server has two IP addresses, 172.14.30.105 and 192.168.10.105. I want to make sure that the SSH daemon on THIS server can only be accessed on the internal (192.168.10.x) network. Which options (one or more) can I use?",
+  "options": [
+   {
+    "id": "a",
+    "text": "sshd_config"
+   },
+   {
+    "id": "b",
+    "text": "IPTables"
+   },
+   {
+    "id": "c",
+    "text": "TCP Wrappers"
+   },
+   {
+    "id": "d",
+    "text": "/etc/hosts"
+   }
+  ],
+  "answer": [
+   "a",
+   "b",
+   "c"
+  ],
+  "explanation": "`ListenAddress 192.168.10.105` in sshd_config, an iptables rule, or TCP Wrappers (hosts.allow/hosts.deny) can each restrict SSH to the internal network. /etc/hosts is only name resolution.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "I want to change the port for SSHd on my server. I can do this via /etc/services.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "False: /etc/services is just a name-to-port lookup table. The sshd listening port is set with `Port` in /etc/ssh/sshd_config.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "prompt": "Which of these two is the \"polite\" (user friendly, helpful) policy to refuse incoming traffic with your firewall?",
+  "options": [
+   {
+    "id": "a",
+    "text": "DROP"
+   },
+   {
+    "id": "b",
+    "text": "REJECT"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "REJECT sends an error back so the client fails immediately; DROP silently discards packets and leaves the client waiting for a timeout.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q07",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "5.3",
+   "3.2"
+  ],
+  "prompt": "Tim is checking out their firewall rules because users are complaining that SSH to the server isn't working. He sees these rules are active. \n\nCopy and paste the WHOLE command with the mistake and then make the required CORRECTION.\n\niptables -A INPUT -i eth0 -p tcp --dport 21 -m state --state NEW,ESTABLISHED -j ACCEPT\niptables -A OUTPUT -o eth0 -p tcp --sport 21 -m state --state ESTABLISHED -j ACCEPT\niptables -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT \niptables -A OUTPUT -o eth0 -p tcp --sport 23 -m state --state ESTABLISHED -j ACCEPT\niptables -P INPUT DROP \niptables -P FORWARD DROP \niptables -P OUTPUT DROP",
+  "accept": [
+   "iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT",
+   "sudo iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT"
+  ],
+  "caseSensitive": true,
+  "explanation": "The OUTPUT rule for SSH replies uses source port 23 (telnet) instead of 22, so with OUTPUT policy DROP the server's SSH replies never leave. Change `--sport 23` to `--sport 22`.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q08",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.4"
+  ],
+  "prompt": "MFA stands for ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "Mother F^$#@! Apples"
+   },
+   {
+    "id": "b",
+    "text": "Multi Factor Access"
+   },
+   {
+    "id": "c",
+    "text": "Multi Factor Authentication"
+   },
+   {
+    "id": "d",
+    "text": "Major Factor Authentication"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "MFA is Multi Factor Authentication: combining something you know, have and/or are.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l14-q09",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.6"
+  ],
+  "prompt": "/etc/issue and /etc/motd are which kind of security controls?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Deterrent (they try to discourage someone)"
+   },
+   {
+    "id": "b",
+    "text": "Preventive (they try to prevent a hack)"
+   },
+   {
+    "id": "c",
+    "text": "Corrective (they try to reverse the impact)"
+   },
+   {
+    "id": "d",
+    "text": "Detective (they alert on unwanted behavior)"
+   },
+   {
+    "id": "e",
+    "text": "Compensating (we can't prevent or fix something so let's do X instead)"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Login banners warn that access is monitored and unauthorised use is prohibited; they discourage but do not technically stop, detect or correct anything.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l15-q01",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "5.5"
+  ],
+  "prompt": "This Linux system is ... (choose all that apply)",
+  "image": "images/ab26fb5c-68c9-4a9c-b146-062f6919ef39.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Low on RAM."
+   },
+   {
+    "id": "b",
+    "text": "Actively using its swap space."
+   },
+   {
+    "id": "c",
+    "text": "Overloaded with processes."
+   },
+   {
+    "id": "d",
+    "text": "Perfectly fine."
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Load average is ~0, CPU is 97% idle, 2.3GiB of memory is available and only 2.5MiB of swap has ever been touched: the system is healthy.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l15-q02",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "5.5"
+  ],
+  "prompt": "This Linux system is ... (choose all that apply)",
+  "image": "images/f2c41f22-9c1f-49c2-97e4-a573ce66dd92.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Low on RAM."
+   },
+   {
+    "id": "b",
+    "text": "Actively using its swap space."
+   },
+   {
+    "id": "c",
+    "text": "Overloaded with processes."
+   },
+   {
+    "id": "d",
+    "text": "Perfectly fine."
+   }
+  ],
+  "answer": [
+   "b",
+   "d"
+  ],
+  "explanation": "The graded form marks \"actively using its swap space\" and \"perfectly fine\" as correct: some swap use with memory still available is normal, not a sign of trouble.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l15-q03",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "5.5"
+  ],
+  "prompt": "This Linux system is ... (choose all that apply)",
+  "image": "images/dc5d2134-2c02-44ab-9f6d-c076c83f8cae.jpg",
+  "options": [
+   {
+    "id": "a",
+    "text": "Low on RAM."
+   },
+   {
+    "id": "b",
+    "text": "Actively using its swap space."
+   },
+   {
+    "id": "c",
+    "text": "Overloaded with processes."
+   },
+   {
+    "id": "d",
+    "text": "Perfectly fine."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "Both cores are at 69-100% and the load average (2.04) is at or above the number of CPUs, while memory is only 1.57G of 4.85G and there is no swap at all: it is CPU-bound, not memory-bound.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l15-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "5.2"
+  ],
+  "prompt": "What's up with /dev/vda1?",
+  "image": "images/659324e9-8440-4fe8-816d-d3eb6b1a52a0.jpg",
+  "options": [
+   {
+    "id": "a",
+    "text": "It's running low on disk space."
+   },
+   {
+    "id": "b",
+    "text": "It's running low on inodes."
+   },
+   {
+    "id": "c",
+    "text": "Nothing much, looks good."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`df -T` shows 72% of the space used and `df -Ti` shows only 2% of inodes used; neither is close to full.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l15-q05",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "This volume group ... (choose all that apply)",
+  "image": "images/1e30d17b-b968-41ad-9a2a-b605c8507491.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Has one or more logical volumes."
+   },
+   {
+    "id": "b",
+    "text": "Has one or more physical volumes."
+   },
+   {
+    "id": "c",
+    "text": "Is low on storage space."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Cur PV is 4 so it has physical volumes, but Cur LV is 0 (no logical volumes) and all 2044 extents / 7.98GiB are still free, so it is not low on space.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l15-q06",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "5.5"
+  ],
+  "prompt": "Based on these \"iostat\" averages, what can you say? (choose all that apply)",
+  "image": "images/32b512a1-9ae3-4074-99d7-920912f04835.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "/dev/sdb is mostly being written to."
+   },
+   {
+    "id": "b",
+    "text": "/dev/sdb is the most active disk."
+   },
+   {
+    "id": "c",
+    "text": "/dev/sdb is doing a lot of \"sequential\" reads."
+   },
+   {
+    "id": "d",
+    "text": "/dev/sdc is mostly doing nothing."
+   }
+  ],
+  "answer": [
+   "c",
+   "d"
+  ],
+  "explanation": "sdb has a high rrqm/s (67.86 merged read requests) and a large average request size, which indicates sequential reads, and sdc shows essentially zero activity. sda actually does more I/O (93 tps, 13.7 MB/s written) so sdb is not the busiest; sdb writes about twice as much as it reads (7.29 vs 3.67 MB/s) so 'mostly being written to' is arguable and might also be intended.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l15-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "5.3"
+  ],
+  "prompt": "Which of these connection errors is almost guaranteed to be caused by a firewall?",
+  "options": [
+   {
+    "id": "a",
+    "text": "No route to host."
+   },
+   {
+    "id": "b",
+    "text": "Host fedora not found."
+   },
+   {
+    "id": "c",
+    "text": "Connection refused."
+   },
+   {
+    "id": "d",
+    "text": "Connection timeout."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The graded form marks \"Connection refused\" as the firewall signature: a REJECT rule answers immediately, where a DROP rule would give a timeout.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l15-q08",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "5.4"
+  ],
+  "prompt": "This error message is MOST likely caused by ...\n\ntess@ubuntu $ python -m http.server 80\n... <15 lines removed >\nFile \"/usr/lib64/python3.8/socketserver.py\", line 466, in server_bind\nself.socket.bind(self.server_address)\nPermissionError: [Errno 13] Permission denied",
+  "options": [
+   {
+    "id": "a",
+    "text": "SELinux is preventing your bind."
+   },
+   {
+    "id": "b",
+    "text": "A firewall is blocking you."
+   },
+   {
+    "id": "c",
+    "text": "Port 80 is already in use."
+   },
+   {
+    "id": "d",
+    "text": "You're using the wrong user account."
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Ports below 1024 are privileged, so an ordinary user (tess) cannot bind port 80; run it as root/with sudo or pick a high port. A port in use would give 'Address already in use', and firewalls do not affect bind().",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-l16-q01",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "5.4"
+  ],
+  "prompt": "Your colleague Tess is trying to SSH to host Ubuntu. Their login fails, with the error \"Permission denied, please try again.\"\n\nWhat could be the cause of this situation? (Choose ALL that apply)",
+  "options": [
+   {
+    "id": "a",
+    "text": "They're using the wrong user account name."
+   },
+   {
+    "id": "b",
+    "text": "They're using the wrong password."
+   },
+   {
+    "id": "c",
+    "text": "Their account is expired / blocked."
+   },
+   {
+    "id": "d",
+    "text": "Their account is not in AllowUsers, or AllowGroups."
+   },
+   {
+    "id": "e",
+    "text": "Their password has expired."
+   }
+  ],
+  "answer": [
+   "a",
+   "b",
+   "c",
+   "d"
+  ],
+  "explanation": "sshd deliberately gives the same 'Permission denied' for an unknown user, a wrong password, a locked/expired account and a user excluded by AllowUsers/AllowGroups. An expired password instead prompts the user to change it after authenticating.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l16-q02",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "5.3"
+  ],
+  "prompt": "Your colleague Tess is again trying to login via SSH, now to a web server. Their login fails, with the error \"No route to host.\"\n\nWhat could be the cause of this situation? (Choose ALL that apply)",
+  "options": [
+   {
+    "id": "a",
+    "text": "A mistake in the routing table(s)."
+   },
+   {
+    "id": "b",
+    "text": "A firewall is blocking the traffic."
+   },
+   {
+    "id": "c",
+    "text": "The SSH daemon is down / stopped."
+   },
+   {
+    "id": "d",
+    "text": "The hostname is not known in DNS."
+   },
+   {
+    "id": "e",
+    "text": "The target server has shutdown"
+   },
+   {
+    "id": "f",
+    "text": "The target server's NIC (network card) is disconnected."
+   }
+  ],
+  "answer": [
+   "a",
+   "b",
+   "e",
+   "f"
+  ],
+  "explanation": "'No route to host' means the packets could not be delivered to the host: bad routing, a firewall rejecting with ICMP host-prohibited, or the target being off or unplugged (ARP fails). A stopped sshd gives 'Connection refused' and a DNS problem gives 'Could not resolve hostname'.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l16-q03",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.3",
+   "5.4"
+  ],
+  "prompt": "You have logged in to a remote system via SSH. After a few minutes of working, your connection is no longer responding. There's probably a network outage. \n\nHow can you exit your SSH client, which is now stuck? (Choose ALL that apply)",
+  "options": [
+   {
+    "id": "a",
+    "text": "Ctrl-C in the SSH client"
+   },
+   {
+    "id": "b",
+    "text": "Kill the SSH client from another terminal."
+   },
+   {
+    "id": "c",
+    "text": "Close the terminal window with the stuck SSH."
+   },
+   {
+    "id": "d",
+    "text": "Press enter, then type: ~."
+   }
+  ],
+  "answer": [
+   "b",
+   "c",
+   "d"
+  ],
+  "explanation": "Ctrl-C is just sent down the dead connection to the remote side. Killing the ssh process, closing the terminal window, or the client escape sequence Enter `~.` all end the stuck client locally.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l16-q04",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "5.4",
+   "3.3"
+  ],
+  "prompt": "Your colleague Tim is trying to run \"sudo fdisk\", but gets an error message stating \"Sorry, user tim is not allowed to execute '/usr/sbin/fdisk' as root on server123.\"\n\nWhat could be the cause of this issue? (Choose ALL that apply)",
+  "options": [
+   {
+    "id": "a",
+    "text": "Tim is mis-typing his password."
+   },
+   {
+    "id": "b",
+    "text": "Tim is running fdisk from the \"wrong\" path."
+   },
+   {
+    "id": "c",
+    "text": "The ruleset of sudo has the wrong fdisk path."
+   },
+   {
+    "id": "d",
+    "text": "The file permissions on fdisk are wrong."
+   },
+   {
+    "id": "e",
+    "text": "Tim's user account, or group(s) do not have a sudo rule for fdisk."
+   }
+  ],
+  "answer": [
+   "b",
+   "c",
+   "e"
+  ],
+  "explanation": "This message means authentication succeeded but no sudoers rule matches that exact command path: Tim has no rule for fdisk, or the rule names a different path than the fdisk binary he ran. A wrong password gives 'Sorry, try again', and file permissions are not involved.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l16-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "5.4",
+   "3.1"
+  ],
+  "prompt": "How SHOULD you check if a user's login password is in fact correct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Ask for their password and try it."
+   },
+   {
+    "id": "b",
+    "text": "Check their password against /etc/shadow."
+   },
+   {
+    "id": "c",
+    "text": "Check the logs for recent login attempts."
+   },
+   {
+    "id": "d",
+    "text": "Just reset the password to what they say it is."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "Check the authentication logs (/var/log/auth.log, /var/log/secure, journalctl) for failed logins. You never ask for a user's password, and /etc/shadow only holds hashes you cannot simply compare by eye.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l16-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "prompt": "Kelly has set a variable in their Bash shell. She's running a shell script from the prompt, which isn't picking up the variable. What could be wrong?",
+  "options": [
+   {
+    "id": "a",
+    "text": "She's using the wrong shell."
+   },
+   {
+    "id": "b",
+    "text": "The variable wasn't exported."
+   },
+   {
+    "id": "c",
+    "text": "The variable has the wrong access permissions."
+   },
+   {
+    "id": "d",
+    "text": "The shell script has the wrong FACL."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "A script runs in a child process, which only inherits variables that were exported to the environment.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l16-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "5.4",
+   "3.3"
+  ],
+  "prompt": "Your colleague Patrick is trying to SSH into server123, using key authentication. This is failing, he's not allowed to login. \n\nYou check /home/patrick/.ssh ON server123 and see the following:\n\nserver123 $ sudo ls -al /home/patrick/.ssh\ndrwx------   2  patrick patrick   4096   Apr   1  13:11   .\ndrwxr-x---   8  patrick patrick   4096   Apr   1  13:11   ..\n-rw-rw-rw-  1  patrick patrick     738   Jun 24  20:04   authorized_keys\n-rw-------    1  patrick patrick.   1110  Jun 24  18:03    known_host \n-rw-rw-rw-  1  patrick patrick.   1110  Jun 24  18:03    id_rsa\n-rw-r--r--    1  patrick patrick.   1110  Jun 24  18:03    id_rsa.pub \n\nWhich file is the problem?",
+  "options": [
+   {
+    "id": "a",
+    "text": "."
+   },
+   {
+    "id": "b",
+    "text": "authorized_keys"
+   },
+   {
+    "id": "c",
+    "text": "known_hosts"
+   },
+   {
+    "id": "d",
+    "text": "id_rsa"
+   },
+   {
+    "id": "e",
+    "text": "id_rsa.pub"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "authorized_keys is world-writable (rw-rw-rw-), so sshd's StrictModes refuses to use it; it should be 600. The id_rsa on the server is also too open but is not used for an incoming login.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l17-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "prompt": "You are shown a configuration file with a lot of spaces and minus-signs \"-\" at the start of their lines, for example::\n\n- name: update web servers\n  hosts: webservers\n  tasks:\n  - name: update Apache\n    yum:\n      name: httpd\n      state: latest\n\nThis is most likely a file in which format?",
+  "options": [
+   {
+    "id": "a",
+    "text": "JSON"
+   },
+   {
+    "id": "b",
+    "text": "CSV"
+   },
+   {
+    "id": "c",
+    "text": "YAML"
+   },
+   {
+    "id": "d",
+    "text": "XML"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "Indentation-based structure with `- ` list items and `key: value` pairs is YAML (this is an Ansible playbook).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l17-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "prompt": "You are shown a configuration file with many curly braces \"{...}\" and key:value pairs. For example:\n\"deployment\": {\n  \"files\": {\n    \"my-resource-file1\": {\n      \"sourceUrl\": \"https://storage.googleapis.com/[MY_BUCKET_ID]/my-application/my-resource-file1\"\n    },\n  }\n},\n\nThis is most likely the file format:",
+  "options": [
+   {
+    "id": "a",
+    "text": "JSON"
+   },
+   {
+    "id": "b",
+    "text": "CSV"
+   },
+   {
+    "id": "c",
+    "text": "YAML"
+   },
+   {
+    "id": "d",
+    "text": "XML"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Curly braces with quoted \"key\": \"value\" pairs are JSON.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l17-q03",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "4.1"
+  ],
+  "prompt": "To manage Ansible configurations you use ... [Choose one or more]",
+  "options": [
+   {
+    "id": "a",
+    "text": "Inventory files"
+   },
+   {
+    "id": "b",
+    "text": "Cookbooks"
+   },
+   {
+    "id": "c",
+    "text": "Playbooks"
+   },
+   {
+    "id": "d",
+    "text": "Shell scripts"
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "Ansible uses inventory files (which hosts) and playbooks (what to do). Cookbooks belong to Chef.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l17-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "prompt": "When you apply an Ansible playbook more than once ...",
+  "options": [
+   {
+    "id": "a",
+    "text": "It changes everything!"
+   },
+   {
+    "id": "b",
+    "text": "Things should not change after the first run."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Ansible playbooks are meant to be idempotent: once the desired state is reached, re-running reports no further changes.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l17-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.6"
+  ],
+  "prompt": "Docker and Podman (mostly) use the same sub-commands.",
+  "options": [
+   {
+    "id": "a",
+    "text": "True"
+   },
+   {
+    "id": "b",
+    "text": "False"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "True: Podman is designed as a drop-in replacement with the same CLI (`podman run`, `ps`, `build`...), to the point that `alias docker=podman` mostly works.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-l17-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.6"
+  ],
+  "prompt": "Podman and Docker aren't completely the same! Which one of the two requires either root access, or the permissions of a specific user group?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Docker"
+   },
+   {
+    "id": "b",
+    "text": "Podman"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Docker talks to a root-owned daemon, so you need root or membership of the `docker` group. Podman is daemonless and runs rootless as an ordinary user.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.2",
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "If I want to SSH to the Fedora VM, from 192.168.1.0/24, will the \"normal\" router need a port forward to allow that?",
+  "image": "images/c83f3788-ae30-4660-90b4-b4a0bab1b6a2.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Yes"
+   },
+   {
+    "id": "b",
+    "text": "No"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "The 'normal' router just routes between 192.168.1.0/24 and 192.168.174.0/24, so Fedora's address is directly reachable; only a route is needed, no port forward.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "If I want to SSH to the Ubuntu VM, from 192.168.1.0/24, will the NAT router need a port forward to allow that?",
+  "image": "images/c83f3788-ae30-4660-90b4-b4a0bab1b6a2.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Yes"
+   },
+   {
+    "id": "b",
+    "text": "No"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Ubuntu sits on the private side of a NAT router, so its 10.0.2.4 address is not reachable from outside; a port forward on the NAT router is required.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Which \"ingress IP\" should the NAT router's port forward listen on, so computers in 192.168.0.0/16 kan access it?",
+  "image": "images/c83f3788-ae30-4660-90b4-b4a0bab1b6a2.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "192.168.1.1"
+   },
+   {
+    "id": "b",
+    "text": "192.168.1.81"
+   },
+   {
+    "id": "c",
+    "text": "192.168.1.183"
+   },
+   {
+    "id": "d",
+    "text": "10.0.2.2"
+   },
+   {
+    "id": "e",
+    "text": "127.0.0.1"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The port forward must listen on the NAT router's outside interface, 192.168.1.183. 10.0.2.2 is its inside address and 192.168.1.81 belongs to the other router.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Which IP should be set as the default gateway/router, for the Fedora VM?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "192.168.174.1"
+   },
+   {
+    "id": "b",
+    "text": "192.168.174.128"
+   },
+   {
+    "id": "c",
+    "text": "192.168.1.81"
+   },
+   {
+    "id": "d",
+    "text": "192.168.1.1"
+   },
+   {
+    "id": "e",
+    "text": "192.168.1.183"
+   },
+   {
+    "id": "f",
+    "text": "10.0.2.2"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "A default gateway must be on the host's own subnet: for Fedora (192.168.174.128) that is the normal router's interface 192.168.174.1.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q08",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Which IP should be set as the default gateway/router, for the \"ordinary\" router?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "192.168.174.1"
+   },
+   {
+    "id": "b",
+    "text": "192.168.174.128"
+   },
+   {
+    "id": "c",
+    "text": "192.168.1.81"
+   },
+   {
+    "id": "d",
+    "text": "192.168.1.1"
+   },
+   {
+    "id": "e",
+    "text": "192.168.1.183"
+   },
+   {
+    "id": "f",
+    "text": "10.0.2.2"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "The ordinary router sends everything it does not know towards the Internet router at 192.168.1.1.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q09",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Which IP should be set as the default gateway/router, for the NAT router?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "192.168.174.1"
+   },
+   {
+    "id": "b",
+    "text": "192.168.174.128"
+   },
+   {
+    "id": "c",
+    "text": "192.168.1.81"
+   },
+   {
+    "id": "d",
+    "text": "192.168.1.1"
+   },
+   {
+    "id": "e",
+    "text": "192.168.1.183"
+   },
+   {
+    "id": "f",
+    "text": "10.0.2.2"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "The NAT router's upstream is the Internet router on 192.168.1.0/24, i.e. 192.168.1.1.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q10",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Which IP should be set as the default gateway/router, for the Ubuntu VM?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "192.168.174.1"
+   },
+   {
+    "id": "b",
+    "text": "192.168.174.128"
+   },
+   {
+    "id": "c",
+    "text": "192.168.1.81"
+   },
+   {
+    "id": "d",
+    "text": "192.168.1.1"
+   },
+   {
+    "id": "e",
+    "text": "192.168.1.183"
+   },
+   {
+    "id": "f",
+    "text": "10.0.2.2"
+   }
+  ],
+  "answer": [
+   "f"
+  ],
+  "explanation": "Ubuntu (10.0.2.4) uses the NAT router's inside interface on its own subnet, 10.0.2.2.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q11",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.2",
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Is it possible to directly connect to the Ubuntu VM, from the 192.168.1.0/24 network, with just a simple routing instruction?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Yes"
+   },
+   {
+    "id": "b",
+    "text": "No"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "No: the NAT router does not pass traffic from 192.168.1.0 into its private 10.0.2.0 network, so a route alone is not enough; a port forward is needed.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q12",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Is it possible to directly connect to the Fedora VM, from the 192.168.1.0/24 network, with just a simple routing instruction?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Yes"
+   },
+   {
+    "id": "b",
+    "text": "No"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Yes: Fedora is behind an ordinary router, so a route for 192.168.174.0/24 via 192.168.1.81 is enough.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q13",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4",
+   "3.2"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Is it possible to directly connect to the Fedora VM, from the 10.0.2.0/24 network, with just a simple routing instruction?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "Yes"
+   },
+   {
+    "id": "b",
+    "text": "No"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Yes: outbound traffic from 10.0.2.0/24 is allowed through the NAT router (source-NATed to 192.168.1.183); it only needs a route to 192.168.174.0/24 via 192.168.1.81.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q14",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it.",
+  "prompt": "Which IP should be set on the NAT router, as the gateway/router for 192.168.174.0/24?",
+  "image": "images/52eeb72d-3898-400f-b684-5785cf2f3999.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "192.168.174.1"
+   },
+   {
+    "id": "b",
+    "text": "192.168.174.128"
+   },
+   {
+    "id": "c",
+    "text": "192.168.1.81"
+   },
+   {
+    "id": "d",
+    "text": "192.168.1.1"
+   },
+   {
+    "id": "e",
+    "text": "192.168.1.183"
+   },
+   {
+    "id": "f",
+    "text": "10.0.2.2"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "From the NAT router, the next hop towards 192.168.174.0/24 is the ordinary router's interface on the shared network: 192.168.1.81.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q16",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
+  "prompt": "I want to SSH from the Ubuntu VM, to the Ubuntu VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
+  "image": "images/aeca5b9f-2a62-4b0f-b9e0-560332a910f5.png",
+  "accept": [
+   "10.0.2.4:22",
+   "127.0.0.1:22",
+   "localhost:22"
+  ],
+  "caseSensitive": true,
+  "explanation": "From the Ubuntu VM itself you connect straight to its own address (or loopback) on the normal SSH port 22; no NAT is involved.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q17",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "3.2"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
+  "prompt": "I want to SSH from 192.168.1.0/24, to the Ubuntu VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
+  "image": "images/aeca5b9f-2a62-4b0f-b9e0-560332a910f5.png",
+  "accept": [
+   "192.168.1.183:2222"
+  ],
+  "caseSensitive": true,
+  "explanation": "Ubuntu is only reachable from outside through the NAT router's port forward, which listens on 192.168.1.183:2222.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q18",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "3.2",
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
+  "prompt": "I want to SSH from the Fedora VM, to the Ubuntu VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
+  "image": "images/aeca5b9f-2a62-4b0f-b9e0-560332a910f5.png",
+  "accept": [
+   "192.168.1.183:2222"
+  ],
+  "caseSensitive": true,
+  "explanation": "Fedora is also outside the NAT, so it too must use the port forward on 192.168.1.183:2222 (routed there via its gateway).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q20",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
+  "prompt": "I want to SSH from the Fedora VM, to the Fedora VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
+  "image": "images/6ec73213-dfeb-4cd1-a230-cfe4eb2e49d0.png",
+  "accept": [
+   "192.168.174.128:22",
+   "127.0.0.1:22",
+   "localhost:22"
+  ],
+  "caseSensitive": true,
+  "explanation": "From Fedora to itself you use its own address (or loopback) on the normal SSH port 22.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q21",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "1.4"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
+  "prompt": "I want to SSH from the 192.168.1.0/24, to the Fedora VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
+  "image": "images/6ec73213-dfeb-4cd1-a230-cfe4eb2e49d0.png",
+  "accept": [
+   "192.168.174.128:22"
+  ],
+  "caseSensitive": true,
+  "explanation": "Fedora sits behind an ordinary router, so its real address and the normal port 22 are reachable from 192.168.1.0/24.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-bonus-q22",
+  "source": "unixerius",
+  "type": "text",
+  "objectives": [
+   "1.4",
+   "3.2"
+  ],
+  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
+  "prompt": "I want to SSH from the Ubuntu VM, to the Fedora VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
+  "image": "images/6ec73213-dfeb-4cd1-a230-cfe4eb2e49d0.png",
+  "accept": [
+   "192.168.174.128:22"
+  ],
+  "caseSensitive": true,
+  "explanation": "Outbound traffic from Ubuntu passes through the NAT router and is then routed normally, so Fedora's real address and port 22 are used.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-exam04-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.7"
+  ],
+  "prompt": "Jamal, who works in the Linux Cloud team received a support request, to build a new file server, \"file.nosuch.corp\". He created a new virtual machine on the VMWare server and installed the operating system.\n\nWhat is the MOST likely installation source he used to install Ubuntu Linux?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Jamal put the latest Ubuntu Linux DVD-ROM in the VMWare server's DVD drive."
+   },
+   {
+    "id": "b",
+    "text": "Jamal used an ISO image of the installation DVD."
+   },
+   {
+    "id": "c",
+    "text": "Jamal used an OSI image of the installation DVD."
+   },
+   {
+    "id": "d",
+    "text": "Jamal used a compressed ZIP file of the installation DVD."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Virtual machines are normally installed from an ISO image attached as a virtual DVD drive; no physical disc is needed. 'OSI' is the network model, not an image format.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "prompt": "Jamal is asked to make sure new user accounts on the server file.nosuch.corp have a file called \"welcome.txt\" in their new home directories. This file will contain a short explanation on how to use the server and whom to contact for help.\n\nWhat is Jamal's BEST option to achieve this goal?",
+  "options": [
+   {
+    "id": "a",
+    "text": "He changes the \"adduser\" script to always create the \"welcome.txt\" file."
+   },
+   {
+    "id": "b",
+    "text": "He adds the \"welcome.txt\" file to the user's Git repository."
+   },
+   {
+    "id": "c",
+    "text": "He adjusts \"/etc/bash_profile\" to create the \"welcome.txt' file if it does not exist yet."
+   },
+   {
+    "id": "d",
+    "text": "He adds the file \"welcome.txt\" to \"/etc/skel/\"."
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Everything in /etc/skel is copied into each new home directory when the account is created with a home directory.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "Jamal's colleague Petra is asked to create a data directory \"/var/data\", which is shared by by the people in the \"devops\" group. Petra has logged in to the server files.nosuch.corp.\n\nWhich of the following commands is NOT needed to setup the shared data directory?",
+  "options": [
+   {
+    "id": "a",
+    "text": "sudo mkdir /var/data"
+   },
+   {
+    "id": "b",
+    "text": "sudo chgrp devops /var/data"
+   },
+   {
+    "id": "c",
+    "text": "sudo chown bill /var/data"
+   },
+   {
+    "id": "d",
+    "text": "sudo chmod 2775 /var/data"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "A group-shared directory needs mkdir, chgrp devops and chmod 2775 (setgid + group write). Making bill the owner is not needed.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "prompt": "Ann works in the IAM (identity and access management) team. A new support ticket was assigned to her: she is asked to create a new user account for Bill on server file.nosuch.corp. Bill will be working as DevOps engineer, working on programming tasks.\n\nWhich command is BEST suited to making an account for Bill, placing him in the group \"devops\" and having his account ready to start work?",
+  "options": [
+   {
+    "id": "a",
+    "text": "sudo useradd bill -g devops"
+   },
+   {
+    "id": "b",
+    "text": "sudo adduser bill"
+   },
+   {
+    "id": "c",
+    "text": "sudo useradd -g devops -m bill"
+   },
+   {
+    "id": "d",
+    "text": "sudo useradd -g devops bill"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`useradd -g devops -m bill` sets the primary group and, with `-m`, creates the home directory so the account is ready to use. The variants without `-m` may leave Bill without a home directory.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "prompt": "Bill is a DevOps engineer. He has just received his new account on server file.nosuch.corp. After logging in he sees that his shell is \"/bin/sh\" instead of \"/bin/bash\".\n\nWhat is the MOST likely reason why this happened?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Bash is not configured in \"/etc/shells\"."
+   },
+   {
+    "id": "b",
+    "text": "Bash is not configured as the default shell."
+   },
+   {
+    "id": "c",
+    "text": "Bill's account is not in \"/etc/passwd\"."
+   },
+   {
+    "id": "d",
+    "text": "Bash is not installed on the Linux server."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "useradd assigns the default shell from its defaults (SHELL in /etc/default/useradd) when none is given; here that default is /bin/sh rather than bash.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q06",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.2"
+  ],
+  "prompt": "Bill has submitted a new support case to the IAM (identity and access management) team. He has requested that his shell on server file.nosuch.corp gets changed to /bin/bash.\n\nWhich options does Ann have to change Bill's shell? Choose TWO.",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "Manually change Bill's shell in \"/etc/passwd\"."
+   },
+   {
+    "id": "b",
+    "text": "Manually change Bill's shell in \"/etc/shells\"."
+   },
+   {
+    "id": "c",
+    "text": "Use the \"chshell\" command on Bill's account."
+   },
+   {
+    "id": "d",
+    "text": "Use the \"usermod\" command with the \"-s\" flag on Bill's account."
+   }
+  ],
+  "answer": [
+   "a",
+   "d"
+  ],
+  "explanation": "The login shell is the last field of the user's /etc/passwd line; edit it directly or use `usermod -s /bin/bash bill`. /etc/shells only lists valid shells and `chshell` does not exist (the real command is chsh).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "On his Linux workstation, Bill has generated an SSH key pair. He would like to use this key pair to authenticate when logging in to his account on the server file.nosuch.corp.\n\nWhat should Bill do?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Copy Bill's local \"~/.ssh/authorized_keys\" to \"~/.ssh/authorized_keys\" on the server."
+   },
+   {
+    "id": "b",
+    "text": "Copy Bill's local \"~/.ssh/id_rsa.pub\" to \"~/.ssh/authorized_keys\" on the server."
+   },
+   {
+    "id": "c",
+    "text": "Copy Bill's local \"~/.ssh/authorized_keys\" to \"~/.ssh/id_rsa.pub\" on the server."
+   },
+   {
+    "id": "d",
+    "text": "Copy Bill's local \"~/.ssh/id_rsa.pub\" to \"~/.ssh/id_rsa.pub\" on the server."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "The public key (id_rsa.pub) must be appended to ~/.ssh/authorized_keys in his account on the server, which is what ssh-copy-id does.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q08",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "The screenshot below shows a list of files and directories with their file permissions.\n\nDrag and drop the numerical file permissions into the SAME ORDER as the files in the screenshot (first file/dir at the top of the list, etc).",
+  "image": "images/exam-1-4-q08.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "750"
+   },
+   {
+    "id": "b",
+    "text": "750 (with added ACL)"
+   },
+   {
+    "id": "c",
+    "text": "2755"
+   },
+   {
+    "id": "d",
+    "text": "644"
+   },
+   {
+    "id": "e",
+    "text": "755"
+   },
+   {
+    "id": "f",
+    "text": "4755"
+   }
+  ],
+  "answer": [
+   "c",
+   "e",
+   "a",
+   "d",
+   "b",
+   "f"
+  ],
+  "explanation": "Top to bottom: `.` drwxr-sr-x = 2755 (setgid), `..` drwxr-xr-x = 755, MyFiles drwxr-x--- = 750, hello.txt -rw-r--r-- = 644, script.sh -rwxr-x---@ = 750 with extended attributes/ACL, something -rwsr-xr-x = 4755 (setuid).",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-exam04-q09",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "prompt": "Bill was asked to make fifty project directories under \"/var/data\", having names like \"team1\", \"team2\" all the way through 50. For this he wrote a small shell script with a loop to create these fifty directories.\n\nHowever, the script only creates one directory called \"team$num\" and gives 49 errors that the directory already exists. What is the MOST LIKELY cause of this problem?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Bill put the directory name and variable between single quotes."
+   },
+   {
+    "id": "b",
+    "text": "Bill forgot to increase $num in each round of the loop."
+   },
+   {
+    "id": "c",
+    "text": "Bill is using the wrong variable name."
+   },
+   {
+    "id": "d",
+    "text": "Bill does not have the permissions needed to overwrite the directory."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Single quotes prevent variable expansion, so every iteration tries to create the literal name `team$num`. Use double quotes: \"team$num\".",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q10",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.1"
+  ],
+  "prompt": "Which Linux command was most likely used to create the output shown in the screenshot?",
+  "image": "images/exam-1-4-q10.png",
+  "options": [
+   {
+    "id": "a",
+    "text": "stat"
+   },
+   {
+    "id": "b",
+    "text": "file"
+   },
+   {
+    "id": "c",
+    "text": "type"
+   },
+   {
+    "id": "d",
+    "text": "whatis"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "The output shows each name followed by a content-type guess (ASCII text, shell script, Mach-O binary, directory), which is what `file` prints. `stat` shows inode metadata and `whatis` shows man-page summaries; the graded form marked `type` as wrong.",
+  "answerStatus": "draft"
+ },
+ {
+  "id": "ux-exam04-q11",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "Ann is manually editing a configuration file with the \"vi\" text editor. \"vi\" is in command mode.\n\nHer cursor is currently at the first of five lines of text which she wants to move from their current location, down to the bottom of the file.\n\nWhich is Ann's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Type \"5dd\", then scroll to the bottom and re-type the lines."
+   },
+   {
+    "id": "b",
+    "text": "Type \"dd\" five times, then scroll to the bottom, then type \"p\"."
+   },
+   {
+    "id": "c",
+    "text": "Type\" \"5dd\", then type \"G\", then type \"p\"."
+   },
+   {
+    "id": "d",
+    "text": "Type \"dd\" five times, then type \"G\", then type \"p\"."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`5dd` cuts five lines in one operation into the register, `G` jumps to the last line and `p` pastes below it. Typing `dd` five times leaves only the last deleted line in the register.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q12",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "4.4"
+  ],
+  "prompt": "Given the screenshot below, which TWO commands are needed to update the \"master\" branch with the changes from \"feature1\"?",
+  "image": "images/exam-1-4-q12.png",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "git pull master"
+   },
+   {
+    "id": "b",
+    "text": "git branch master"
+   },
+   {
+    "id": "c",
+    "text": "git checkout master"
+   },
+   {
+    "id": "d",
+    "text": "git pull feature1"
+   },
+   {
+    "id": "e",
+    "text": "git merge master"
+   },
+   {
+    "id": "f",
+    "text": "git merge feature1"
+   }
+  ],
+  "answer": [
+   "c",
+   "f"
+  ],
+  "explanation": "Switch to the branch that should receive the changes (`git checkout master`) and then merge the other branch into it (`git merge feature1`).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam04-q13",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.2",
+   "1.5"
+  ],
+  "prompt": "Jamal set an environment variable on his shell, \"HTTP_PROXY=proxy.nosuch.corp:8080\".\n\nHe finds that the \"curl\" command he uses to download a file from the Internet is not using the proxy server setting from the environment variable. Instead, \"curl\" is trying to make a direct connection to the Internet.\n\nWhat is the MOST likely cause for the problem?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Jamal forgot to export the environment variable."
+   },
+   {
+    "id": "b",
+    "text": "Jamal forgot to use \"sudo\"."
+   },
+   {
+    "id": "c",
+    "text": "Jamal is using the wrong shell."
+   },
+   {
+    "id": "d",
+    "text": "The proxy server is unreachable."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "A plain shell variable is not passed to child processes; it must be exported (`export HTTP_PROXY=...`) for curl to see it.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "prompt": "Richard operates a Linux server which hosts the company website. This server has multiple IP addresses.\n\nWhich command can Richard use to determine if the web server process is bound to the correct IP address?",
+  "options": [
+   {
+    "id": "a",
+    "text": "route"
+   },
+   {
+    "id": "b",
+    "text": "netstat"
+   },
+   {
+    "id": "c",
+    "text": "host"
+   },
+   {
+    "id": "d",
+    "text": "nslookup"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`netstat -tlnp` shows which address and port each listening process is bound to. route shows the routing table; host and nslookup are DNS lookup tools.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "prompt": "Erik is logged in to a remote system via SSH and only has the one, single session which he can use to interact with the remote server.\n\nIt's going to be a bit unwieldy, but Erik wants to run a \"ping\" to test connectivity to google.com, while using the same shell to run a few other commands at the same time. What's Erik's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "bg ping www.google.com"
+   },
+   {
+    "id": "b",
+    "text": "ping www.google.com < results.txt"
+   },
+   {
+    "id": "c",
+    "text": "ping www.google.com ;"
+   },
+   {
+    "id": "d",
+    "text": "ping www.google.com &"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "A trailing `&` runs ping as a background job so the same shell stays usable. `bg` takes a job spec, not a command.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.5",
+   "2.2"
+  ],
+  "prompt": "On the web server, Richard wants to add a new directory to $PATH for all the users on the system. What is Richard's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Edit /etc/profile.d, change the $PATH setting and run \"bash_completion.sh.\""
+   },
+   {
+    "id": "b",
+    "text": "Edit /etc/profile, change the $PATH setting and run \". /etc/profile\"."
+   },
+   {
+    "id": "c",
+    "text": "Edit /etc/profile.d, change the $PATH setting and reboot."
+   },
+   {
+    "id": "d",
+    "text": "Edit /etc/profile, change the $PATH setting and login a new session via SSH."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "/etc/profile is the system-wide login profile (a file; /etc/profile.d is a directory, so those options are wrong), and sourcing it with `. /etc/profile` applies the change immediately without a reboot. The option 'log in a new session' is also workable and might be the intended key.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "prompt": "Erik is back! He now wants to test connectivity to Google.com and get statistics for ten round-trips.",
+  "options": [
+   {
+    "id": "a",
+    "text": "ping -c 10 www.google.com"
+   },
+   {
+    "id": "b",
+    "text": "traceroute -c 10 www.google.com"
+   },
+   {
+    "id": "c",
+    "text": "netstat www.google.com"
+   },
+   {
+    "id": "d",
+    "text": "pathping -c 10 www.google.com"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`ping -c 10` sends exactly ten echo requests and prints round-trip statistics. traceroute has no such `-c` and pathping is a Windows tool.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "Ann is setting up SSH key authentication for her account \"acoulter\" on server \"file.nosuch.corp\". She has already created an RSA key pair on her own workstation.\n\nInto which file, on server \"file.nosuch.corp\", must she copy her public key?",
+  "options": [
+   {
+    "id": "a",
+    "text": "~/.ssh/authorized_keys"
+   },
+   {
+    "id": "b",
+    "text": "~/.ssh/config"
+   },
+   {
+    "id": "c",
+    "text": "~/.ssh/id_rsa.pub"
+   },
+   {
+    "id": "d",
+    "text": "~/.ssh/known_hosts"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "sshd checks the user's ~/.ssh/authorized_keys on the server for accepted public keys. known_hosts stores server host keys on the client side.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "5.4",
+   "5.2"
+  ],
+  "prompt": "Maria is a Linux administrator who has been charged with repairing a broken RedHat Linux server. The server does boot, but it does not start the services that are required. Sudo is also broken and the team have lost the root password as well.\n\nWhat is the BEST way for Maria to regain root access on the broken server?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Boot into a rescue shell, mount the /etc file system in RO-mode and manually edit /etc/shadow."
+   },
+   {
+    "id": "b",
+    "text": "Boot into a rescue shell, mount the /etc/file system in RW-mode and manually edit /etc/passwd."
+   },
+   {
+    "id": "c",
+    "text": "Boot into a rescue shell, mount the /etc file system in RW-mode and change the password with \"passwd root\"."
+   },
+   {
+    "id": "d",
+    "text": "Boot into a rescue shell, mount the /etc file system in RO-mode and unlock the account with \"chage root\"."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The file system holding /etc must be writable (RW) to change anything, and `passwd root` is the proper way to set a new hash in /etc/shadow. RO mounts cannot be edited, and hand-editing /etc/passwd is not the best method.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "4.4",
+   "4.1"
+  ],
+  "prompt": "Piotr has been working on a new feature for the company's webshop software. The project's source code is managed in Git version control. Following his team's way-of-work, all of Piotr's new changes were made in a feature branch, \"feature/SHOP-145\".\n\nPiotr's work has been tested and he's ready to send his changes into the live product. What is Piotr's BEST next step?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Clone the feature branch into the master/main branch."
+   },
+   {
+    "id": "b",
+    "text": "Copy all the changed files and commit them onto the master branch."
+   },
+   {
+    "id": "c",
+    "text": "Merge the feature branch into the master/main branch."
+   },
+   {
+    "id": "d",
+    "text": "Submit a pull request of the feature branch into the master/main branch."
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "in a team workflow with feature branches the next step is a pull (merge) request so the change is reviewed before it lands on master/main. A direct merge is technically what ends up happening and may be the intended key if the instructor was only testing git commands.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q08",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.4"
+  ],
+  "prompt": "Which of the following services assigns IP addresses to systems on the network?",
+  "options": [
+   {
+    "id": "a",
+    "text": "NTP"
+   },
+   {
+    "id": "b",
+    "text": "DNS"
+   },
+   {
+    "id": "c",
+    "text": "DHCP"
+   },
+   {
+    "id": "d",
+    "text": "SSH"
+   },
+   {
+    "id": "e",
+    "text": "Systemd"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "DHCP (Dynamic Host Configuration Protocol) hands out IP addresses, netmask, gateway and DNS settings to clients.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q09",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "prompt": "Piotr is performing local testing on his Linux workstation. He is testing his new feature in the company's webshop code. This code will make connections to \"prod-db.nosuch.corp\", but for his local testing he wants to use a local mock database that runs on his workstation.\n\nHow can Piotr BEST change his workstation configuration, so \"prod-db.nosuch.corp\" will resolve to his localhost?",
+  "options": [
+   {
+    "id": "a",
+    "text": "hostnamectl set-hostname \"127.0.0.1 prod-db.nosuch.corp\""
+   },
+   {
+    "id": "b",
+    "text": "ip addr add 127.0.0.1/24 eth0 && rndc reload prod-db.nosuch.corp"
+   },
+   {
+    "id": "c",
+    "text": "echo \"127.0.0.1 prod-db.nosuch.corp\" | sudo tee -a /etc/resolv.conf"
+   },
+   {
+    "id": "d",
+    "text": "echo \"127.0.0.1 prod-db.nosuch.corp\" | sudo tee -a /etc/hosts"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "An entry in /etc/hosts overrides DNS for that name locally. resolv.conf lists DNS servers, not host entries, and hostnamectl sets the machine's own name.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q10",
+  "source": "unixerius",
+  "type": "multi",
+  "objectives": [
+   "2.2",
+   "3.5"
+  ],
+  "prompt": "Passwords for user accounts on Linux are stored ... (choose TWO)",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "In /etc/passwd."
+   },
+   {
+    "id": "b",
+    "text": "In /etc/shadow."
+   },
+   {
+    "id": "c",
+    "text": "In /etc/skel."
+   },
+   {
+    "id": "d",
+    "text": "In plain text."
+   },
+   {
+    "id": "e",
+    "text": "Encrypted."
+   },
+   {
+    "id": "f",
+    "text": "Hashed."
+   },
+   {
+    "id": "g",
+    "text": "Never."
+   }
+  ],
+  "answer": [
+   "b",
+   "f"
+  ],
+  "explanation": "Passwords are stored in /etc/shadow as salted hashes (one-way), not encrypted or in plain text. /etc/passwd only holds an `x` placeholder.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q11",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.1",
+   "1.5"
+  ],
+  "prompt": "Greg is trying to find all files and directories that are literally called \"services\", under the /etc directory tree. He wants to store a sorted list of these files in /tmp/files.txt.\n\nWhich command is the BEST one to use?",
+  "options": [
+   {
+    "id": "a",
+    "text": "find /etc -name services | sort > /tmp/files"
+   },
+   {
+    "id": "b",
+    "text": "locate /etc -sort services > /tmp/files"
+   },
+   {
+    "id": "c",
+    "text": "find -name services -sort < /tmp/files"
+   },
+   {
+    "id": "d",
+    "text": "find /etc -name services -sort > /tmp/files"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`find /etc -name services` matches the exact name, piping to `sort` orders the list and `>` writes it to the file. find has no `-sort` option.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q12",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "Jamal has downloaded an RPM package for VSFTPD. It's in his home directory, in the Downloads folder and he wants to copy it to \"server12.nosuch.corp\", into the /tmp directory.\n\nWhich command should Jamal use?",
+  "options": [
+   {
+    "id": "a",
+    "text": "scp ~/Downloads/vsftpd.rpm jamal@server12.nosuch.corp /tmp"
+   },
+   {
+    "id": "b",
+    "text": "scp jamal@server12.nosuch.corp ~/Downloads/vsftpd.rpm /tmp"
+   },
+   {
+    "id": "c",
+    "text": "wget jamal@server12.nosuch.corp:/tmp -f ~/Downloads/vsftpd.rpm"
+   },
+   {
+    "id": "d",
+    "text": "scp ~/Downloads/vsftpd.rpm jamal@server12.nosuch.corp:/tmp"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "scp syntax is `scp source user@host:/path`; the colon is what separates the remote host from the remote path.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q13",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "prompt": "Petra created /var/data on server \"files.nosuch.corp\", which will be used by the DevOps team to store shared files. She has already performed \"sudo chgrp devops /var/data\".\n\nFor this purpose, the DevOps team has asked that any files and directories created in /var/data should be owned by the group \"devops\".\n\nWhat is Petra's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "sudo chmod o+s /var/data"
+   },
+   {
+    "id": "b",
+    "text": "sudo chmod g+s /var/data"
+   },
+   {
+    "id": "c",
+    "text": "sudo chmod +s /var/data"
+   },
+   {
+    "id": "d",
+    "text": "sudo chmod u+s /var/data"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "The setgid bit on a directory (`chmod g+s`) makes new files and subdirectories inherit the directory's group. `u+s` is setuid and `o+s` is meaningless.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q14",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "Maria has a CSV file with data, \"/tmp/alldata\". She wants to extract the third column of data from this file, so she can use it as input for other commands.\n\nWhich of these commands will allow Maria to extract a specific column of data from a CSV?",
+  "options": [
+   {
+    "id": "a",
+    "text": "echo"
+   },
+   {
+    "id": "b",
+    "text": "sort"
+   },
+   {
+    "id": "c",
+    "text": "printf"
+   },
+   {
+    "id": "d",
+    "text": "awk"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "awk splits lines into fields, e.g. `awk -F, '{print $3}' /tmp/alldata`. echo, sort and printf cannot select a column.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q15",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "prompt": "Maria wants to append the data she's extracting from the CSV to an existing file /tmp/data3.\n\nWhich is Maria's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "cut -d, -f3 /tmp/alldata << /tmp/data3"
+   },
+   {
+    "id": "b",
+    "text": "cut -d, -f3 /tmp/alldata > /tmp/data3"
+   },
+   {
+    "id": "c",
+    "text": "cut -d, -f3 /tmp/alldata < /tmp/data3"
+   },
+   {
+    "id": "d",
+    "text": "cut -d, -f3 /tmp/alldata >> /tmp/data3"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "`>>` appends to an existing file; `>` would overwrite it, and `<`/`<<` are input redirections.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q16",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "prompt": "Rob wants to download the file https://files.nosuch.corp/contactinfo.txt.\n\nWhich command is Rob's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "scp https://files.nosuch.corp/contactinfo.txt ./contactinfo.txt"
+   },
+   {
+    "id": "b",
+    "text": "ftp https://files.nosuch.corp/contactinfo.txt"
+   },
+   {
+    "id": "c",
+    "text": "cat https://files.nosuch.corp/contactinfo.txt"
+   },
+   {
+    "id": "d",
+    "text": "curl https://files.nosuch.corp/contactinfo.txt"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "curl (like wget) downloads from HTTP(S) URLs. scp, ftp and cat do not speak HTTPS.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam07-q17",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "What is the purpose of the Filesystem Hierarchy Standard?",
+  "options": [
+   {
+    "id": "a",
+    "text": "It defines a common internal structure of inodes for file systems."
+   },
+   {
+    "id": "b",
+    "text": "It is a security model to ensure files are organized based on permissions."
+   },
+   {
+    "id": "c",
+    "text": "It is a distribution neutral description of locations of files and dirs."
+   },
+   {
+    "id": "d",
+    "text": "It provides unified tools to manage file systems."
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The FHS is a distribution-neutral standard describing where files and directories belong (/etc, /var, /usr, ...).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q01",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "prompt": "Richard is installing a PCIe HSM card into NoSuch Corp's new certificate authority server. This new hardware will be used to generate cryptographic keys and to perform certificate signing operations.\n\nAfter installation of the PCIe HSM card's software, Richard needs to load the driver into the kernel.\n\nRichard would like to load the HSM's kernel module, and all of its dependencies with ONE single command. Which command is Richard's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "modprobe"
+   },
+   {
+    "id": "b",
+    "text": "lsmod"
+   },
+   {
+    "id": "c",
+    "text": "insmod"
+   },
+   {
+    "id": "d",
+    "text": "loaddrv"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`modprobe` loads a module together with all modules it depends on. insmod loads only the single file given and lsmod just lists loaded modules.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q02",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1",
+   "5.2"
+  ],
+  "prompt": "Jonathan needs to boot a Linux VM into single user mode. Which of Grub2's boot options is Jonathan's BEST option?",
+  "options": [
+   {
+    "id": "a",
+    "text": "single-user"
+   },
+   {
+    "id": "b",
+    "text": "su"
+   },
+   {
+    "id": "c",
+    "text": "root"
+   },
+   {
+    "id": "d",
+    "text": "single"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "Appending `single` (or `1`, `s`) to the kernel line in GRUB2 boots into single user mode.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q03",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "prompt": "After fixing the problem with the Linux VM, Jonathan reboots the virtual machine as usual. He now wants to make sure that the boot process completed without problems.\n\nWhich command can Jonathan use BEST to read the \"kernel ring buffer\" logs?",
+  "options": [
+   {
+    "id": "a",
+    "text": "cat /var/log/syslog"
+   },
+   {
+    "id": "b",
+    "text": "krblog"
+   },
+   {
+    "id": "c",
+    "text": "dmesg"
+   },
+   {
+    "id": "d",
+    "text": "lsboot"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`dmesg` prints the kernel ring buffer. /var/log/syslog is the general system log and the other two commands do not exist.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q04",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Ann was asked to copy a few files from \"files.nosuch.corp\" onto a portable USB drive.\n\nThe USB drive was formatted as EXT4 and contains one single partition. The drive is connected as /dev/sdb.\n\nWhich command mounts the EXT4 file system on the USB drive, on /mnt/usb?",
+  "options": [
+   {
+    "id": "a",
+    "text": "mount /dev/sdb0 /mnt/usb"
+   },
+   {
+    "id": "b",
+    "text": "mount /dev/sdb1"
+   },
+   {
+    "id": "c",
+    "text": "mount /dev/sdb1 /mnt/usb"
+   },
+   {
+    "id": "d",
+    "text": "mount /dev/sdb /mnt/usb"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "The file system is on the first partition, /dev/sdb1 (partition numbers start at 1), and mount needs both the device and the mount point since there is no fstab entry.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q05",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "What is the maximum amount of PRIMARY partitions on one MBR-partitioned hard drive?",
+  "options": [
+   {
+    "id": "a",
+    "text": "3"
+   },
+   {
+    "id": "b",
+    "text": "4"
+   },
+   {
+    "id": "c",
+    "text": "5."
+   },
+   {
+    "id": "d",
+    "text": "There is no maximum."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "An MBR partition table has four entries, so at most four primary partitions (or three plus one extended).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q06",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Jamal is adding a few new hard drives to \"files.nosuch.corp\". Four new SATA drives were installed and properly detected during booting. The drives are /dev/sdf, /dev/sdg, /dev/sdh and /dev/sdi.\n\nJamal was given the task of adding these four drives to LVM. Which of the following commands should Jamal use FIRST to add the drives to LVM's control?",
+  "options": [
+   {
+    "id": "a",
+    "text": "lvmadd"
+   },
+   {
+    "id": "b",
+    "text": "lvcreate"
+   },
+   {
+    "id": "c",
+    "text": "pvcreate"
+   },
+   {
+    "id": "d",
+    "text": "vgcreate"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`pvcreate` initialises the disks as LVM physical volumes; only then can vgcreate and lvcreate use them.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q07",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1",
+   "5.2"
+  ],
+  "prompt": "Piotr maintains an old PC which is needed to compile and build some very old legacy software their company needs. The PC uses MBR partitioned PATA (IDE) drives.\n\nAfter a hardware failure, Piotr replaced the second PATA drive. He now needs to install the Grub2 bootload onto the MBR of the second PATA drive in the system. What is the BEST command to do this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "grub2-install /dev/hdb2"
+   },
+   {
+    "id": "b",
+    "text": "grub2-install /dev/sdb2"
+   },
+   {
+    "id": "c",
+    "text": "grub2-install /dev/hdb"
+   },
+   {
+    "id": "d",
+    "text": "grub2-install /dev/sdb"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "PATA/IDE drives are named /dev/hdX, so the second one is /dev/hdb, and the MBR belongs to the whole disk, not a partition such as hdb2.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q08",
+  "source": "unixerius",
+  "type": "order",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "When configuring a Linux system to use LVM for its storage systems, you need to run a few commands in a particular order.\n\nPlease put the commands in the right order (first command on top, last command at the bottom).",
+  "options": [
+   {
+    "id": "a",
+    "text": "vgcreate"
+   },
+   {
+    "id": "b",
+    "text": "lvcreate"
+   },
+   {
+    "id": "c",
+    "text": "mkfs"
+   },
+   {
+    "id": "d",
+    "text": "mount"
+   },
+   {
+    "id": "e",
+    "text": "pvcreate"
+   }
+  ],
+  "answer": [
+   "e",
+   "a",
+   "b",
+   "c",
+   "d"
+  ],
+  "explanation": "Create physical volumes, group them into a volume group, carve out a logical volume, make a file system on it, then mount it.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q09",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Ann is working on server \"www.nosuch.corp\". She is investigating the hard drives, partitions and file systems in the system. She notices that /dev/sdc1 is a partition that is not mounted, but it has a file system. It is not automatically mounted at boot-time either.\n\nAnn wants to know how often the file system on /dev/sdc1 has been mounted over the course of its existence. Which command or file can she check to read how often the file system on /dev/sdc1 has been mounted?",
+  "options": [
+   {
+    "id": "a",
+    "text": "tune2fs -l /dev/sdc2"
+   },
+   {
+    "id": "b",
+    "text": "cat /etc/fstab"
+   },
+   {
+    "id": "c",
+    "text": "mount -a"
+   },
+   {
+    "id": "d",
+    "text": "cat /etc/fsmnt"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`tune2fs -l` prints the ext superblock, including 'Mount count'. The option says /dev/sdc2 instead of /dev/sdc1, which looks like a typo, but it is the only option that can show a mount count at all (fstab and `mount -a` cannot, /etc/fsmnt does not exist).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q10",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "prompt": "Jamal has been asked to add a new udev rule, to handle a new piece of hardware on a Linux workstation.\n\nIn which directory would Jamal find the configuration files for the udev service?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/dev"
+   },
+   {
+    "id": "b",
+    "text": "/dev/rules"
+   },
+   {
+    "id": "c",
+    "text": "/etc/udev"
+   },
+   {
+    "id": "d",
+    "text": "/var/udev"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "udev's configuration lives in /etc/udev, with custom rules in /etc/udev/rules.d/.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q11",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "The Linux boot process is quite complicated! There are a lot of steps that happen in sequence, from the moment that you push the power button, until the system is fully booted.\n\nDuring the boot process there is a special file system which is mounted. It's the first Linux file system that is handled in the boot process. Which file system is this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Grub2"
+   },
+   {
+    "id": "b",
+    "text": "initramfs"
+   },
+   {
+    "id": "c",
+    "text": "dmesg"
+   },
+   {
+    "id": "d",
+    "text": "PXE"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "The initramfs is the temporary root file system the kernel mounts first, before the real root. GRUB2 is the boot loader, dmesg a command and PXE a network boot method.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q12",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "When Ann was poking around the file systems and storage devices of server \"www.nosuch.corp\" (see question 9) she used one, single command to list all storage devices with their device paths, file system types and mount points.\n\nWhich command did Ann use?",
+  "options": [
+   {
+    "id": "a",
+    "text": "lsdev"
+   },
+   {
+    "id": "b",
+    "text": "lsusb"
+   },
+   {
+    "id": "c",
+    "text": "lsblk"
+   },
+   {
+    "id": "d",
+    "text": "lspci"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`lsblk` (with `-f`) lists block devices with their paths, file system types and mount points. lsusb and lspci list hardware buses; lsdev is not it.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q13",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "prompt": "The web server support team got an alarm from the SOC: apparently the web server is getting spammed with a DDoS and it's close to becoming unresponsive.\n\nWhich ONE single command can the team use to completely shut down external traffic to the web server.",
+  "options": [
+   {
+    "id": "a",
+    "text": "firewall-cmd --panic-on"
+   },
+   {
+    "id": "b",
+    "text": "firewall-cmd --list-all"
+   },
+   {
+    "id": "c",
+    "text": "firewall-cmd --zone=dangerzone --add-service=samba"
+   },
+   {
+    "id": "d",
+    "text": "iptables -A INPUT -S 192.168.33.24 -j DROP"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`firewall-cmd --panic-on` makes firewalld drop all incoming and outgoing traffic at once. The iptables option only blocks one source address.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q14",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "prompt": "After finishing work on the certificate authority server (question 1), Richard is building a root CA using a laptop and a USB HSM.\n\nRichard wants the Linux OS of the laptop to run a specific program, every single time that the USB HSM is connected to the system.\n\nWhich system service can run programs when hardware is connected to the system?",
+  "options": [
+   {
+    "id": "a",
+    "text": "udev"
+   },
+   {
+    "id": "b",
+    "text": "lsdev"
+   },
+   {
+    "id": "c",
+    "text": "dmesg"
+   },
+   {
+    "id": "d",
+    "text": "mapper"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "udev handles device events and its rules can trigger programs (RUN+=) when matching hardware is plugged in.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q15",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "According to the FHS (Filesystem Hierarchy Standard), under which directory should removable media be mounted?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/mnt"
+   },
+   {
+    "id": "b",
+    "text": "/media"
+   },
+   {
+    "id": "c",
+    "text": "/etc"
+   },
+   {
+    "id": "d",
+    "text": "/tmp"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "The FHS designates /media for removable media; /mnt is for temporarily mounted file systems by the administrator.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q16",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "prompt": "Ann need to expand the file system \"/var/data\" on \"file.nosuch.corp\". Luckily there was still empty space left on the relevant storage device!\n\nWhich ONE, single command can Ann use to resize an existing file system and its underlying partitions without losing data?",
+  "options": [
+   {
+    "id": "a",
+    "text": "resize2fs"
+   },
+   {
+    "id": "b",
+    "text": "fdisk"
+   },
+   {
+    "id": "c",
+    "text": "parted"
+   },
+   {
+    "id": "d",
+    "text": "mkfs"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`parted` is the only listed tool that can resize a partition, and older versions' `resize` command also resized the file system in the same step. On current systems you need parted/growpart for the partition plus resize2fs for the file system, so no option fits cleanly; resize2fs alone only resizes the file system.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q17",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "Which file is used to indicate the local timezone on a Linux system?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/timezone"
+   },
+   {
+    "id": "b",
+    "text": "/etc/profile"
+   },
+   {
+    "id": "c",
+    "text": "/etc/default/timezone"
+   },
+   {
+    "id": "d",
+    "text": "/etc/tz"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "/etc/timezone holds the zone name on Debian-style systems (alongside the /etc/localtime link); the other paths do not exist or are unrelated.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q18",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "Sara needs to double-check the default systemd boot-level target that is set for the workstation \"devops102.nosuch.corp\". She needs to make sure that it's set to \"graphical\".\n\nWhich command should Sara do, to verify the configured default boot target?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl default"
+   },
+   {
+    "id": "b",
+    "text": "systemctl runlevel"
+   },
+   {
+    "id": "c",
+    "text": "ls -al /etc/init.d/boot"
+   },
+   {
+    "id": "d",
+    "text": "systemctl get-default"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "`systemctl get-default` prints the configured default target. `systemctl default` actually switches the running system to the default target.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q19",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "prompt": "Which of the following BEST describes the /proc file system?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/proc contains information about files to be processed."
+   },
+   {
+    "id": "b",
+    "text": "/proc contains variable data such as mail and web files."
+   },
+   {
+    "id": "c",
+    "text": "/proc contains configuration files for processes."
+   },
+   {
+    "id": "d",
+    "text": "/proc has information on currently running processes, including the kernel."
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "/proc is a virtual file system exposing kernel and per-process information (e.g. /proc/cpuinfo, /proc/<pid>/).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q20",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.4"
+  ],
+  "prompt": "Jamal needs to run full software updates on his Debian-based test system. Which command is BEST suited to running OS and software updates on Debian?",
+  "options": [
+   {
+    "id": "a",
+    "text": "yum update"
+   },
+   {
+    "id": "b",
+    "text": "apt-update"
+   },
+   {
+    "id": "c",
+    "text": "apt-get update"
+   },
+   {
+    "id": "d",
+    "text": "apt-get upgrade"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "`apt-get upgrade` installs the newer package versions. `apt-get update` only refreshes the package lists, `apt-update` does not exist and yum is for Red Hat.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q21",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "prompt": "Now that Sara knows what the booting target is for \"devops102.nosuch.corp\", she's wondering whether the SSH daemon is actually up and running.\n\nWhich command can she BEST use to determine both the current and the configured status of sshd?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl status sshd"
+   },
+   {
+    "id": "b",
+    "text": "system show sshd"
+   },
+   {
+    "id": "c",
+    "text": "systemctl sshd"
+   },
+   {
+    "id": "d",
+    "text": "systemcl --list-all"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`systemctl status sshd` shows both whether the unit is active (running now) and whether it is enabled (starts at boot).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "ux-exam12-q22",
+  "source": "unixerius",
+  "type": "single",
+  "objectives": [
+   "1.3",
+   "2.1"
+  ],
+  "prompt": "The first serial ATA (SATA) hard drive in a Linux system has which of these device paths?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/dev/sda"
+   },
+   {
+    "id": "b",
+    "text": "/dev/dska"
+   },
+   {
+    "id": "c",
+    "text": "/dev/hda"
+   },
+   {
+    "id": "d",
+    "text": "/dev/sata"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "SATA (and SCSI/USB) disks use the sd driver: the first is /dev/sda. /dev/hda was for old PATA/IDE drives.",
+  "answerStatus": "verified"
+ }
+]

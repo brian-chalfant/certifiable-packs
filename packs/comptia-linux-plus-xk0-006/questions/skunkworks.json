@@ -1,0 +1,994 @@
+[
+ {
+  "id": "sk-SYS-01",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "topic": "System Management",
+  "prompt": "Which command displays the kernel version and architecture in one line?",
+  "options": [
+   {
+    "id": "a",
+    "text": "uname -a"
+   },
+   {
+    "id": "b",
+    "text": "kernelctl status"
+   },
+   {
+    "id": "c",
+    "text": "sysinfo --all"
+   },
+   {
+    "id": "d",
+    "text": "lsmod -v"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "uname -a prints kernel release, machine arch, and more.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SYS-02",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.1",
+   "2.5"
+  ],
+  "topic": "System Management",
+  "prompt": "Which systemd command shows logs for a service named nginx?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl log nginx"
+   },
+   {
+    "id": "b",
+    "text": "journalctl -u nginx"
+   },
+   {
+    "id": "c",
+    "text": "dmesg -u nginx"
+   },
+   {
+    "id": "d",
+    "text": "logctl --service nginx"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "journalctl -u <unit> queries the systemd journal for that unit.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SYS-03",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "topic": "System Management",
+  "prompt": "Where is a service restart policy most likely configured in systemd?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/sysctl.conf"
+   },
+   {
+    "id": "b",
+    "text": "The unit file (Restart=)"
+   },
+   {
+    "id": "c",
+    "text": "/etc/fstab"
+   },
+   {
+    "id": "d",
+    "text": "/etc/cron.d/"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Restart= lives in the service unit definition.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SYS-04",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "topic": "System Management",
+  "prompt": "Which command changes the systemd boot target to multi-user (CLI) by default?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemctl set-default multi-user.target"
+   },
+   {
+    "id": "b",
+    "text": "systemctl default multi-user"
+   },
+   {
+    "id": "c",
+    "text": "systemctl enable multi-user"
+   },
+   {
+    "id": "d",
+    "text": "initctl set multi-user"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "set-default changes the default target symlink.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SYS-05",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.1"
+  ],
+  "topic": "System Management",
+  "prompt": "Which command shows system boot messages from the current boot in journalctl?",
+  "options": [
+   {
+    "id": "a",
+    "text": "journalctl -b"
+   },
+   {
+    "id": "b",
+    "text": "journalctl --boot=all"
+   },
+   {
+    "id": "c",
+    "text": "journalctl -k"
+   },
+   {
+    "id": "d",
+    "text": "dmesg -b"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "journalctl -b shows messages from the current boot.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-UP-01",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Users & Permissions",
+  "prompt": "A file has permissions -rwsr-xr-x. What does 's' in the user execute position mean?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Sticky bit set"
+   },
+   {
+    "id": "b",
+    "text": "Setuid set"
+   },
+   {
+    "id": "c",
+    "text": "Setgid set"
+   },
+   {
+    "id": "d",
+    "text": "SELinux enforcing"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Setuid means the program runs with file owner's effective UID.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-UP-02",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "topic": "Users & Permissions",
+  "prompt": "Which command adds a new user alex with a home directory and Bash as login shell?",
+  "options": [
+   {
+    "id": "a",
+    "text": "useradd -m -s /bin/bash alex"
+   },
+   {
+    "id": "b",
+    "text": "adduser --shell /bash alex"
+   },
+   {
+    "id": "c",
+    "text": "usermod -a -m alex"
+   },
+   {
+    "id": "d",
+    "text": "mkuser -h /home/alex -s bash alex"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "useradd -m creates home; -s sets the login shell.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-UP-03",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Users & Permissions",
+  "prompt": "Which file controls sudo privileges and should be edited with visudo?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/passwd"
+   },
+   {
+    "id": "b",
+    "text": "/etc/shadow"
+   },
+   {
+    "id": "c",
+    "text": "/etc/sudoers"
+   },
+   {
+    "id": "d",
+    "text": "/etc/profile"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "Use visudo to safely edit /etc/sudoers.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-UP-04",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Users & Permissions",
+  "prompt": "Which command changes ownership of /srv/app to user 'app' and group 'app' recursively?",
+  "options": [
+   {
+    "id": "a",
+    "text": "chmod -R app:app /srv/app"
+   },
+   {
+    "id": "b",
+    "text": "chown -R app:app /srv/app"
+   },
+   {
+    "id": "c",
+    "text": "usermod -R app:app /srv/app"
+   },
+   {
+    "id": "d",
+    "text": "setfacl -R app:app /srv/app"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "chown changes owner/group; -R applies recursively.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-UP-05",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Users & Permissions",
+  "prompt": "What umask value would produce default permissions of 644 for new files?",
+  "options": [
+   {
+    "id": "a",
+    "text": "022"
+   },
+   {
+    "id": "b",
+    "text": "002"
+   },
+   {
+    "id": "c",
+    "text": "077"
+   },
+   {
+    "id": "d",
+    "text": "027"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "New file base is 666; 666-022 => 644.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-FS-01",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.6"
+  ],
+  "topic": "Filesystems & Storage",
+  "prompt": "What does: tar -czf backup.tgz /home/user do?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Creates gzip-compressed tar archive"
+   },
+   {
+    "id": "b",
+    "text": "Extracts gzip-compressed tar archive"
+   },
+   {
+    "id": "c",
+    "text": "Creates bzip2 tar archive"
+   },
+   {
+    "id": "d",
+    "text": "Creates uncompressed tar"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "c=create, z=gzip, f=filename.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-FS-02",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "topic": "Filesystems & Storage",
+  "prompt": "Which command lists mounted filesystems and their usage in a human-readable format?",
+  "options": [
+   {
+    "id": "a",
+    "text": "du -sh"
+   },
+   {
+    "id": "b",
+    "text": "df -h"
+   },
+   {
+    "id": "c",
+    "text": "lsblk -f"
+   },
+   {
+    "id": "d",
+    "text": "mount -l"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "df -h shows filesystem usage by mountpoint.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-FS-03",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "topic": "Filesystems & Storage",
+  "prompt": "Which file contains static filesystem mount definitions for boot-time mounting?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/fstab"
+   },
+   {
+    "id": "b",
+    "text": "/etc/mtab"
+   },
+   {
+    "id": "c",
+    "text": "/etc/exports"
+   },
+   {
+    "id": "d",
+    "text": "/etc/fuse.conf"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "/etc/fstab defines mounts (device/UUID, mountpoint, fs type, options).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-FS-04",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "2.1"
+  ],
+  "topic": "Filesystems & Storage",
+  "prompt": "Which command finds files under /var/log modified in the last 2 days?",
+  "options": [
+   {
+    "id": "a",
+    "text": "find /var/log -type f -mtime -2"
+   },
+   {
+    "id": "b",
+    "text": "locate -mtime 2 /var/log"
+   },
+   {
+    "id": "c",
+    "text": "grep -R \"-2\" /var/log"
+   },
+   {
+    "id": "d",
+    "text": "stat --since 2d /var/log"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "find with -mtime -2 means modified within last 2*24 hours.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-FS-05",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "5.5",
+   "1.3"
+  ],
+  "topic": "Filesystems & Storage",
+  "prompt": "What is the purpose of swap space?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Store logs permanently"
+   },
+   {
+    "id": "b",
+    "text": "Provide virtual memory backing when RAM is constrained"
+   },
+   {
+    "id": "c",
+    "text": "Encrypt disk by default"
+   },
+   {
+    "id": "d",
+    "text": "Accelerate CPU scheduling"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Swap extends memory capacity (at a performance cost) and helps with hibernation.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-NET-01",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Networking",
+  "prompt": "Which ip command shows IP addresses assigned to all interfaces?",
+  "options": [
+   {
+    "id": "a",
+    "text": "ip addr show"
+   },
+   {
+    "id": "b",
+    "text": "ip route list"
+   },
+   {
+    "id": "c",
+    "text": "ip link show"
+   },
+   {
+    "id": "d",
+    "text": "ip neigh show"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "ip addr shows assigned addresses.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-NET-02",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Networking",
+  "prompt": "Which command displays the routing table using modern tooling?",
+  "options": [
+   {
+    "id": "a",
+    "text": "route -n"
+   },
+   {
+    "id": "b",
+    "text": "ip route"
+   },
+   {
+    "id": "c",
+    "text": "netstat -r"
+   },
+   {
+    "id": "d",
+    "text": "ifroute --show"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "ip route is the modern replacement for route.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-NET-03",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Networking",
+  "prompt": "Which file typically configures DNS resolver settings on many systems (if not managed by other services)?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/hosts"
+   },
+   {
+    "id": "b",
+    "text": "/etc/resolv.conf"
+   },
+   {
+    "id": "c",
+    "text": "/etc/nsswitch.conf"
+   },
+   {
+    "id": "d",
+    "text": "/etc/dns.conf"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "/etc/resolv.conf contains nameserver and search directives.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-NET-04",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Networking",
+  "prompt": "Which tool captures network packets for troubleshooting?",
+  "options": [
+   {
+    "id": "a",
+    "text": "tcpdump"
+   },
+   {
+    "id": "b",
+    "text": "ps"
+   },
+   {
+    "id": "c",
+    "text": "top"
+   },
+   {
+    "id": "d",
+    "text": "chage"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "tcpdump captures packets; Wireshark is GUI counterpart.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-NET-05",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Networking",
+  "prompt": "Which command tests TCP connectivity to host example.com on port 443 (common choice)?",
+  "options": [
+   {
+    "id": "a",
+    "text": "curl -I https://example.com"
+   },
+   {
+    "id": "b",
+    "text": "ping -p 443 example.com"
+   },
+   {
+    "id": "c",
+    "text": "nc -vz example.com 443"
+   },
+   {
+    "id": "d",
+    "text": "ip test example.com 443"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "nc (netcat) with -vz checks TCP connect (verbose, zero-I/O).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SEC-01",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "topic": "Security",
+  "prompt": "Which tool commonly manages persistent firewall rules and integrates with nftables on many distros?",
+  "options": [
+   {
+    "id": "a",
+    "text": "firewalld"
+   },
+   {
+    "id": "b",
+    "text": "netstat"
+   },
+   {
+    "id": "c",
+    "text": "strace"
+   },
+   {
+    "id": "d",
+    "text": "lsof"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "firewalld manages zones/rules; backend often nftables.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SEC-02",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Security",
+  "prompt": "What does SELinux primarily provide?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Disk compression"
+   },
+   {
+    "id": "b",
+    "text": "Mandatory Access Control (MAC)"
+   },
+   {
+    "id": "c",
+    "text": "Kernel upgrades"
+   },
+   {
+    "id": "d",
+    "text": "Password hashing"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "SELinux enforces MAC policies beyond traditional DAC permissions.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SEC-03",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Security",
+  "prompt": "Which command generates an SSH keypair using Ed25519?",
+  "options": [
+   {
+    "id": "a",
+    "text": "ssh-keygen -t ed25519"
+   },
+   {
+    "id": "b",
+    "text": "ssh-keygen --rsa 4096"
+   },
+   {
+    "id": "c",
+    "text": "ssh-keyadd -t ed25519"
+   },
+   {
+    "id": "d",
+    "text": "sshgen -ed25519"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "ssh-keygen -t ed25519 creates an Ed25519 key.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SEC-04",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "topic": "Security",
+  "prompt": "Which file stores hashed user passwords on Linux?",
+  "options": [
+   {
+    "id": "a",
+    "text": "/etc/passwd"
+   },
+   {
+    "id": "b",
+    "text": "/etc/shadow"
+   },
+   {
+    "id": "c",
+    "text": "/etc/group"
+   },
+   {
+    "id": "d",
+    "text": "/etc/login.defs"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "/etc/shadow stores password hashes and aging data.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SEC-05",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Security",
+  "prompt": "Which option on chmod sets the sticky bit on a directory?",
+  "options": [
+   {
+    "id": "a",
+    "text": "chmod +s dir"
+   },
+   {
+    "id": "b",
+    "text": "chmod +t dir"
+   },
+   {
+    "id": "c",
+    "text": "chmod +g dir"
+   },
+   {
+    "id": "d",
+    "text": "chmod +u dir"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Sticky bit (+t) restricts delete/rename in shared directories like /tmp.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SCR-01",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "topic": "Scripting & Automation",
+  "prompt": "In Bash, which variable expands to the exit status of the last command?",
+  "options": [
+   {
+    "id": "a",
+    "text": "$0"
+   },
+   {
+    "id": "b",
+    "text": "$?"
+   },
+   {
+    "id": "c",
+    "text": "$$"
+   },
+   {
+    "id": "d",
+    "text": "$!"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "$? is the last command's exit code.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SCR-02",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "topic": "Scripting & Automation",
+  "prompt": "Which cron expression runs a job at 03:15 every day?",
+  "options": [
+   {
+    "id": "a",
+    "text": "15 3 * * *"
+   },
+   {
+    "id": "b",
+    "text": "3 15 * * *"
+   },
+   {
+    "id": "c",
+    "text": "* 3 15 * *"
+   },
+   {
+    "id": "d",
+    "text": "15 * 3 * *"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Minute Hour Day Month Weekday => 15 3 * * *.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SCR-03",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "topic": "Scripting & Automation",
+  "prompt": "Which tool schedules one-time jobs for later execution?",
+  "options": [
+   {
+    "id": "a",
+    "text": "cron"
+   },
+   {
+    "id": "b",
+    "text": "at"
+   },
+   {
+    "id": "c",
+    "text": "systemctl"
+   },
+   {
+    "id": "d",
+    "text": "nohup"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "at schedules one-off tasks; cron is recurring.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SCR-04",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "topic": "Scripting & Automation",
+  "prompt": "What does 'set -e' generally do in a Bash script?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Prints commands before executing"
+   },
+   {
+    "id": "b",
+    "text": "Exits on command failure"
+   },
+   {
+    "id": "c",
+    "text": "Enables job control"
+   },
+   {
+    "id": "d",
+    "text": "Forces interactive shell"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "set -e exits the script when a command returns non-zero (with caveats).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "sk-SCR-05",
+  "source": "skunkworks",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "topic": "Scripting & Automation",
+  "prompt": "Which command pipes stdout of cmdA into cmdB?",
+  "options": [
+   {
+    "id": "a",
+    "text": "cmdA > cmdB"
+   },
+   {
+    "id": "b",
+    "text": "cmdA | cmdB"
+   },
+   {
+    "id": "c",
+    "text": "cmdA < cmdB"
+   },
+   {
+    "id": "d",
+    "text": "cmdA & cmdB"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "| sends stdout of left command into stdin of right command.",
+  "answerStatus": "verified"
+ }
+]

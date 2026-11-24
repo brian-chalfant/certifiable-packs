@@ -1,0 +1,159 @@
+{
+ "format": 1,
+ "id": "comptia-datasys-plus-ds0-002",
+ "title": "CompTIA DataSys+ DS0-002",
+ "subtitle": "Exam objectives document version 3.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 700,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Database Fundamentals",
+   "weight": 19,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Compare and contrast database types and data types."
+    },
+    {
+     "id": "1.2",
+     "title": "Given a scenario, develop, modify, and run Structured Query Language (SQL) code."
+    },
+    {
+     "id": "1.3",
+     "title": "Compare and contrast scripting methods and environments."
+    },
+    {
+     "id": "1.4",
+     "title": "Explain the impact of programming on database performance."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Database Deployment",
+   "weight": 17,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Compare and contrast aspects of database planning and operations."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, implement techniques related to database design and documentation."
+    },
+    {
+     "id": "2.3",
+     "title": "Explain connectivity concepts related to databases."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Database Management and Maintenance",
+   "weight": 18,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Explain the purpose of monitoring and reporting for database management and performance."
+    },
+    {
+     "id": "3.2",
+     "title": "Explain common database maintenance processes."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, implement data management tasks."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Data and Database Security",
+   "weight": 19,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain data security concepts."
+    },
+    {
+     "id": "4.2",
+     "title": "Explain the purpose of governance and regulatory compliance."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, implement policies and best practices related to authentication and authorization."
+    },
+    {
+     "id": "4.4",
+     "title": "Explain the purpose of database security."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Business Continuity",
+   "weight": 14,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Given a scenario, implement backup and restoration processes."
+    },
+    {
+     "id": "5.2",
+     "title": "Explain the importance of disaster recovery (DR) and best practices."
+    },
+    {
+     "id": "5.3",
+     "title": "Compare and contrast fault tolerance operations."
+    }
+   ]
+  },
+  {
+   "id": "6.0",
+   "title": "Data Integration",
+   "weight": 13,
+   "children": [
+    {
+     "id": "6.1",
+     "title": "Given a scenario, use data acquisition techniques and methods."
+    },
+    {
+     "id": "6.2",
+     "title": "Given a scenario, troubleshoot common data acquisition issues."
+    },
+    {
+     "id": "6.3",
+     "title": "Explain emerging technologies and AI concepts related to data integration."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://www.comptia.org/en-us/certifications/datasys/",
+   "note": "Written for this app by an AI model against the official DS0-002 objectives; not independently reviewed. No openly licensed question bank was available for this exam."
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json"
+ ],
+ "questionCount": 380,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Only 380 questions for a 90-question exam",
+   "All questions come from a single source"
+  ]
+ },
+ "icon": "assets/icons/datasys-plus.webp"
+}

@@ -1,0 +1,161 @@
+{
+ "format": 1,
+ "id": "microsoft-sc-900",
+ "title": "Microsoft Security, Compliance, and Identity Fundamentals SC-900",
+ "subtitle": "Skills measured as of October 21, 2026",
+ "exam": {
+  "questions": 40,
+  "minutes": 45,
+  "passScore": 700,
+  "scaleMin": 1,
+  "scaleMax": 1000
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Describe the concepts of security, compliance, and identity",
+   "weight": 13,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Describe security and compliance concepts"
+    },
+    {
+     "id": "1.2",
+     "title": "Define identity concepts"
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Describe the capabilities of Microsoft Entra",
+   "weight": 27,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Describe function and identity types of Microsoft Entra ID"
+    },
+    {
+     "id": "2.2",
+     "title": "Describe authentication capabilities of Microsoft Entra ID"
+    },
+    {
+     "id": "2.3",
+     "title": "Describe access management capabilities of Microsoft Entra ID"
+    },
+    {
+     "id": "2.4",
+     "title": "Describe identity protection and governance capabilities of Microsoft Entra"
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Describe the capabilities of Microsoft security solutions",
+   "weight": 37,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Describe core infrastructure security services in Azure"
+    },
+    {
+     "id": "3.2",
+     "title": "Describe security management capabilities of Azure"
+    },
+    {
+     "id": "3.3",
+     "title": "Describe capabilities of Microsoft Sentinel"
+    },
+    {
+     "id": "3.4",
+     "title": "Describe threat protection with Microsoft Defender XDR"
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Describe the capabilities of Microsoft compliance solutions",
+   "weight": 23,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Describe Microsoft Service Trust Portal and privacy principles"
+    },
+    {
+     "id": "4.2",
+     "title": "Describe compliance management capabilities of Microsoft Purview"
+    },
+    {
+     "id": "4.3",
+     "title": "Describe information protection, data lifecycle management, and data governance capabilities of Microsoft Purview"
+    },
+    {
+     "id": "4.4",
+     "title": "Describe insider risk, eDiscovery, and audit capabilities in Microsoft Purview"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://learn.microsoft.com/en-us/credentials/certifications/",
+   "note": "Written for this app by an AI model against the official SC-900 skills outline and Microsoft Learn documentation; not independently reviewed."
+  },
+  {
+   "id": "quban",
+   "title": "Certification Practice SC-900 bank",
+   "license": "MIT",
+   "attribution": "Quban301, https://github.com/Quban301/Certification-Practice",
+   "url": "https://github.com/Quban301/Certification-Practice"
+  },
+  {
+   "id": "quizcert",
+   "title": "QUIZCERT",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Matteo Zordan",
+   "url": "https://github.com/Kashim0-afk/QUIZCERT",
+   "note": "English text of a bilingual (Italian/English) bank. Topic labels are the source's own."
+  },
+  {
+   "id": "pathfinder",
+   "title": "Pathfinder SC-900 practice set",
+   "license": "CC BY 4.0",
+   "attribution": "legiosai, https://github.com/legiosai/pathfinder",
+   "url": "https://github.com/legiosai/pathfinder"
+  },
+  {
+   "id": "mtfucf",
+   "title": "Exam Timer Focus Mode question set",
+   "license": "MIT",
+   "attribution": "MTFUCF, https://github.com/MTFUCF/exam-timer-focus-mode",
+   "url": "https://github.com/MTFUCF/exam-timer-focus-mode"
+  },
+  {
+   "id": "wiloak",
+   "title": "Security Zero to Hero practice questions",
+   "license": "CC BY 4.0",
+   "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/security-zero-to-hero",
+   "url": "https://github.com/PatrickWiloak/security-zero-to-hero"
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json",
+  "questions/quban.json",
+  "questions/quizcert.json",
+  "questions/pathfinder.json",
+  "questions/mtfucf.json",
+  "questions/wiloak.json"
+ ],
+ "questionCount": 526,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Questions are mapped to exam domains only, not to individual objectives"
+  ]
+ },
+ "icon": "assets/icons/ms-fundamentals.svg"
+}

@@ -1,0 +1,4337 @@
+[
+ {
+  "id": "orig-s1-q01",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "topic": "Firewall zones",
+  "prompt": "A gateway host has `ens3` connected to the internet and `ens4` connected to a trusted management LAN. The administrator wants SSH reachable only from the management LAN, using firewalld.\n\nWhich approach fits firewalld's design BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Create two copies of the firewalld service, one per interface."
+   },
+   {
+    "id": "b",
+    "text": "Bind each interface to a different zone and allow the `ssh` service only in the zone used by `ens4`."
+   },
+   {
+    "id": "c",
+    "text": "Add a rich rule to the `drop` zone that lists both interfaces."
+   },
+   {
+    "id": "d",
+    "text": "Set `ens3` to promiscuous mode so firewalld ignores it."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "firewalld groups rules into zones by trust level; each interface is bound to one zone (`firewall-cmd --zone=internal --change-interface=ens4 --permanent`), and services are allowed per zone.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q02",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.5"
+  ],
+  "topic": "CPU wait time",
+  "prompt": "Users report that a database host feels slow. `vmstat 2` shows the `us` and `sy` columns near zero, the `id` column low, and one other CPU column consistently around 60.\n\nWhich column is high, and what does it point to?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`st` - the hypervisor is short of memory."
+   },
+   {
+    "id": "b",
+    "text": "`wa` - processes are waiting on storage I/O."
+   },
+   {
+    "id": "c",
+    "text": "`si` - the network card is dropping interrupts."
+   },
+   {
+    "id": "d",
+    "text": "`bo` - the CPU is throttled by thermal limits."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`wa` is the share of time CPUs sit idle while waiting for I/O to finish. High `wa` with low `us`/`sy` points at slow or saturated storage. `st` is time stolen by the hypervisor; `si` and `bo` in vmstat are swap-in and blocks-out, not CPU states.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q03",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.4",
+   "3.3"
+  ],
+  "topic": "SELinux file labels",
+  "prompt": "A developer builds a site in their home directory and then moves it with `mv` into `/var/www/html`. Apache returns \"403 Forbidden\" for every page, although file permissions are 644 and SELinux is enforcing.\n\nWhich command is the BEST fix?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`chmod -R 777 /var/www/html`"
+   },
+   {
+    "id": "b",
+    "text": "`setenforce 0`"
+   },
+   {
+    "id": "c",
+    "text": "`restorecon -Rv /var/www/html`"
+   },
+   {
+    "id": "d",
+    "text": "`chown -R root:root /var/www/html`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`mv` within the same file system keeps the file's original SELinux context (here a home-directory type), which httpd may not read. `restorecon` resets labels to the policy default for the new location. Disabling enforcement or opening permissions hides the problem instead of fixing it.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q04",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.3"
+  ],
+  "topic": "Path MTU",
+  "prompt": "Across a new VPN tunnel, `ping` works and SSH logins succeed, but copying large files hangs after a few kilobytes.\n\nWhich test BEST confirms the suspected cause?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`ping -M do -s 1472 <remote host>`"
+   },
+   {
+    "id": "b",
+    "text": "`ping -c 100 -i 0.2 <remote host>`"
+   },
+   {
+    "id": "c",
+    "text": "`dig +trace <remote host>`"
+   },
+   {
+    "id": "d",
+    "text": "`ss -tulpn`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`-M do` forbids fragmentation and `-s 1472` plus 28 bytes of headers makes a 1500-byte packet. If it fails while smaller sizes pass, the path MTU is lower than the interface MTU, which typically stalls large transfers while small packets work.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q05",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.2"
+  ],
+  "topic": "Fatal kernel errors",
+  "prompt": "A physical server freezes completely. The console shows a call trace ending in \"not syncing\", the keyboard LEDs blink, and the machine responds to nothing until it is power-cycled.\n\nWhat has happened?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The OOM killer ended the init process."
+   },
+   {
+    "id": "b",
+    "text": "A kernel panic."
+   },
+   {
+    "id": "c",
+    "text": "A segmentation fault in the login shell."
+   },
+   {
+    "id": "d",
+    "text": "The root file system was remounted read-only."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a kernel panic is an unrecoverable kernel error; the kernel halts (\"Kernel panic - not syncing\") and the system must be rebooted.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q06",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.1"
+  ],
+  "topic": "Unsolicited monitoring alerts",
+  "prompt": "A UPS is configured so that, the moment it switches to battery, it sends a message to the monitoring server on its own, without waiting to be queried.\n\nWhat is this kind of SNMP message called?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A walk"
+   },
+   {
+    "id": "b",
+    "text": "A get-request"
+   },
+   {
+    "id": "c",
+    "text": "A trap"
+   },
+   {
+    "id": "d",
+    "text": "A MIB"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "a trap is sent by the agent to the manager on its own initiative. Get-requests and walks are polls started by the manager; a MIB is the definition of the data, not a message.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q07",
+  "source": "original",
+  "type": "multi",
+  "objectives": [
+   "5.1"
+  ],
+  "topic": "Service level terms (choose TWO)",
+  "prompt": "A hosting company promises customers 99.9% monthly availability in its contract, with invoice credits if it misses. Internally, the operations team aims for 99.95% so there is headroom.\n\nWhich TWO statements are correct?",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "The 99.9% contractual promise is the SLA."
+   },
+   {
+    "id": "b",
+    "text": "The 99.9% contractual promise is the SLO."
+   },
+   {
+    "id": "c",
+    "text": "The 99.95% internal target is the SLO."
+   },
+   {
+    "id": "d",
+    "text": "The 99.95% internal target is the SLA."
+   },
+   {
+    "id": "e",
+    "text": "Both figures are SLIs."
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "an SLA is the agreement with the customer, usually with penalties. An SLO is the target the provider sets for itself, normally stricter than the SLA. An SLI is the measured value.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q08",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.3"
+  ],
+  "topic": "Python package isolation",
+  "prompt": "A script needs a newer version of the `requests` library than the one the distribution's own tools depend on. The administrator must not change the system-wide Python packages.\n\nWhat is the BEST approach?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Run `sudo pip install --upgrade requests`."
+   },
+   {
+    "id": "b",
+    "text": "Create a virtual environment with `python3 -m venv` and install the library inside it."
+   },
+   {
+    "id": "c",
+    "text": "Copy the library into `/usr/lib/python3/` by hand."
+   },
+   {
+    "id": "d",
+    "text": "Remove the distribution package first, then install with pip."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a virtual environment gives the project its own interpreter path and site-packages, leaving the distribution's packages untouched. Upgrading system-wide with pip can break distribution tools.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q09",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "topic": "Shell branching",
+  "prompt": "A script takes one argument that must be `start`, `stop` or `status`, and runs a different block for each, with a fallback for anything else. The author uses the shell construct designed for matching one value against several patterns.\n\nWhich keyword ends that construct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`fi`"
+   },
+   {
+    "id": "b",
+    "text": "`done`"
+   },
+   {
+    "id": "c",
+    "text": "`esac`"
+   },
+   {
+    "id": "d",
+    "text": "`end`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`case ... in pattern) ... ;; esac`. `fi` ends `if`, `done` ends loops.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q10",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.4"
+  ],
+  "topic": "Git branches",
+  "prompt": "A developer on `main` wants to create a new line of development called `hotfix-42` from the current commit, but stay on `main` for now.\n\nWhich command does exactly that?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`git branch hotfix-42`"
+   },
+   {
+    "id": "b",
+    "text": "`git checkout -b hotfix-42`"
+   },
+   {
+    "id": "c",
+    "text": "`git merge hotfix-42`"
+   },
+   {
+    "id": "d",
+    "text": "`git clone hotfix-42`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`git branch <name>` creates the branch at the current commit without switching to it. `git checkout -b` (or `git switch -c`) creates it and switches.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q11",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "topic": "Ansible host lists",
+  "prompt": "An Ansible playbook starts with `hosts: dbservers`. Ansible needs to know which machines belong to `dbservers`.\n\nWhere is that defined?",
+  "options": [
+   {
+    "id": "a",
+    "text": "In the playbook's `tasks:` section"
+   },
+   {
+    "id": "b",
+    "text": "In the inventory"
+   },
+   {
+    "id": "c",
+    "text": "In `ansible.cfg` under `[privilege_escalation]`"
+   },
+   {
+    "id": "d",
+    "text": "In a role's `handlers/main.yml`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "the inventory (INI or YAML) lists hosts and the groups they belong to; `hosts:` in a play refers to those names.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q12",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.4",
+   "3.1"
+  ],
+  "topic": "Password reuse",
+  "prompt": "Security policy says users may not reuse any of their previous eight passwords.\n\nWhich PAM setting enforces this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`pam_faillock.so deny=8`"
+   },
+   {
+    "id": "b",
+    "text": "`pam_pwquality.so minlen=8`"
+   },
+   {
+    "id": "c",
+    "text": "`pam_pwhistory.so remember=8`"
+   },
+   {
+    "id": "d",
+    "text": "`pam_limits.so maxlogins=8`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`pam_pwhistory` with `remember=N` stores old password hashes in `/etc/security/opasswd` and rejects reuse. `pam_faillock` handles lockouts, `pam_pwquality` handles complexity.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q13",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Sudo without a prompt",
+  "prompt": "A backup account must run `/usr/local/bin/backup.sh` as root from cron, with no password prompt, and nothing else.\n\nWhich sudoers line is correct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`backup ALL=(root) /usr/local/bin/backup.sh NOPASSWD`"
+   },
+   {
+    "id": "b",
+    "text": "`backup ALL=(root) NOPASSWD: /usr/local/bin/backup.sh`"
+   },
+   {
+    "id": "c",
+    "text": "`backup NOPASSWD=(ALL) ALL`"
+   },
+   {
+    "id": "d",
+    "text": "`backup ALL=(ALL) !authenticate /usr/local/bin/backup.sh`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "the tag goes before the command list: `user host=(runas) NOPASSWD: command`. Always edit with `visudo`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q14",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "topic": "Before the kernel",
+  "prompt": "Which component reads its own configuration, presents a menu of installed kernels, and then loads the selected kernel and initramfs into memory?",
+  "options": [
+   {
+    "id": "a",
+    "text": "systemd"
+   },
+   {
+    "id": "b",
+    "text": "The bootloader (for example GRUB2)"
+   },
+   {
+    "id": "c",
+    "text": "udev"
+   },
+   {
+    "id": "d",
+    "text": "dracut"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "the bootloader runs before any kernel is loaded, reads its configuration (`grub.cfg`), and loads the kernel and initramfs. systemd and udev start afterwards; dracut builds the initramfs but does not boot it.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q15",
+  "source": "original",
+  "type": "match",
+  "objectives": [
+   "3.1"
+  ],
+  "topic": "Matching: authentication and authorization",
+  "prompt": "Match each technology (1-5) to its description (A-E).",
+  "left": [
+   {
+    "id": "1",
+    "text": "PAM"
+   },
+   {
+    "id": "2",
+    "text": "LDAP"
+   },
+   {
+    "id": "3",
+    "text": "Kerberos"
+   },
+   {
+    "id": "4",
+    "text": "SSSD"
+   },
+   {
+    "id": "5",
+    "text": "Polkit"
+   }
+  ],
+  "right": [
+   {
+    "id": "a",
+    "text": "Protocol for querying and modifying a directory of users, groups and hosts"
+   },
+   {
+    "id": "b",
+    "text": "Decides whether an unprivileged process may perform a specific privileged action, such as mounting a disk from the desktop"
+   },
+   {
+    "id": "c",
+    "text": "Issues time-limited tickets so users authenticate once and services never see the password"
+   },
+   {
+    "id": "d",
+    "text": "Stackable modules that applications call to authenticate users and manage sessions"
+   },
+   {
+    "id": "e",
+    "text": "Local daemon that connects to remote identity providers and caches credentials for offline logins"
+   }
+  ],
+  "answer": {
+   "1": "d",
+   "2": "a",
+   "3": "c",
+   "4": "e",
+   "5": "b"
+  },
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q16",
+  "source": "original",
+  "type": "match",
+  "objectives": [
+   "2.5"
+  ],
+  "topic": "Matching: systemd unit types",
+  "prompt": "Match each unit type (1-4) to its role (A-D).",
+  "left": [
+   {
+    "id": "1",
+    "text": "`.service`"
+   },
+   {
+    "id": "2",
+    "text": "`.timer`"
+   },
+   {
+    "id": "3",
+    "text": "`.mount`"
+   },
+   {
+    "id": "4",
+    "text": "`.target`"
+   }
+  ],
+  "right": [
+   {
+    "id": "a",
+    "text": "Groups other units into a named state the system can reach, such as multi-user"
+   },
+   {
+    "id": "b",
+    "text": "Attaches a file system at a directory"
+   },
+   {
+    "id": "c",
+    "text": "Starts and supervises a process or daemon"
+   },
+   {
+    "id": "d",
+    "text": "Activates another unit on a schedule or after a delay"
+   }
+  ],
+  "answer": {
+   "1": "c",
+   "2": "d",
+   "3": "b",
+   "4": "a"
+  },
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q17",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.4"
+  ],
+  "topic": "Package signatures",
+  "prompt": "After adding a vendor's repository on a RHEL-family host, `dnf install vendor-agent` stops with an error that the package's signature cannot be verified because the public key is not installed.\n\nWhat is the BEST fix?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Add `gpgcheck=0` to `/etc/dnf/dnf.conf`."
+   },
+   {
+    "id": "b",
+    "text": "Import the vendor's public key, for example with `rpm --import <key file or URL>`."
+   },
+   {
+    "id": "c",
+    "text": "Run `dnf clean all` and try again."
+   },
+   {
+    "id": "d",
+    "text": "Rebuild the RPM database with `rpm --rebuilddb`."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "packages are signed with the vendor's GPG key; importing the public key lets rpm/dnf verify them. Turning off `gpgcheck` removes the protection.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q18",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "topic": "Process priority",
+  "prompt": "A compression job with PID 8841 is already running and is starving interactive users of CPU time. The administrator wants it to continue, at a lower priority.\n\nWhich command is BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`nice -n 15 8841`"
+   },
+   {
+    "id": "b",
+    "text": "`kill -STOP 8841`"
+   },
+   {
+    "id": "c",
+    "text": "`renice -n 15 -p 8841`"
+   },
+   {
+    "id": "d",
+    "text": "`chrt -f 99 -p 8841`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`renice` changes the nice value of a running process. `nice` only sets it when starting a command; `kill -STOP` pauses the job; `chrt -f 99` would raise it to real-time priority.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q19",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "topic": "Login shell",
+  "prompt": "User `mlopez` already exists and should use `/bin/zsh` as the login shell from now on.\n\nWhich command, run as root, makes that change?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`useradd -s /bin/zsh mlopez`"
+   },
+   {
+    "id": "b",
+    "text": "`usermod -s /bin/zsh mlopez`"
+   },
+   {
+    "id": "c",
+    "text": "`passwd -s /bin/zsh mlopez`"
+   },
+   {
+    "id": "d",
+    "text": "`echo /bin/zsh >> /etc/shells`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`usermod -s` changes the shell of an existing account (`chsh -s /bin/zsh mlopez` also works). `useradd` creates accounts.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q20",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.1"
+  ],
+  "topic": "Recently changed files",
+  "prompt": "An administrator needs every regular file under `/srv/app` that was modified during the last 24 hours. Some of the files were written only a few minutes ago.\n\nWhich command is BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`locate -t 1 /srv/app`"
+   },
+   {
+    "id": "b",
+    "text": "`find /srv/app -type f -mtime -1`"
+   },
+   {
+    "id": "c",
+    "text": "`find /srv/app -type f -mtime +1`"
+   },
+   {
+    "id": "d",
+    "text": "`ls -R /srv/app | grep today`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`find` walks the live file system; `-mtime -1` means modified less than one 24-hour period ago. `+1` means older. `locate` reads a database that may be hours out of date.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q21",
+  "source": "original",
+  "type": "multi",
+  "objectives": [
+   "1.6"
+  ],
+  "topic": "Archive and compress (choose TWO)",
+  "prompt": "`/etc` must be saved into one compressed file, keeping ownership and permissions, using two separate tools: one to bundle and one to compress.\n\nWhich TWO tools would be used?",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "`tar`"
+   },
+   {
+    "id": "b",
+    "text": "`dd`"
+   },
+   {
+    "id": "c",
+    "text": "`gzip`"
+   },
+   {
+    "id": "d",
+    "text": "`split`"
+   },
+   {
+    "id": "e",
+    "text": "`ln`"
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "`tar` bundles the tree into one archive and records ownership and permissions (use `-p` when extracting as root); `gzip` compresses that single file. `tar -czf` does both in one step.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q22",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "topic": "Redirection",
+  "prompt": "A nightly script should add one line with the current date to the end of `/var/log/nightly.log`, keeping everything already in the file.\n\nWhich line is correct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`date > /var/log/nightly.log`"
+   },
+   {
+    "id": "b",
+    "text": "`date < /var/log/nightly.log`"
+   },
+   {
+    "id": "c",
+    "text": "`date >> /var/log/nightly.log`"
+   },
+   {
+    "id": "d",
+    "text": "`date 2> /var/log/nightly.log`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`>>` appends; `>` truncates the file first. `2>` redirects only standard error.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q23",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Name servers",
+  "prompt": "On a host that does not use a local stub resolver, which file holds the `nameserver` lines the C library resolver reads?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`/etc/hosts`"
+   },
+   {
+    "id": "b",
+    "text": "`/etc/nsswitch.conf`"
+   },
+   {
+    "id": "c",
+    "text": "`/etc/hostname`"
+   },
+   {
+    "id": "d",
+    "text": "`/etc/resolv.conf`"
+   }
+  ],
+  "answer": [
+   "d"
+  ],
+  "explanation": "`/etc/resolv.conf` lists `nameserver` entries. `/etc/hosts` is static name-to-address mapping and `/etc/nsswitch.conf` sets the lookup order.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q24",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "topic": "Growing a logical volume",
+  "prompt": "Volume group `vg_data` has 20 GiB free. The logical volume `lv_home` in that group, formatted with ext4 and mounted, must grow by 10 GiB, including its file system, in one command.\n\nWhich command is BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`vgextend vg_data +10G`"
+   },
+   {
+    "id": "b",
+    "text": "`lvextend -r -L +10G /dev/vg_data/lv_home`"
+   },
+   {
+    "id": "c",
+    "text": "`pvresize -L +10G /dev/vg_data/lv_home`"
+   },
+   {
+    "id": "d",
+    "text": "`lvcreate -L 10G -n lv_home vg_data`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`lvextend -L +10G` grows the logical volume from free extents in its volume group, and `-r` (`--resizefs`) grows the file system in the same step. `vgextend` adds physical volumes to a group; `lvcreate` makes a new volume.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s1-q25",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "topic": "Hardware inventory",
+  "prompt": "A newly installed network card does not appear in `ip link`. The administrator wants to see whether the kernel detects the card on the bus at all, and which driver, if any, is bound to it.\n\nWhich command is BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`lsusb -t`"
+   },
+   {
+    "id": "b",
+    "text": "`lsblk -f`"
+   },
+   {
+    "id": "c",
+    "text": "`lspci -k`"
+   },
+   {
+    "id": "d",
+    "text": "`lscpu`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`lspci` lists PCI devices as the kernel sees them, and `-k` shows the kernel driver and modules for each. `lsusb` covers USB, `lsblk` block devices, `lscpu` the processor.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q01",
+  "source": "original",
+  "type": "multi",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "File attributes (choose TWO)",
+  "prompt": "An auditor wants `/etc/resolv.conf` protected so that even root cannot change or delete it by accident, and wants `/var/log/audit-trail.log` to accept new lines while existing lines stay untouchable.\n\nWhich TWO commands achieve this?",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "`chattr +i /etc/resolv.conf`"
+   },
+   {
+    "id": "b",
+    "text": "`chmod 000 /etc/resolv.conf`"
+   },
+   {
+    "id": "c",
+    "text": "`chattr +a /var/log/audit-trail.log`"
+   },
+   {
+    "id": "d",
+    "text": "`chmod +t /var/log/audit-trail.log`"
+   },
+   {
+    "id": "e",
+    "text": "`setfacl -m u::r /var/log/audit-trail.log`"
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "`chattr +i` makes a file immutable: no writes, renames or deletion until the flag is removed. `+a` makes it append-only. Check with `lsattr`. Permission bits and ACLs do not stop root.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q02",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.2",
+   "5.5"
+  ],
+  "topic": "Memory that never comes back",
+  "prompt": "Over three days, one Java service's resident memory climbs from 1 GiB to 14 GiB while request volume stays flat. On day four the kernel log shows \"Out of memory: Killed process\".\n\nWhat is the MOST likely cause?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The page cache is too large."
+   },
+   {
+    "id": "b",
+    "text": "A memory leak in the service."
+   },
+   {
+    "id": "c",
+    "text": "Swap is formatted with the wrong file system."
+   },
+   {
+    "id": "d",
+    "text": "The service's nice value is too high."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "memory that grows steadily without more work and is never released is a leak; eventually the OOM killer ends a process. Page cache is reclaimable and does not trigger this.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q03",
+  "source": "original",
+  "type": "multi",
+  "objectives": [
+   "5.4",
+   "3.5"
+  ],
+  "topic": "TLS problems (choose TWO)",
+  "prompt": "`openssl s_client -connect portal.example.net:443` reports \"certificate has expired\". A scanner also notes that the server still accepts TLS 1.0 connections.\n\nWhich TWO findings should go in the report?",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "A certificate validity problem"
+   },
+   {
+    "id": "b",
+    "text": "A DNS delegation problem"
+   },
+   {
+    "id": "c",
+    "text": "An obsolete, insecure protocol version is enabled"
+   },
+   {
+    "id": "d",
+    "text": "A missing reverse proxy"
+   },
+   {
+    "id": "e",
+    "text": "An MTU mismatch"
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "an expired certificate is a certificate problem; TLS 1.0 is deprecated and should be disabled in favour of TLS 1.2 or 1.3.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q04",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.3"
+  ],
+  "topic": "Local only",
+  "prompt": "A freshly configured server can ping every address in 10.20.30.0/24, its own subnet, but nothing outside it. `ip route` shows only the connected route.\n\nWhat is missing?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A default gateway"
+   },
+   {
+    "id": "b",
+    "text": "A second DNS server"
+   },
+   {
+    "id": "c",
+    "text": "A loopback interface"
+   },
+   {
+    "id": "d",
+    "text": "An ARP cache"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "without a default route (`ip route add default via <gateway>`), the host only knows how to reach its directly connected network.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q05",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.2"
+  ],
+  "topic": "Space, but no space",
+  "prompt": "`touch /data/newfile` fails with \"No space left on device\", yet `df -h /data` shows 40% used. The directory tree holds millions of tiny cache files.\n\nWhich command reveals the real problem?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`du -sh /data`"
+   },
+   {
+    "id": "b",
+    "text": "`df -i /data`"
+   },
+   {
+    "id": "c",
+    "text": "`lsblk -f`"
+   },
+   {
+    "id": "d",
+    "text": "`free -m`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "each file uses an inode. `df -i` shows inode usage; when it reaches 100% no new files can be created even with free blocks.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q06",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.2",
+   "2.4"
+  ],
+  "topic": "Unsatisfied requirements",
+  "prompt": "Installing a locally downloaded RPM with `rpm -ivh` fails because it needs a newer `libssl` than the one installed.\n\nWhich approach is BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Run `rpm -ivh --nodeps` to skip the check."
+   },
+   {
+    "id": "b",
+    "text": "Install it with `dnf install ./package.rpm` so the package manager resolves dependencies from the repositories."
+   },
+   {
+    "id": "c",
+    "text": "Rename the existing library file to the expected version."
+   },
+   {
+    "id": "d",
+    "text": "Delete `/var/lib/rpm` and retry."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`dnf` (or `apt`) resolves and installs dependencies; `rpm` alone does not. `--nodeps` leaves a package that will not run.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q07",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.1"
+  ],
+  "topic": "Event callbacks",
+  "prompt": "A Git hosting service is set up so that every push makes it send an HTTP POST with details to a URL on the build server, which then starts a build.\n\nWhat is this mechanism called?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A cron job"
+   },
+   {
+    "id": "b",
+    "text": "A webhook"
+   },
+   {
+    "id": "c",
+    "text": "An SNMP poll"
+   },
+   {
+    "id": "d",
+    "text": "A reverse shell"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a webhook is an HTTP callback: the source system pushes a request to a configured URL when an event happens, so nothing has to poll.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q08",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.4"
+  ],
+  "topic": "Reviewing staged work",
+  "prompt": "A developer has run `git add` on several files and wants to read, line by line, exactly what will go into the next commit.\n\nWhich command shows that?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`git status -s`"
+   },
+   {
+    "id": "b",
+    "text": "`git log -p`"
+   },
+   {
+    "id": "c",
+    "text": "`git diff --staged`"
+   },
+   {
+    "id": "d",
+    "text": "`git show HEAD~1`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`git diff --staged` (same as `--cached`) compares the index with the last commit. Plain `git diff` shows unstaged changes only.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q09",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.3"
+  ],
+  "topic": "Python block structure",
+  "prompt": "A Python script fails with \"IndentationError: unindent does not match any outer indentation level\" after being edited in two different editors.\n\nWhat is the MOST likely cause?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A missing semicolon at the end of a line"
+   },
+   {
+    "id": "b",
+    "text": "Tabs and spaces mixed in the same block"
+   },
+   {
+    "id": "c",
+    "text": "A variable declared without a type"
+   },
+   {
+    "id": "d",
+    "text": "The file lacks execute permission"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Python uses indentation for block structure and rejects inconsistent use of tabs and spaces. `cat -A` shows tabs as `^I`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q10",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "topic": "Capturing output",
+  "prompt": "A script needs the current kernel release stored in a variable for later use.\n\nWhich line is correct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`KVER=uname -r`"
+   },
+   {
+    "id": "b",
+    "text": "`KVER=$(uname -r)`"
+   },
+   {
+    "id": "c",
+    "text": "`KVER={uname -r}`"
+   },
+   {
+    "id": "d",
+    "text": "`KVER=<uname -r>`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`$(command)` is command substitution; the output replaces the expression. Backticks are the older form.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q11",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "topic": "Earlier testing",
+  "prompt": "A team moves vulnerability scanning and linting from \"just before release\" to \"on every merge request\".\n\nWhat is this practice called?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Blue-green deployment"
+   },
+   {
+    "id": "b",
+    "text": "Shift-left testing"
+   },
+   {
+    "id": "c",
+    "text": "Canary release"
+   },
+   {
+    "id": "d",
+    "text": "Chaos engineering"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "shift-left means moving testing and security checks earlier in the pipeline, where problems are cheaper to fix.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q12",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.5"
+  ],
+  "topic": "Stolen drive",
+  "prompt": "A laptop's data partition must be unreadable if the SSD is removed and attached to another computer.\n\nWhich technology is BEST suited?",
+  "options": [
+   {
+    "id": "a",
+    "text": "LUKS, managed with `cryptsetup`"
+   },
+   {
+    "id": "b",
+    "text": "An ext4 journal"
+   },
+   {
+    "id": "c",
+    "text": "A `noexec` mount option"
+   },
+   {
+    "id": "d",
+    "text": "A sticky bit on the mount point"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "LUKS encrypts the block device; without the passphrase or key the data is unreadable anywhere.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q13",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.4"
+  ],
+  "topic": "Two proofs",
+  "prompt": "To log in to the bastion host, administrators enter their password and then a six-digit code from an authenticator app that changes every 30 seconds.\n\nWhat is this called?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Single sign-on"
+   },
+   {
+    "id": "b",
+    "text": "Multifactor authentication"
+   },
+   {
+    "id": "c",
+    "text": "Role-based access control"
+   },
+   {
+    "id": "d",
+    "text": "Federation"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a password (something you know) plus a TOTP code from a device (something you have) is multifactor authentication.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q14",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "topic": "Variable data",
+  "prompt": "According to the Filesystem Hierarchy Standard, where do system logs, print and mail spools, and package manager caches belong?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`/usr`"
+   },
+   {
+    "id": "b",
+    "text": "`/opt`"
+   },
+   {
+    "id": "c",
+    "text": "`/var`"
+   },
+   {
+    "id": "d",
+    "text": "`/boot`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`/var` holds variable data: `/var/log`, `/var/spool`, `/var/cache`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q15",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "topic": "Allow by name",
+  "prompt": "An administrator wants to permit HTTPS through firewalld using the predefined definition, not a port number.\n\nWhich command is correct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`firewall-cmd --permanent --add-port=https`"
+   },
+   {
+    "id": "b",
+    "text": "`firewall-cmd --permanent --add-service=https`"
+   },
+   {
+    "id": "c",
+    "text": "`firewall-cmd --permanent --enable=https`"
+   },
+   {
+    "id": "d",
+    "text": "`firewall-cmd --permanent --zone=https`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`--add-service` uses a named service definition; `--add-port` needs `port/protocol`, for example `443/tcp`. Reload afterwards for permanent rules to take effect.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q16",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.6"
+  ],
+  "topic": "Container default command",
+  "prompt": "In a Dockerfile, which instruction sets the command that runs when a container starts, and can be replaced simply by adding a different command at the end of `docker run <image>`?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`RUN`"
+   },
+   {
+    "id": "b",
+    "text": "`CMD`"
+   },
+   {
+    "id": "c",
+    "text": "`EXPOSE`"
+   },
+   {
+    "id": "d",
+    "text": "`ENV`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`CMD` provides the default command and is overridden by arguments to `docker run`. `RUN` executes at build time. `ENTRYPOINT` is harder to override.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q17",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.4"
+  ],
+  "topic": "Automatic addressing",
+  "prompt": "New laptops joining the office network should receive an IP address, subnet mask, default gateway and DNS servers without manual setup.\n\nWhich service provides this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "NTP"
+   },
+   {
+    "id": "b",
+    "text": "DHCP"
+   },
+   {
+    "id": "c",
+    "text": "LDAP"
+   },
+   {
+    "id": "d",
+    "text": "NFS"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "DHCP hands out address, mask, gateway, DNS and lease time.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q18",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "topic": "Run once, later",
+  "prompt": "A database export must run exactly once, at 02:30 tomorrow, and never again.\n\nWhich tool is BEST suited?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`crontab -e`"
+   },
+   {
+    "id": "b",
+    "text": "`at`"
+   },
+   {
+    "id": "c",
+    "text": "`watch`"
+   },
+   {
+    "id": "d",
+    "text": "`nohup`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`at` queues a job for a single run (`at 02:30 tomorrow`). cron is for recurring jobs.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q19",
+  "source": "original",
+  "type": "multi",
+  "objectives": [
+   "2.2"
+  ],
+  "topic": "Leaver and long-term absence (choose TWO)",
+  "prompt": "User `tkhan` has left the company; the account and its home directory must be removed. User `rsingh` is on leave for three months; the account must stay but password logins must stop.\n\nWhich TWO commands are appropriate?",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "`userdel -r tkhan`"
+   },
+   {
+    "id": "b",
+    "text": "`usermod -e 1 tkhan`"
+   },
+   {
+    "id": "c",
+    "text": "`passwd -l rsingh`"
+   },
+   {
+    "id": "d",
+    "text": "`chage -l rsingh`"
+   },
+   {
+    "id": "e",
+    "text": "`groupdel rsingh`"
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "`userdel -r` removes the account, home directory and mail spool. `passwd -l` locks the password by prefixing the hash with `!` (`usermod -L` does the same); note that SSH key logins still work unless the account is also expired.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q20",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.3",
+   "1.4"
+  ],
+  "topic": "Who has the port",
+  "prompt": "A web server will not start because port 8080 is \"already in use\".\n\nWhich command identifies the process holding it?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`lsof -i :8080`"
+   },
+   {
+    "id": "b",
+    "text": "`lsblk 8080`"
+   },
+   {
+    "id": "c",
+    "text": "`ping -p 8080 localhost`"
+   },
+   {
+    "id": "d",
+    "text": "`uptime`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`lsof -i :8080` lists processes with that port open; `ss -tlnp` shows the same information for listening sockets.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q21",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.6"
+  ],
+  "topic": "Failing disk",
+  "prompt": "A disk with growing numbers of unreadable sectors must be imaged to a healthy disk. The tool should skip bad areas, carry on, and retry them later using a map file.\n\nWhich tool is BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`cp -a`"
+   },
+   {
+    "id": "b",
+    "text": "`ddrescue`"
+   },
+   {
+    "id": "c",
+    "text": "`mkfs`"
+   },
+   {
+    "id": "d",
+    "text": "`rsync --delete`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "GNU `ddrescue` copies good areas first, logs bad ones in a map file and retries them, which suits failing media.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q22",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.5",
+   "2.1"
+  ],
+  "topic": "Back where I was",
+  "prompt": "An administrator is in `/var/log/nginx`, changes to `/etc/nginx/conf.d`, and then wants to return to the previous directory with the shortest command.\n\nWhich command does that?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`cd ~`"
+   },
+   {
+    "id": "b",
+    "text": "`cd ..`"
+   },
+   {
+    "id": "c",
+    "text": "`cd -`"
+   },
+   {
+    "id": "d",
+    "text": "`cd /`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`cd -` switches to `$OLDPWD`, the previous working directory.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q23",
+  "source": "original",
+  "type": "match",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Matching: network tools",
+  "prompt": "Match each tool (1-5) to what it is used for (A-E).",
+  "left": [
+   {
+    "id": "1",
+    "text": "`ping`"
+   },
+   {
+    "id": "2",
+    "text": "`traceroute`"
+   },
+   {
+    "id": "3",
+    "text": "`mtr`"
+   },
+   {
+    "id": "4",
+    "text": "`ss`"
+   },
+   {
+    "id": "5",
+    "text": "`tcpdump`"
+   }
+  ],
+  "right": [
+   {
+    "id": "a",
+    "text": "Captures packets on an interface for inspection"
+   },
+   {
+    "id": "b",
+    "text": "Lists sockets on the local host and the state they are in"
+   },
+   {
+    "id": "c",
+    "text": "Sends echo requests to check whether a host answers"
+   },
+   {
+    "id": "d",
+    "text": "Shows the routers on the path to a destination, once"
+   },
+   {
+    "id": "e",
+    "text": "Continuously updates per-hop loss and latency along the path"
+   }
+  ],
+  "answer": {
+   "1": "c",
+   "2": "d",
+   "3": "e",
+   "4": "b",
+   "5": "a"
+  },
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q24",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.3",
+   "5.2"
+  ],
+  "topic": "After a power cut",
+  "prompt": "An ext4 data volume was not unmounted cleanly and now refuses to mount, reporting that it needs checking.\n\nWhich tool should be run on the unmounted device?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`mkfs.ext4`"
+   },
+   {
+    "id": "b",
+    "text": "`fsck`"
+   },
+   {
+    "id": "c",
+    "text": "`du`"
+   },
+   {
+    "id": "d",
+    "text": "`resize2fs`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`fsck` (here `e2fsck`) checks and repairs a file system; run it only on unmounted file systems. `mkfs` would destroy the data.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s2-q25",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "topic": "Watching the GPU",
+  "prompt": "A machine-learning host has several GPUs. The administrator wants a live, top-style terminal view of GPU utilization and memory per process.\n\nWhich tool provides that?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`sensors`"
+   },
+   {
+    "id": "b",
+    "text": "`dmidecode`"
+   },
+   {
+    "id": "c",
+    "text": "`nvtop`"
+   },
+   {
+    "id": "d",
+    "text": "`ipmitool`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`nvtop` is an htop-like monitor for GPUs. `sensors` reads temperatures and fans; `dmidecode` and `ipmitool` report firmware and BMC data.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q01",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "topic": "Runtime versus permanent",
+  "prompt": "An administrator runs `firewall-cmd --add-port=9090/tcp`. The port works immediately, but after `firewall-cmd --reload` it is closed again.\n\nWhy?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The rule was added to the runtime configuration only; `--permanent` was not used."
+   },
+   {
+    "id": "b",
+    "text": "firewalld deletes rules for ports above 1024 on reload."
+   },
+   {
+    "id": "c",
+    "text": "The rule needed to be added to the `trusted` zone."
+   },
+   {
+    "id": "d",
+    "text": "SELinux removed the rule."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "without `--permanent`, changes exist only in the runtime configuration and vanish on reload or reboot. Either add with `--permanent` and reload, or run `firewall-cmd --runtime-to-permanent`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q02",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.5"
+  ],
+  "topic": "Reading load",
+  "prompt": "A server with 4 CPU cores shows `load average: 11.80, 10.95, 9.40` in `uptime`.\n\nWhat does this indicate?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The system has been up for about 11 days."
+   },
+   {
+    "id": "b",
+    "text": "On average, more tasks are runnable or waiting than the cores can service, so work is queuing."
+   },
+   {
+    "id": "c",
+    "text": "11.8% of CPU capacity is in use."
+   },
+   {
+    "id": "d",
+    "text": "Eleven users are logged in."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "load average is the average number of tasks running, runnable or in uninterruptible wait over 1, 5 and 15 minutes. A sustained value well above the core count means tasks are waiting.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q03",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.4"
+  ],
+  "topic": "Allowed, yet denied",
+  "prompt": "On an enforcing RHEL host, `getfacl` confirms that user `web` has `rwx` on `/srv/reports`, and standard permissions look right, but the web service still gets \"Permission denied\". `/var/log/audit/audit.log` shows AVC denials.\n\nWhat is blocking access?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The ACL mask"
+   },
+   {
+    "id": "b",
+    "text": "SELinux policy or file context"
+   },
+   {
+    "id": "c",
+    "text": "A full disk quota"
+   },
+   {
+    "id": "d",
+    "text": "The umask of the web service"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "SELinux is mandatory access control; it is checked in addition to permissions and ACLs, and a denial there wins. AVC messages in the audit log are the giveaway; `ls -Z` and `restorecon` or `semanage fcontext` are the usual tools.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q04",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.3"
+  ],
+  "topic": "Bonded interfaces",
+  "prompt": "`bond0` combines `eno1` and `eno2` for redundancy. Monitoring warns that the bond is degraded.\n\nWhere can the administrator see the link state of each member interface?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`/etc/hosts`"
+   },
+   {
+    "id": "b",
+    "text": "`/proc/net/bonding/bond0`"
+   },
+   {
+    "id": "c",
+    "text": "`/var/log/wtmp`"
+   },
+   {
+    "id": "d",
+    "text": "`/sys/class/thermal`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "the bonding driver exposes mode, active slave and each member's MII status there.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q05",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.3"
+  ],
+  "topic": "Same address twice",
+  "prompt": "Connections to a file server drop at random. `arping` to its address gets replies from two different MAC addresses.\n\nWhat is the problem?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A duplicate IP address on the network"
+   },
+   {
+    "id": "b",
+    "text": "A DNS cache that needs flushing"
+   },
+   {
+    "id": "c",
+    "text": "A wrong subnet mask on the client"
+   },
+   {
+    "id": "d",
+    "text": "A routing loop"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "two MAC addresses answering for one IP means two hosts are configured with the same address.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q06",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.3",
+   "5.2"
+  ],
+  "topic": "Bigger disk, same full file system",
+  "prompt": "A VM's virtual disk was enlarged from 40 GiB to 80 GiB, but `df -h /` still shows 100% used of 40 GiB.\n\nWhat still has to happen?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The partition, any LVM layers, and the file system must be grown to use the new space."
+   },
+   {
+    "id": "b",
+    "text": "The VM must be converted to a container."
+   },
+   {
+    "id": "c",
+    "text": "The swap partition must be deleted."
+   },
+   {
+    "id": "d",
+    "text": "Nothing; `df` updates after 24 hours."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "enlarging the virtual disk only gives the block device more room. The partition (`growpart`/`parted`), then physical volume and logical volume if LVM is used, then the file system (`resize2fs` or `xfs_growfs`) must each be extended.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q07",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.1"
+  ],
+  "topic": "Being told",
+  "prompt": "A monitoring system is configured to email the on-call engineer whenever disk usage on any host exceeds 85% for five minutes.\n\nWhat has been configured?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A log rotation policy"
+   },
+   {
+    "id": "b",
+    "text": "A threshold with an alert"
+   },
+   {
+    "id": "c",
+    "text": "A baseline image"
+   },
+   {
+    "id": "d",
+    "text": "A health check endpoint"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a threshold defines the limit; an alert is the notification fired when it is crossed.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q08",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.5"
+  ],
+  "topic": "AI-generated code",
+  "prompt": "A junior administrator asks an AI assistant for a cleanup script and intends to paste it straight into root's crontab on production.\n\nWhich practice should be followed?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Run it once as root to see what happens."
+   },
+   {
+    "id": "b",
+    "text": "Have a person read and test the script before it is used, like any other code."
+   },
+   {
+    "id": "c",
+    "text": "Ask the assistant whether the script is safe and trust the answer."
+   },
+   {
+    "id": "d",
+    "text": "Rename the script so it looks hand-written."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "AI output can be wrong or unsafe; it must be reviewed and tested by a person before use, and never pasted in blind.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q09",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.4"
+  ],
+  "topic": "Fetch and integrate",
+  "prompt": "Which single Git command downloads new commits from the remote and integrates them into the current branch?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`git fetch`"
+   },
+   {
+    "id": "b",
+    "text": "`git pull`"
+   },
+   {
+    "id": "c",
+    "text": "`git push`"
+   },
+   {
+    "id": "d",
+    "text": "`git stash`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`git pull` is `git fetch` followed by a merge (or rebase) into the current branch.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q10",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "topic": "Loop until done",
+  "prompt": "A script must process a file one line at a time and stop when the file ends.\n\nWhich construct is the usual choice?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`while read -r line; do ...; done < file`"
+   },
+   {
+    "id": "b",
+    "text": "`case $line in ... esac`"
+   },
+   {
+    "id": "c",
+    "text": "`select line in file; do ...; done`"
+   },
+   {
+    "id": "d",
+    "text": "`if read line; then ...; fi`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "a `while read` loop runs as long as `read` succeeds, which ends at end of file.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q11",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "topic": "What exists versus what is declared",
+  "prompt": "OpenTofu and Terraform keep a record that maps the resources declared in configuration to the real resources already created, so the next plan can work out what must change.\n\nWhat is this record called?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The playbook"
+   },
+   {
+    "id": "b",
+    "text": "The state file"
+   },
+   {
+    "id": "c",
+    "text": "The manifest cache"
+   },
+   {
+    "id": "d",
+    "text": "The inventory"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "the state file (`terraform.tfstate`) records real resource IDs and attributes.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q12",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.5"
+  ],
+  "topic": "Keyed integrity",
+  "prompt": "Two services share a secret. Each message carries a digest calculated from the message and that secret, so the receiver can verify both integrity and origin.\n\nWhat is this digest?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A CRC32 checksum"
+   },
+   {
+    "id": "b",
+    "text": "An HMAC"
+   },
+   {
+    "id": "c",
+    "text": "A plain SHA-256 hash"
+   },
+   {
+    "id": "d",
+    "text": "A Base64 encoding"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "an HMAC combines a hash function with a secret key, so only holders of the key can produce or verify it. A plain hash proves integrity only.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q13",
+  "source": "original",
+  "type": "multi",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Sudoers tags (choose TWO)",
+  "prompt": "In `/etc/sudoers`, one rule must stop an allowed editor from launching a shell, and another must let the `wheel` group run anything as root without being asked for a password.\n\nWhich TWO entries fit?",
+  "select": 2,
+  "options": [
+   {
+    "id": "a",
+    "text": "`%wheel ALL=(ALL) NOPASSWD: ALL`"
+   },
+   {
+    "id": "b",
+    "text": "`%wheel ALL=(ALL) SETENV: NONE`"
+   },
+   {
+    "id": "c",
+    "text": "`ops ALL=(root) NOEXEC: /usr/bin/vim /etc/hosts`"
+   },
+   {
+    "id": "d",
+    "text": "`ops ALL=(root) NOLOGIN: /usr/bin/vim`"
+   },
+   {
+    "id": "e",
+    "text": "`Defaults !requiretty`"
+   }
+  ],
+  "answer": [
+   "a",
+   "c"
+  ],
+  "explanation": "`NOPASSWD:` skips the password prompt; `NOEXEC:` prevents a dynamically linked program from executing further commands, which blocks shell escapes from editors.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q14",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.1",
+   "1.5"
+  ],
+  "topic": "Architecture name",
+  "prompt": "On a 64-bit ARM cloud instance, what does `uname -m` print?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`x86_64`"
+   },
+   {
+    "id": "b",
+    "text": "`aarch64`"
+   },
+   {
+    "id": "c",
+    "text": "`i686`"
+   },
+   {
+    "id": "d",
+    "text": "`riscv32`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`aarch64` is the Linux name for 64-bit ARM (ARM64).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q15",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.6"
+  ],
+  "topic": "Reclaiming image space",
+  "prompt": "A build host has accumulated many untagged, unused container image layers left over from rebuilds.\n\nWhich command removes them?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`docker image prune`"
+   },
+   {
+    "id": "b",
+    "text": "`docker stop $(docker ps -q)`"
+   },
+   {
+    "id": "c",
+    "text": "`docker logs --tail 0`"
+   },
+   {
+    "id": "d",
+    "text": "`docker commit`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`docker image prune` (or `podman image prune`) removes dangling images; add `-a` to remove all images not used by a container.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q16",
+  "source": "original",
+  "type": "match",
+  "objectives": [
+   "2.5"
+  ],
+  "topic": "Matching: systemd utilities",
+  "prompt": "Match each utility (1-4) to its purpose (A-D).",
+  "left": [
+   {
+    "id": "1",
+    "text": "`hostnamectl`"
+   },
+   {
+    "id": "2",
+    "text": "`timedatectl`"
+   },
+   {
+    "id": "3",
+    "text": "`resolvectl`"
+   },
+   {
+    "id": "4",
+    "text": "`systemd-analyze`"
+   }
+  ],
+  "right": [
+   {
+    "id": "a",
+    "text": "Shows how long boot took and which units were slowest"
+   },
+   {
+    "id": "b",
+    "text": "Queries and configures name resolution through systemd-resolved"
+   },
+   {
+    "id": "c",
+    "text": "Sets the system clock, time zone and NTP synchronisation"
+   },
+   {
+    "id": "d",
+    "text": "Views or changes the system's host name"
+   }
+  ],
+  "answer": {
+   "1": "d",
+   "2": "c",
+   "3": "b",
+   "4": "a"
+  },
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q17",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.3"
+  ],
+  "topic": "Dead but listed",
+  "prompt": "`ps aux` shows a process with state `Z` and the label `<defunct>`. It uses no CPU or memory.\n\nWhat is it?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A process stopped with Ctrl+Z"
+   },
+   {
+    "id": "b",
+    "text": "A zombie: it has exited, but its parent has not collected its exit status"
+   },
+   {
+    "id": "c",
+    "text": "A kernel thread"
+   },
+   {
+    "id": "d",
+    "text": "A daemon waiting for a socket"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a zombie has finished; only its process-table entry remains until the parent calls `wait()`. It cannot be killed; fix or restart the parent.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q18",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "topic": "Most recent login",
+  "prompt": "Which command reports, for a named account, the date, time and origin of its most recent login, read from `/var/log/lastlog`?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`lastlog -u <user>`"
+   },
+   {
+    "id": "b",
+    "text": "`whoami`"
+   },
+   {
+    "id": "c",
+    "text": "`id <user>`"
+   },
+   {
+    "id": "d",
+    "text": "`uptime`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`lastlog` reads `/var/log/lastlog`. `last` shows login history from `wtmp`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q19",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.1"
+  ],
+  "topic": "Two names, one file",
+  "prompt": "`ln report.txt backup.txt` is run, and then `report.txt` is deleted. `backup.txt` still opens with all the data.\n\nWhy?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`backup.txt` is a symbolic link, which caches the content."
+   },
+   {
+    "id": "b",
+    "text": "Both names were hard links to the same inode; the data remains while any link exists."
+   },
+   {
+    "id": "c",
+    "text": "The file was copied to `/tmp` automatically."
+   },
+   {
+    "id": "d",
+    "text": "The shell keeps deleted files for 24 hours."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a hard link is another directory entry for the same inode. Data is freed only when the link count reaches zero and no process has the file open. Hard links cannot cross file systems.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q20",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.7"
+  ],
+  "topic": "Faster guest I/O",
+  "prompt": "Which paravirtualized device framework lets KVM guests use disk and network drivers that cooperate with the hypervisor, avoiding slow emulation of real hardware?",
+  "options": [
+   {
+    "id": "a",
+    "text": "VirtIO"
+   },
+   {
+    "id": "b",
+    "text": "IPMI"
+   },
+   {
+    "id": "c",
+    "text": "PXE"
+   },
+   {
+    "id": "d",
+    "text": "ACPI"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "VirtIO provides paravirtualized block, network and other devices (`virtio_blk`, `virtio_net`).",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q21",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.6"
+  ],
+  "topic": "Better ratio than gzip",
+  "prompt": "Many source tarballs end in `.tar.xz`.\n\nWhich tool compresses and decompresses that format, typically achieving smaller files than gzip at the cost of more CPU time?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`zip`"
+   },
+   {
+    "id": "b",
+    "text": "`xz`"
+   },
+   {
+    "id": "c",
+    "text": "`compress`"
+   },
+   {
+    "id": "d",
+    "text": "`ar`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`xz` uses LZMA2. `tar -cJf` and `tar -xJf` call it directly.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q22",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.6"
+  ],
+  "topic": "Really gone",
+  "prompt": "A file with temporary credentials on a spinning disk must be overwritten several times and then removed.\n\nWhich command is designed for this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`rm -f creds.txt`"
+   },
+   {
+    "id": "b",
+    "text": "`shred -u creds.txt`"
+   },
+   {
+    "id": "c",
+    "text": "`truncate -s 0 creds.txt`"
+   },
+   {
+    "id": "d",
+    "text": "`mv creds.txt /dev/null`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`shred` overwrites the file's blocks repeatedly; `-u` removes it afterwards. It is less reliable on SSDs and on journaling or copy-on-write file systems.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q23",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "Lookup order",
+  "prompt": "Which file decides whether host names are looked up in `/etc/hosts` before DNS, or the other way round?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`/etc/resolv.conf`"
+   },
+   {
+    "id": "b",
+    "text": "`/etc/nsswitch.conf`"
+   },
+   {
+    "id": "c",
+    "text": "`/etc/hostname`"
+   },
+   {
+    "id": "d",
+    "text": "`/etc/networks`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "the `hosts:` line in `/etc/nsswitch.conf` (for example `files dns`) sets the order. `/etc/resolv.conf` only lists DNS servers.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q24",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "topic": "What is using the space",
+  "prompt": "`/var` is nearly full. The administrator wants a human-readable total for each directory directly under `/var`.\n\nWhich command is BEST?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`df -h /var`"
+   },
+   {
+    "id": "b",
+    "text": "`du -h --max-depth=1 /var`"
+   },
+   {
+    "id": "c",
+    "text": "`ls -l /var`"
+   },
+   {
+    "id": "d",
+    "text": "`stat /var`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`du` totals space used by directories; `--max-depth=1` (or `du -sh /var/*`) summarises one level. `df` reports whole file systems.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s3-q25",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "topic": "Unloading a module",
+  "prompt": "A test kernel module `dummy_net` is loaded and nothing is using it.\n\nWhich command removes it from the running kernel?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`lsmod dummy_net`"
+   },
+   {
+    "id": "b",
+    "text": "`modinfo dummy_net`"
+   },
+   {
+    "id": "c",
+    "text": "`rmmod dummy_net`"
+   },
+   {
+    "id": "d",
+    "text": "`depmod dummy_net`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "`rmmod` unloads a module (`modprobe -r` also removes unused dependencies). `lsmod` lists, `modinfo` describes, `depmod` rebuilds dependency data.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q01",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "topic": "More than port and service",
+  "prompt": "A firewalld rule must accept SSH only from 203.0.113.0/24, log each accepted connection with a prefix, and limit logging to three entries per minute.\n\nWhich firewalld feature is designed for rules this specific?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A rich rule"
+   },
+   {
+    "id": "b",
+    "text": "A predefined service"
+   },
+   {
+    "id": "c",
+    "text": "The default zone"
+   },
+   {
+    "id": "d",
+    "text": "Panic mode"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "rich rules (`firewall-cmd --add-rich-rule='rule family=\"ipv4\" source address=... service name=\"ssh\" log prefix=... limit value=\"3/m\" accept'`) express source, logging, limits and actions that services and ports alone cannot.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q02",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.5"
+  ],
+  "topic": "Sluggish terminal",
+  "prompt": "Over SSH, every keystroke on a server takes a second or more to appear. `ping` to the server shows 2 ms with no loss.\n\nWhat should be checked FIRST on the server?",
+  "options": [
+   {
+    "id": "a",
+    "text": "CPU, memory and I/O pressure, using tools such as `top` and `vmstat`"
+   },
+   {
+    "id": "b",
+    "text": "The terminal's colour scheme"
+   },
+   {
+    "id": "c",
+    "text": "The length of `~/.bash_history`"
+   },
+   {
+    "id": "d",
+    "text": "The keyboard layout in `/etc/default/keyboard`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "with a healthy network, typing lag usually means the host is starved: CPU saturated, swapping, or blocked on I/O.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q03",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.4",
+   "2.2"
+  ],
+  "topic": "Still getting in",
+  "prompt": "A contractor's engagement ended last week, but the audit log shows their account logging in yesterday.\n\nWhich action stops access immediately while keeping the account and its files for review?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`usermod -L -e 1 <user>`"
+   },
+   {
+    "id": "b",
+    "text": "`chage -l <user>`"
+   },
+   {
+    "id": "c",
+    "text": "`chmod 700 /home/<user>`"
+   },
+   {
+    "id": "d",
+    "text": "`groupmod -n former <user>`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`usermod -L` locks the password and `-e 1` sets the expiry date to the past, which also blocks SSH key logins. Files stay in place. `chage -l` only lists ageing information.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q04",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.4",
+   "3.5"
+  ],
+  "topic": "Two certificate warnings",
+  "prompt": "`curl` to server A fails because the certificate was issued by the company's internal CA, which this host does not know. `curl` to server B fails because the certificate was signed by its own key, with no CA involved.\n\nWhich pair describes A and B, in that order?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Untrusted certificate authority; self-signed certificate"
+   },
+   {
+    "id": "b",
+    "text": "Revoked certificate; expired certificate"
+   },
+   {
+    "id": "c",
+    "text": "Wrong host name; weak cipher"
+   },
+   {
+    "id": "d",
+    "text": "Self-signed certificate; untrusted certificate authority"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "A is signed by a CA missing from this host's trust store (add it and run `update-ca-trust` or `update-ca-certificates`). B is self-signed: issuer and subject are the same.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q05",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.3"
+  ],
+  "topic": "Listening, but unreachable",
+  "prompt": "On an application server, `ss -tlnp` shows the service listening on 0.0.0.0:8443. From the server, `curl https://localhost:8443` works. From other hosts on the same subnet, the connection times out.\n\nWhat is the MOST likely cause?",
+  "options": [
+   {
+    "id": "a",
+    "text": "The host firewall has no rule allowing 8443/tcp."
+   },
+   {
+    "id": "b",
+    "text": "The service is bound to the loopback address."
+   },
+   {
+    "id": "c",
+    "text": "DNS has no PTR record for the server."
+   },
+   {
+    "id": "d",
+    "text": "The server's clock is wrong."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "the service listens on all addresses and works locally, so the block is between hosts: the local firewall lacks an allow rule for the port.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q06",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.2",
+   "3.1"
+  ],
+  "topic": "A unit that will not stay up",
+  "prompt": "`systemctl status reportd` shows the unit as `failed` after several restart attempts.\n\nWhich command shows the service's own log messages to find out why, such as a missing library or configuration file?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`journalctl -u reportd`"
+   },
+   {
+    "id": "b",
+    "text": "`systemctl enable reportd`"
+   },
+   {
+    "id": "c",
+    "text": "`lsblk`"
+   },
+   {
+    "id": "d",
+    "text": "`systemctl daemon-reload`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`journalctl -u <unit>` shows that unit's log output; `systemctl status` shows only the last few lines.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q07",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.1"
+  ],
+  "topic": "Are you alive?",
+  "prompt": "A load balancer requests `/healthz` from each backend every ten seconds and stops sending traffic to any backend that fails three times in a row.\n\nWhat is this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Log aggregation"
+   },
+   {
+    "id": "b",
+    "text": "A health check"
+   },
+   {
+    "id": "c",
+    "text": "A webhook"
+   },
+   {
+    "id": "d",
+    "text": "Rate limiting"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a health check is an active, periodic probe used to decide whether an instance should receive traffic.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q08",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.4"
+  ],
+  "topic": "Keep build output out",
+  "prompt": "Compiled `*.o` files and the `build/` directory should never appear in `git status` or be committed.\n\nWhere are these patterns listed?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`.gitignore`"
+   },
+   {
+    "id": "b",
+    "text": "`.gitmodules`"
+   },
+   {
+    "id": "c",
+    "text": "`.git/HEAD`"
+   },
+   {
+    "id": "d",
+    "text": "`.gitattributes`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`.gitignore` lists patterns Git should not track. Files already committed must be removed from the index with `git rm --cached`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q09",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.3"
+  ],
+  "topic": "Python data types",
+  "prompt": "A Python script must look up an IP address by host name, for example `addr[\"db01\"]`.\n\nWhich built-in type stores key-value pairs like this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "list"
+   },
+   {
+    "id": "b",
+    "text": "tuple"
+   },
+   {
+    "id": "c",
+    "text": "dictionary"
+   },
+   {
+    "id": "d",
+    "text": "set"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "a dictionary (`dict`) maps keys to values: `addr = {\"db01\": \"10.0.0.5\"}`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q10",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "topic": "Is it empty?",
+  "prompt": "A script should continue only if the variable `TARGET` contains at least one character.\n\nWhich test is correct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`[ -z \"$TARGET\" ]`"
+   },
+   {
+    "id": "b",
+    "text": "`[ -n \"$TARGET\" ]`"
+   },
+   {
+    "id": "c",
+    "text": "`[ -e \"$TARGET\" ]`"
+   },
+   {
+    "id": "d",
+    "text": "`[ -d \"$TARGET\" ]`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`-n` is true for a non-empty string; `-z` is true for an empty one. Quote the variable.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q11",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.1"
+  ],
+  "topic": "Hands-off installation",
+  "prompt": "Two hundred Rocky Linux servers must be installed without anyone answering installer questions. Partitioning, packages and the root password are described in a text file the installer reads.\n\nWhat is that file called?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A Kickstart file"
+   },
+   {
+    "id": "b",
+    "text": "A Dockerfile"
+   },
+   {
+    "id": "c",
+    "text": "A unit file"
+   },
+   {
+    "id": "d",
+    "text": "A preseed diff"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Kickstart is the Red Hat family's unattended-install format. Debian uses preseed; Ubuntu Server uses autoinstall.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q12",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.6"
+  ],
+  "topic": "Scanning against a baseline",
+  "prompt": "A security team wants to scan hosts automatically against a published benchmark written in SCAP format and produce a pass/fail report.\n\nWhich tool does this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "OpenSCAP (`oscap`)"
+   },
+   {
+    "id": "b",
+    "text": "`logrotate`"
+   },
+   {
+    "id": "c",
+    "text": "`tcpdump`"
+   },
+   {
+    "id": "d",
+    "text": "`rsyslog`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "OpenSCAP evaluates systems against SCAP content (XCCDF/OVAL), for example CIS or STIG profiles.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q13",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "SSH hardening pair",
+  "prompt": "In `/etc/ssh/sshd_config`, an administrator wants to stop direct logins as root, and to stop password logins so that only key pairs are accepted.\n\nWhich pair of settings does this, in that order?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`PermitRootLogin no`; `PasswordAuthentication no`"
+   },
+   {
+    "id": "b",
+    "text": "`AllowTcpForwarding no`; `X11Forwarding no`"
+   },
+   {
+    "id": "c",
+    "text": "`PermitEmptyPasswords no`; `UsePAM no`"
+   },
+   {
+    "id": "d",
+    "text": "`PasswordAuthentication no`; `PermitRootLogin yes`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`PermitRootLogin no` blocks root over SSH; `PasswordAuthentication no` leaves public-key authentication. Reload sshd afterwards and keep a session open while testing.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q14",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.1",
+   "2.4"
+  ],
+  "topic": "Package families",
+  "prompt": "A vendor ships its agent only as a `.deb` file.\n\nOn which distribution can it be installed with the native package tools?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Fedora"
+   },
+   {
+    "id": "b",
+    "text": "Ubuntu"
+   },
+   {
+    "id": "c",
+    "text": "openSUSE"
+   },
+   {
+    "id": "d",
+    "text": "Rocky Linux"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`.deb` packages are for Debian and derivatives such as Ubuntu (`dpkg`, `apt`). Fedora, Rocky and openSUSE use RPM.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q15",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.1"
+  ],
+  "topic": "Follow the journal",
+  "prompt": "Which command prints new systemd journal entries as they arrive, like `tail -f`?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`journalctl -b -1`"
+   },
+   {
+    "id": "b",
+    "text": "`journalctl -f`"
+   },
+   {
+    "id": "c",
+    "text": "`journalctl --vacuum-time=1d`"
+   },
+   {
+    "id": "d",
+    "text": "`journalctl --list-boots`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`-f` follows the journal. `-b -1` shows the previous boot.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q16",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.6"
+  ],
+  "topic": "Data that outlives the container",
+  "prompt": "A PostgreSQL container is removed and recreated on every upgrade. The database files must survive.\n\nWhat is the correct approach?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Map a host directory or named volume to the data directory, for example `-v pgdata:/var/lib/postgresql/data`."
+   },
+   {
+    "id": "b",
+    "text": "Publish port 5432 with `-p`."
+   },
+   {
+    "id": "c",
+    "text": "Add `--restart=always`."
+   },
+   {
+    "id": "d",
+    "text": "Increase the container's memory limit."
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "volumes and bind mounts store data outside the container's writable layer, so it survives removal.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q17",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "topic": "Never start",
+  "prompt": "The `cups` service must be impossible to start, whether manually or as a dependency of another unit.\n\nWhich command achieves that?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`systemctl stop cups`"
+   },
+   {
+    "id": "b",
+    "text": "`systemctl disable cups`"
+   },
+   {
+    "id": "c",
+    "text": "`systemctl mask cups`"
+   },
+   {
+    "id": "d",
+    "text": "`systemctl kill cups`"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "masking links the unit to `/dev/null`, so it cannot be started at all. `disable` only removes automatic start; the unit can still be started by hand or as a dependency.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q18",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.4",
+   "4.3"
+  ],
+  "topic": "Not in the repositories",
+  "prompt": "A Python library needed by a script is not packaged by the distribution but is published on the Python Package Index.\n\nWhich tool installs it?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`pip`"
+   },
+   {
+    "id": "b",
+    "text": "`gem`"
+   },
+   {
+    "id": "c",
+    "text": "`make`"
+   },
+   {
+    "id": "d",
+    "text": "`cpan`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`pip` installs from PyPI; use it inside a virtual environment or with `--user` to avoid touching system packages.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q19",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.2"
+  ],
+  "topic": "Starter files",
+  "prompt": "Every new user should get a `README` and a preconfigured `.vimrc` in their home directory when the account is created with `useradd -m`.\n\nWhere should these files be placed?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`/etc/skel`"
+   },
+   {
+    "id": "b",
+    "text": "`/etc/default`"
+   },
+   {
+    "id": "c",
+    "text": "`/usr/share/doc`"
+   },
+   {
+    "id": "d",
+    "text": "`/root`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "the contents of `/etc/skel` are copied into each new home directory when it is created.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q20",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.1"
+  ],
+  "topic": "Remove a tree",
+  "prompt": "Which command deletes the directory `old_builds` together with everything inside it?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`rmdir old_builds`"
+   },
+   {
+    "id": "b",
+    "text": "`rm -r old_builds`"
+   },
+   {
+    "id": "c",
+    "text": "`unlink old_builds`"
+   },
+   {
+    "id": "d",
+    "text": "`rm old_builds/*`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`rm -r` removes recursively. `rmdir` only removes empty directories.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q21",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.7"
+  ],
+  "topic": "Lab isolation",
+  "prompt": "Malware-analysis VMs must be able to talk to each other and to the host, but must have no route to the office LAN or the internet.\n\nWhich virtual network type fits?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Bridged"
+   },
+   {
+    "id": "b",
+    "text": "NAT"
+   },
+   {
+    "id": "c",
+    "text": "Host-only (isolated)"
+   },
+   {
+    "id": "d",
+    "text": "Macvlan"
+   }
+  ],
+  "answer": [
+   "c"
+  ],
+  "explanation": "a host-only or isolated network connects guests and host with no uplink. NAT gives outbound access; bridged puts guests on the physical LAN.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q22",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.6"
+  ],
+  "topic": "Always there",
+  "prompt": "Which compression tool can be expected on practically every Linux system and produces `.gz` files?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`gzip`"
+   },
+   {
+    "id": "b",
+    "text": "`7z`"
+   },
+   {
+    "id": "c",
+    "text": "`rar`"
+   },
+   {
+    "id": "d",
+    "text": "`zstd`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`gzip` is part of virtually every base installation.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q23",
+  "source": "original",
+  "type": "match",
+  "objectives": [
+   "1.5"
+  ],
+  "topic": "Matching: text tools",
+  "prompt": "Match each tool (1-5) to its main use (A-E).",
+  "left": [
+   {
+    "id": "1",
+    "text": "`grep`"
+   },
+   {
+    "id": "2",
+    "text": "`sed`"
+   },
+   {
+    "id": "3",
+    "text": "`awk`"
+   },
+   {
+    "id": "4",
+    "text": "`cut`"
+   },
+   {
+    "id": "5",
+    "text": "`sort`"
+   }
+  ],
+  "right": [
+   {
+    "id": "a",
+    "text": "Extracts chosen columns or character positions from each line"
+   },
+   {
+    "id": "b",
+    "text": "Prints lines that match a pattern"
+   },
+   {
+    "id": "c",
+    "text": "Orders lines alphabetically or numerically"
+   },
+   {
+    "id": "d",
+    "text": "Applies editing commands, such as substitutions, to a stream"
+   },
+   {
+    "id": "e",
+    "text": "Field-aware pattern-and-action language for reports and calculations"
+   }
+  ],
+  "answer": {
+   "1": "b",
+   "2": "d",
+   "3": "e",
+   "4": "a",
+   "5": "c"
+  },
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q24",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.3"
+  ],
+  "topic": "Software RAID",
+  "prompt": "Three disks must be combined into one array that keeps working if any one disk fails, using Linux software RAID.\n\nWhich command is used?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`mdadm --create /dev/md0 --level=5 --raid-devices=3 /dev/sd[bcd]`"
+   },
+   {
+    "id": "b",
+    "text": "`mkfs.ext4 -R 5 /dev/sd[bcd]`"
+   },
+   {
+    "id": "c",
+    "text": "`pvcreate --raid 5 /dev/sd[bcd]`"
+   },
+   {
+    "id": "d",
+    "text": "`fdisk --stripe /dev/sd[bcd]`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`mdadm` manages Linux software RAID. RAID 5 stripes data with distributed parity and survives one disk failure.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s4-q25",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "topic": "Firmware facts",
+  "prompt": "Without opening the case, an administrator needs the motherboard model, BIOS version and installed memory module details.\n\nWhich command reads this from the firmware's DMI/SMBIOS tables?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`dmidecode`"
+   },
+   {
+    "id": "b",
+    "text": "`lsusb`"
+   },
+   {
+    "id": "c",
+    "text": "`dmesg -C`"
+   },
+   {
+    "id": "d",
+    "text": "`blkid`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`dmidecode` (run as root) decodes the DMI/SMBIOS tables: BIOS, system, baseboard, memory and more.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q01",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.2"
+  ],
+  "topic": "Port forwarding",
+  "prompt": "A Linux router has one public address. Connections arriving on its TCP port 2222 must be redirected to port 22 on the internal host 192.168.50.10.\n\nWhich firewall technique is this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Source NAT (masquerading)"
+   },
+   {
+    "id": "b",
+    "text": "Destination NAT"
+   },
+   {
+    "id": "c",
+    "text": "Connection tracking bypass"
+   },
+   {
+    "id": "d",
+    "text": "Bridge filtering"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "destination NAT (DNAT) rewrites the destination address or port of incoming packets; port forwarding is DNAT. Source NAT and masquerading rewrite the source of outgoing packets.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q02",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.5"
+  ],
+  "topic": "Too much switching",
+  "prompt": "A monitoring script starts a new short-lived process hundreds of times per second. CPU graphs show jagged spikes, and `vmstat 1` shows a very high value in the `cs` column.\n\nWhat does `cs` measure?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Cache size"
+   },
+   {
+    "id": "b",
+    "text": "Context switches per second"
+   },
+   {
+    "id": "c",
+    "text": "Core speed"
+   },
+   {
+    "id": "d",
+    "text": "Cumulative swap"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`cs` is context switches per second. Constantly creating short-lived processes makes the kernel switch tasks very often, wasting CPU.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q03",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.5"
+  ],
+  "topic": "Slow disk, lost packets",
+  "prompt": "`iostat -x` shows `await` of 400 ms on a disk whose SMART data is healthy. Separately, `ip -s link show eth0` shows the RX \"dropped\" counter rising steadily.\n\nWhich pair names the two symptoms, in that order?",
+  "options": [
+   {
+    "id": "a",
+    "text": "High disk latency; packet drops"
+   },
+   {
+    "id": "b",
+    "text": "Inode exhaustion; duplicate IP"
+   },
+   {
+    "id": "c",
+    "text": "Memory leak; MTU mismatch"
+   },
+   {
+    "id": "d",
+    "text": "Bad sectors; DNS timeout"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "high `await` with healthy hardware is disk latency, often from saturation; a rising \"dropped\" counter means the interface or kernel is discarding packets.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q04",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.5",
+   "5.4"
+  ],
+  "topic": "Many names, one source",
+  "prompt": "`/var/log/secure` shows 4,000 \"Failed password\" entries in ten minutes, all from one IP address, trying usernames such as admin, test, oracle and backup.\n\nWhat does this indicate?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A misconfigured cron job"
+   },
+   {
+    "id": "b",
+    "text": "A brute-force or password-spraying attempt against SSH"
+   },
+   {
+    "id": "c",
+    "text": "A user who forgot their password"
+   },
+   {
+    "id": "d",
+    "text": "Clock drift on the server"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "many failures in a short time across many usernames from one source is an automated guessing attack. Typical responses are fail2ban, key-only authentication and firewall rules.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q05",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.3"
+  ],
+  "topic": "One stack works",
+  "prompt": "On an interface with both IPv4 and IPv6 addresses, `ping -4 example.org` succeeds but `ping -6 example.org` fails. Applications that prefer IPv6 hang before falling back.\n\nHow is this kind of fault BEST described?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A dual-stack issue: the IPv6 side is broken while IPv4 works"
+   },
+   {
+    "id": "b",
+    "text": "A duplex mismatch"
+   },
+   {
+    "id": "c",
+    "text": "An ARP storm"
+   },
+   {
+    "id": "d",
+    "text": "A DHCP lease exhaustion"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "both protocols are configured, but one path (often IPv6 routing, router advertisements or a firewall) is broken.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q06",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "5.2"
+  ],
+  "topic": "Kernel not found",
+  "prompt": "After hand-editing the bootloader configuration to rename a kernel entry, the machine stops at a `grub>` prompt saying the kernel file cannot be found.\n\nWhat is the MOST likely cause?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A GRUB configuration error pointing at a path that does not exist"
+   },
+   {
+    "id": "b",
+    "text": "A failed memory module"
+   },
+   {
+    "id": "c",
+    "text": "A full `/home` partition"
+   },
+   {
+    "id": "d",
+    "text": "An expired root password"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "a wrong kernel path or name in the GRUB configuration leaves GRUB unable to load a kernel. The supported method is to edit `/etc/default/grub` and regenerate with `grub2-mkconfig` or `update-grub`, not to hand-edit `grub.cfg`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q07",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.1"
+  ],
+  "topic": "Central identities, cached",
+  "prompt": "Linux servers must accept logins from accounts stored in Active Directory, and must keep working for recently seen users when the domain controllers are briefly unreachable.\n\nWhich service provides this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "SSSD"
+   },
+   {
+    "id": "b",
+    "text": "`nscd` alone"
+   },
+   {
+    "id": "c",
+    "text": "`rsyslogd`"
+   },
+   {
+    "id": "d",
+    "text": "`chronyd`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "SSSD connects to LDAP, Active Directory or FreeIPA and caches identities and credentials, allowing offline logins.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q08",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.5"
+  ],
+  "topic": "Keeping prompts in-house",
+  "prompt": "A company wants an AI coding assistant, but policy forbids sending source code to any external service.\n\nWhich deployment satisfies the policy?",
+  "options": [
+   {
+    "id": "a",
+    "text": "A public cloud chatbot with history disabled"
+   },
+   {
+    "id": "b",
+    "text": "A model hosted and run on the company's own infrastructure"
+   },
+   {
+    "id": "c",
+    "text": "A browser extension for a public service"
+   },
+   {
+    "id": "d",
+    "text": "A shared team account on a public service"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "a locally hosted model keeps prompts and code inside the organisation. Public services, however configured, send data off-site.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q09",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.4"
+  ],
+  "topic": "One commit from many",
+  "prompt": "A feature branch has 14 small \"work in progress\" commits. The team wants `main` to receive them as a single commit.\n\nWhich Git feature does this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Squashing, for example `git merge --squash`"
+   },
+   {
+    "id": "b",
+    "text": "Tagging"
+   },
+   {
+    "id": "c",
+    "text": "Stashing"
+   },
+   {
+    "id": "d",
+    "text": "Bisecting"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "squashing combines commits: `git merge --squash` stages the combined change for one commit; `git rebase -i` can also squash.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q10",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.3"
+  ],
+  "topic": "Python style",
+  "prompt": "Which document is the widely followed style guide for Python code, covering naming, four-space indentation and line length?",
+  "options": [
+   {
+    "id": "a",
+    "text": "PEP 8"
+   },
+   {
+    "id": "b",
+    "text": "POSIX.1"
+   },
+   {
+    "id": "c",
+    "text": "RFC 2119"
+   },
+   {
+    "id": "d",
+    "text": "ISO 9660"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "PEP 8 is the style guide for Python code.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q11",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "4.2"
+  ],
+  "topic": "Numeric comparison",
+  "prompt": "A script should print a warning only when the integer in `$USED` is strictly greater than 90.\n\nWhich test is correct?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`[ \"$USED\" -ge 90 ]`"
+   },
+   {
+    "id": "b",
+    "text": "`[ \"$USED\" -gt 90 ]`"
+   },
+   {
+    "id": "c",
+    "text": "`[ \"$USED\" > 90 ]`"
+   },
+   {
+    "id": "d",
+    "text": "`[ \"$USED\" -eq 90 ]`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`-gt` is the integer \"greater than\" operator. `-ge` includes equality. Inside `[ ]`, `>` is output redirection, not comparison.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q12",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.6"
+  ],
+  "topic": "Naming and scoring vulnerabilities",
+  "prompt": "A security bulletin refers to an issue by an identifier of the form \"year-number\" from a public catalogue, and rates it 9.8 out of 10 for severity.\n\nWhich pair provides the identifier and the score, in that order?",
+  "options": [
+   {
+    "id": "a",
+    "text": "CVE; CVSS"
+   },
+   {
+    "id": "b",
+    "text": "CVSS; CVE"
+   },
+   {
+    "id": "c",
+    "text": "CIS; STIG"
+   },
+   {
+    "id": "d",
+    "text": "OVAL; CPE"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "CVE identifiers (CVE-YYYY-NNNN) name publicly known vulnerabilities; CVSS scores severity from 0.0 to 10.0.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q13",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.3"
+  ],
+  "topic": "Cleartext logins",
+  "prompt": "An audit finds a service on port 23 that lets administrators log in remotely, sending usernames and passwords unencrypted.\n\nWhat should be done?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Move the service to port 2323."
+   },
+   {
+    "id": "b",
+    "text": "Remove Telnet and use SSH."
+   },
+   {
+    "id": "c",
+    "text": "Allow it only during business hours."
+   },
+   {
+    "id": "d",
+    "text": "Add a longer login banner."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "Telnet (like FTP and rsh) sends credentials in clear text. Replace it with SSH and remove the old service.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q14",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.1"
+  ],
+  "topic": "Free as in freedom",
+  "prompt": "According to the Free Software Foundation, what makes a program \"free software\"?",
+  "options": [
+   {
+    "id": "a",
+    "text": "It can be downloaded at no cost."
+   },
+   {
+    "id": "b",
+    "text": "Users may run, study, modify and redistribute it."
+   },
+   {
+    "id": "c",
+    "text": "It has no warranty."
+   },
+   {
+    "id": "d",
+    "text": "It is written in C."
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "free software is defined by four freedoms: run, study, redistribute, and distribute modified versions. Price is not the point.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q15",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "3.1",
+   "1.3"
+  ],
+  "topic": "Shares for Windows clients",
+  "prompt": "A Linux server must offer file shares that Windows PCs can map as network drives using their native protocol.\n\nWhich software provides this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Samba"
+   },
+   {
+    "id": "b",
+    "text": "NFS"
+   },
+   {
+    "id": "c",
+    "text": "vsftpd"
+   },
+   {
+    "id": "d",
+    "text": "Squid"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Samba implements SMB/CIFS, the Windows file-sharing protocol, and can use local or domain accounts. NFS is the usual protocol between Unix-like systems.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q16",
+  "source": "original",
+  "type": "match",
+  "objectives": [
+   "2.6"
+  ],
+  "topic": "Matching: container network modes",
+  "prompt": "Match each mode (1-5) to its description (A-E).",
+  "left": [
+   {
+    "id": "1",
+    "text": "bridge"
+   },
+   {
+    "id": "2",
+    "text": "host"
+   },
+   {
+    "id": "3",
+    "text": "none"
+   },
+   {
+    "id": "4",
+    "text": "macvlan"
+   },
+   {
+    "id": "5",
+    "text": "overlay"
+   }
+  ],
+  "right": [
+   {
+    "id": "a",
+    "text": "The container gets only a loopback interface"
+   },
+   {
+    "id": "b",
+    "text": "The container gets its own MAC address and appears directly on the physical network"
+   },
+   {
+    "id": "c",
+    "text": "The container uses the host's network stack with no isolation"
+   },
+   {
+    "id": "d",
+    "text": "Default: containers attach to a private virtual switch on one host and reach outside through NAT"
+   },
+   {
+    "id": "e",
+    "text": "A virtual network that connects containers running on different hosts"
+   }
+  ],
+  "answer": {
+   "1": "d",
+   "2": "c",
+   "3": "a",
+   "4": "b",
+   "5": "e"
+  },
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q17",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.5"
+  ],
+  "topic": "Overriding a unit safely",
+  "prompt": "`nginx.service` is supplied by a package. The administrator wants to add `LimitNOFILE=65535` in a way that survives package updates.\n\nWhich command is the correct way to do this?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Edit `/usr/lib/systemd/system/nginx.service` directly."
+   },
+   {
+    "id": "b",
+    "text": "`systemctl edit nginx`"
+   },
+   {
+    "id": "c",
+    "text": "`systemctl revert nginx`"
+   },
+   {
+    "id": "d",
+    "text": "`systemctl isolate nginx`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "`systemctl edit` creates a drop-in file under `/etc/systemd/system/nginx.service.d/` and reloads systemd. Files under `/usr/lib/systemd/system` are replaced by package updates.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q18",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.4"
+  ],
+  "topic": "Self-contained desktop apps",
+  "prompt": "A user wants the newest release of a graphical application, bundled with its own libraries and run with restricted access to the rest of the system, independent of the distribution's repositories.\n\nWhich packaging technology fits?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Flatpak or Snap"
+   },
+   {
+    "id": "b",
+    "text": "A source tarball installed with `make install`"
+   },
+   {
+    "id": "c",
+    "text": "A kernel module"
+   },
+   {
+    "id": "d",
+    "text": "An initramfs hook"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "Flatpak and Snap bundle dependencies and run applications in a sandbox, independent of distribution packages.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q19",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.1",
+   "2.3"
+  ],
+  "topic": "Who has it open",
+  "prompt": "A suspicious file `/tmp/.x.dat` cannot be removed cleanly because something is using it.\n\nWhich command shows the processes, and their owners, that have the file open?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`lsof /tmp/.x.dat`"
+   },
+   {
+    "id": "b",
+    "text": "`stat /tmp/.x.dat`"
+   },
+   {
+    "id": "c",
+    "text": "`file /tmp/.x.dat`"
+   },
+   {
+    "id": "d",
+    "text": "`touch /tmp/.x.dat`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`lsof <file>` lists the processes with the file open, with PID and user. `fuser` gives similar information.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q20",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "2.1"
+  ],
+  "topic": "What changed",
+  "prompt": "Two versions of a configuration file exist: `sshd_config` and `sshd_config.bak`.\n\nWhich command shows the lines that differ between them?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`diff sshd_config sshd_config.bak`"
+   },
+   {
+    "id": "b",
+    "text": "`cat sshd_config sshd_config.bak`"
+   },
+   {
+    "id": "c",
+    "text": "`wc -l sshd_config sshd_config.bak`"
+   },
+   {
+    "id": "d",
+    "text": "`join sshd_config sshd_config.bak`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`diff` compares files line by line; `-u` gives unified output.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q21",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.7"
+  ],
+  "topic": "Out, but not in",
+  "prompt": "A VM needs to download updates from the internet, but must not be directly reachable from other machines on the office LAN. It should share the host's IP address for outbound traffic.\n\nWhich virtual network mode fits?",
+  "options": [
+   {
+    "id": "a",
+    "text": "Bridged"
+   },
+   {
+    "id": "b",
+    "text": "NAT"
+   },
+   {
+    "id": "c",
+    "text": "Host-only"
+   },
+   {
+    "id": "d",
+    "text": "Passthrough"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "with NAT, the guest sits on a private network and the host translates its outbound traffic; nothing on the LAN can reach the guest unless ports are forwarded.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q22",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.6"
+  ],
+  "topic": "Cross-platform archives",
+  "prompt": "A Windows colleague sends a `.7z` archive.\n\nWhich tool handles this format on Linux, although it is usually not installed by default?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`7z` (7-Zip / p7zip)"
+   },
+   {
+    "id": "b",
+    "text": "`gzip`"
+   },
+   {
+    "id": "c",
+    "text": "`cpio`"
+   },
+   {
+    "id": "d",
+    "text": "`bzip2`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "the 7-Zip tools (`7z`, `7za`, `7zz`) handle `.7z`; the package is typically `p7zip` or `7zip`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q23",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.5"
+  ],
+  "topic": "Shell startup files",
+  "prompt": "Aliases and a custom prompt should apply every time a user opens a new terminal window in a desktop session, which starts an interactive non-login Bash shell.\n\nWhich file is read in that case?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`~/.bash_logout`"
+   },
+   {
+    "id": "b",
+    "text": "`~/.bashrc`"
+   },
+   {
+    "id": "c",
+    "text": "`/etc/shadow`"
+   },
+   {
+    "id": "d",
+    "text": "`~/.bash_history`"
+   }
+  ],
+  "answer": [
+   "b"
+  ],
+  "explanation": "interactive non-login shells read `~/.bashrc`. Login shells read `/etc/profile` and then `~/.bash_profile`, `~/.bash_login` or `~/.profile`, which usually source `~/.bashrc`.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q24",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.4"
+  ],
+  "topic": "NetworkManager from the terminal",
+  "prompt": "On a server whose networking is managed by NetworkManager, which command-line tool lists connections and changes their settings?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`nmcli`"
+   },
+   {
+    "id": "b",
+    "text": "`netplan`"
+   },
+   {
+    "id": "c",
+    "text": "`ifconfig`"
+   },
+   {
+    "id": "d",
+    "text": "`route`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`nmcli` is NetworkManager's command-line client (`nmcli con show`, `nmcli con mod`). Netplan is a separate configuration front end used on Ubuntu.",
+  "answerStatus": "verified"
+ },
+ {
+  "id": "orig-s5-q25",
+  "source": "original",
+  "type": "single",
+  "objectives": [
+   "1.2"
+  ],
+  "topic": "Everything in one report",
+  "prompt": "Which single command produces a consolidated hardware inventory covering CPU, memory, storage, network and buses, with an optional short summary view?",
+  "options": [
+   {
+    "id": "a",
+    "text": "`lshw`"
+   },
+   {
+    "id": "b",
+    "text": "`lsmod`"
+   },
+   {
+    "id": "c",
+    "text": "`lsattr`"
+   },
+   {
+    "id": "d",
+    "text": "`lslocks`"
+   }
+  ],
+  "answer": [
+   "a"
+  ],
+  "explanation": "`lshw` lists hardware in detail; `lshw -short` gives a compact table. Run it as root for complete output.",
+  "answerStatus": "verified"
+ }
+]

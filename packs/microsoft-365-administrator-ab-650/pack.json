@@ -1,0 +1,124 @@
+{
+ "format": 1,
+ "id": "microsoft-365-administrator-ab-650",
+ "title": "Microsoft 365 and AI Services Administrator AB-650",
+ "subtitle": "Skills measured as of July 27, 2026",
+ "exam": {
+  "questions": 50,
+  "minutes": 100,
+  "passScore": 700,
+  "scaleMin": 1,
+  "scaleMax": 1000
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Configure and manage Microsoft 365 tenants and workloads",
+   "weight": 22,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Configure and manage a Microsoft 365 tenant"
+    },
+    {
+     "id": "1.2",
+     "title": "Manage Microsoft 365 workloads"
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Govern and secure Microsoft 365 tenants and workloads",
+   "weight": 42,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Manage identities in Microsoft Entra"
+    },
+    {
+     "id": "2.2",
+     "title": "Implement and manage authentication and access in Microsoft Entra"
+    },
+    {
+     "id": "2.3",
+     "title": "Secure Microsoft 365 workloads"
+    },
+    {
+     "id": "2.4",
+     "title": "Protect data in Microsoft 365 by using Microsoft Purview"
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Manage and secure AI services in Microsoft 365",
+   "weight": 36,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Enable and manage Microsoft 365 Copilot"
+    },
+    {
+     "id": "3.2",
+     "title": "Implement and manage agents in Microsoft 365 and Agent 365"
+    },
+    {
+     "id": "3.3",
+     "title": "Secure and govern agents by using Agent 365"
+    },
+    {
+     "id": "3.4",
+     "title": "Monitor AI services in Microsoft 365"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://learn.microsoft.com/en-us/credentials/certifications/",
+   "note": "Written for this app by an AI model against the official AB-650 skills outline and Microsoft Learn documentation; not independently reviewed."
+  },
+  {
+   "id": "quizcert",
+   "title": "QUIZCERT",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Matteo Zordan",
+   "url": "https://github.com/Kashim0-afk/QUIZCERT",
+   "note": "English text of a bilingual (Italian/English) bank. Written for MS-102, the exam AB-650 replaced."
+  },
+  {
+   "id": "ajay",
+   "title": "AI MS-102 Exam Prep mock exam",
+   "license": "MIT",
+   "attribution": "ajaysecurecertpath-rgb, https://github.com/ajaysecurecertpath-rgb/AI-MS102-Exam-Prep",
+   "url": "https://github.com/ajaysecurecertpath-rgb/AI-MS102-Exam-Prep",
+   "note": "Written for MS-102, the exam AB-650 replaced."
+  },
+  {
+   "id": "savemycert",
+   "title": "AB-900 study guide sample questions",
+   "license": "CC BY 4.0",
+   "attribution": "SaveMyCert, https://github.com/savemycert/ab-900-study-guide",
+   "url": "https://github.com/savemycert/ab-900-study-guide",
+   "note": "Written for AB-900, the fundamentals-level exam on the same topics."
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json",
+  "questions/quizcert.json",
+  "questions/ajay.json",
+  "questions/savemycert.json"
+ ],
+ "questionCount": 391,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "81% of the questions come from one source"
+  ]
+ },
+ "icon": "assets/icons/ms-associate.svg"
+}

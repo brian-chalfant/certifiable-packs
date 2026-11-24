@@ -1,0 +1,102 @@
+{
+ "format": 1,
+ "id": "microsoft-sc-200",
+ "title": "Microsoft Security Operations Analyst SC-200",
+ "subtitle": "Skills measured as of October 21, 2026",
+ "exam": {
+  "questions": 50,
+  "minutes": 100,
+  "passScore": 700,
+  "scaleMin": 1,
+  "scaleMax": 1000
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Manage a security operations environment",
+   "weight": 42,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Configure automation for Microsoft Defender XDR and Microsoft Sentinel"
+    },
+    {
+     "id": "1.2",
+     "title": "Configure the Microsoft Sentinel SIEM and platform"
+    },
+    {
+     "id": "1.3",
+     "title": "Ingest data into the Microsoft Sentinel SIEM and platform"
+    },
+    {
+     "id": "1.4",
+     "title": "Configure detections"
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Respond to security incidents",
+   "weight": 36,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Respond to alerts and incidents in Microsoft Defender XDR"
+    },
+    {
+     "id": "2.2",
+     "title": "Respond to alerts and incidents in Microsoft Defender for Endpoint"
+    },
+    {
+     "id": "2.3",
+     "title": "Investigate Microsoft 365 activities to identify threats"
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Perform threat hunting",
+   "weight": 22,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Detect threats by using Microsoft Defender XDR"
+    },
+    {
+     "id": "3.2",
+     "title": "Detect threats by using the Microsoft Sentinel platform"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "kr4k0w",
+   "title": "SC-200 Practice Exams",
+   "license": "MIT",
+   "attribution": "Kr4k0w, https://github.com/Kr4k0w/SC-200_Practice_Exams",
+   "url": "https://github.com/Kr4k0w/SC-200_Practice_Exams",
+   "note": "The author describes the questions, keys and explanations as AI-generated and unverified."
+  },
+  {
+   "id": "wiloak",
+   "title": "Security Zero to Hero practice questions",
+   "license": "CC BY 4.0",
+   "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/security-zero-to-hero",
+   "url": "https://github.com/PatrickWiloak/security-zero-to-hero"
+  }
+ ],
+ "questionFiles": [
+  "questions/kr4k0w.json",
+  "questions/wiloak.json"
+ ],
+ "questionCount": 325,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Fewer than 10 questions for 2 of 9 objectives",
+   "93% of the questions come from one source"
+  ]
+ },
+ "icon": "assets/icons/ms-associate.svg"
+}

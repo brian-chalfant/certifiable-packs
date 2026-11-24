@@ -1,0 +1,157 @@
+{
+ "format": 1,
+ "id": "microsoft-azure-administrator-az-104",
+ "title": "Microsoft Azure Administrator AZ-104",
+ "subtitle": "Skills measured as of October 26, 2023",
+ "exam": {
+  "questions": 50,
+  "minutes": 100,
+  "passScore": 700,
+  "scaleMin": 1,
+  "scaleMax": 1000
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Manage Azure identities and governance",
+   "weight": 24,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Manage Microsoft Entra users and groups"
+    },
+    {
+     "id": "1.2",
+     "title": "Manage access to Azure resources"
+    },
+    {
+     "id": "1.3",
+     "title": "Manage Azure subscriptions and governance"
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Implement and manage storage",
+   "weight": 19,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Configure access to storage"
+    },
+    {
+     "id": "2.2",
+     "title": "Configure and manage storage accounts"
+    },
+    {
+     "id": "2.3",
+     "title": "Configure Azure Files and Azure Blob Storage"
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Deploy and manage Azure compute resources",
+   "weight": 24,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Automate deployment of resources by using Azure Resource Manager (ARM) templates or Bicep files"
+    },
+    {
+     "id": "3.2",
+     "title": "Create and configure virtual machines"
+    },
+    {
+     "id": "3.3",
+     "title": "Provision and manage containers in the Azure portal"
+    },
+    {
+     "id": "3.4",
+     "title": "Create and configure Azure App Service"
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Implement and manage virtual networking",
+   "weight": 19,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Configure and manage virtual networks in Azure"
+    },
+    {
+     "id": "4.2",
+     "title": "Configure secure access to virtual networks"
+    },
+    {
+     "id": "4.3",
+     "title": "Configure name resolution and load balancing"
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Monitor and maintain Azure resources",
+   "weight": 14,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Monitor resources in Azure"
+    },
+    {
+     "id": "5.2",
+     "title": "Implement backup and recovery"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "coach",
+   "title": "Study Coach AZ-104 question bank",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Ythalo Saldanha",
+   "url": "https://github.com/ythalorossy/study-coach",
+   "note": "The author describes the questions as generated from Microsoft Learn fact sheets and re-verified. Sentence-completion and drag-and-drop items are split into one question per blank or target; exhibits are shown as text."
+  },
+  {
+   "id": "cpowell",
+   "title": "AZ-104 Trainer",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 The AZ-104 Trainer authors",
+   "url": "https://github.com/cpowell202/az104-trainer",
+   "note": "Yes/no, ordering, matching and drop-down items are left out."
+  },
+  {
+   "id": "kaseris",
+   "title": "AZ-104 Quiz",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Michalis Kaseris",
+   "url": "https://github.com/kaseris/az-104-quiz",
+   "note": "Adapted by its author from Tim Warner's MIT-licensed AZ-104 material (Copyright (c) 2021 Tim Warner)."
+  },
+  {
+   "id": "sherpa",
+   "title": "Awesome Cert Sherpa",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2025 ThanhNguyxn",
+   "url": "https://github.com/ThanhNguyxnOrg/awesome-cert-sherpa"
+  }
+ ],
+ "questionFiles": [
+  "questions/coach.json",
+  "questions/cpowell.json",
+  "questions/kaseris.json",
+  "questions/sherpa.json"
+ ],
+ "questionCount": 3702,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "89% of the questions come from one source"
+  ]
+ },
+ "icon": "assets/icons/ms-associate.svg"
+}

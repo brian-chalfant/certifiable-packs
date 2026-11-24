@@ -1,0 +1,380 @@
+{
+ "format": 1,
+ "id": "isc2-cissp",
+ "title": "ISC2 CISSP",
+ "subtitle": "Exam outline effective April 15, 2024",
+ "exam": {
+  "questions": 125,
+  "minutes": 180,
+  "passScore": 700,
+  "scaleMin": 0,
+  "scaleMax": 1000
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Security and Risk Management",
+   "weight": 16,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Understand, adhere to, and promote professional ethics"
+    },
+    {
+     "id": "1.2",
+     "title": "Understand and apply security concepts"
+    },
+    {
+     "id": "1.3",
+     "title": "Evaluate and apply security governance principles"
+    },
+    {
+     "id": "1.4",
+     "title": "Understand legal, regulatory, and compliance issues that pertain to information security in a holistic context"
+    },
+    {
+     "id": "1.5",
+     "title": "Understand requirements for investigation types (i.e., administrative, criminal, civil, regulatory, industry standards)"
+    },
+    {
+     "id": "1.6",
+     "title": "Develop, document, and implement security policy, standards, procedures, and guidelines"
+    },
+    {
+     "id": "1.7",
+     "title": "Identify, analyze, assess, prioritize, and implement Business Continuity (BC) requirements"
+    },
+    {
+     "id": "1.8",
+     "title": "Contribute to and enforce personnel security policies and procedures"
+    },
+    {
+     "id": "1.9",
+     "title": "Understand and apply risk management concepts"
+    },
+    {
+     "id": "1.10",
+     "title": "Understand and apply threat modeling concepts and methodologies"
+    },
+    {
+     "id": "1.11",
+     "title": "Apply supply chain risk management (SCRM) concepts"
+    },
+    {
+     "id": "1.12",
+     "title": "Establish and maintain a security awareness, education, and training program"
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Asset Security",
+   "weight": 10,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Identify and classify information and assets"
+    },
+    {
+     "id": "2.2",
+     "title": "Establish information and asset handling requirements"
+    },
+    {
+     "id": "2.3",
+     "title": "Provision information and assets securely"
+    },
+    {
+     "id": "2.4",
+     "title": "Manage data lifecycle"
+    },
+    {
+     "id": "2.5",
+     "title": "Ensure appropriate asset retention (e.g., End of Life (EOL), End of Support)"
+    },
+    {
+     "id": "2.6",
+     "title": "Determine data security controls and compliance requirements"
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Security Architecture and Engineering",
+   "weight": 13,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Research, implement and manage engineering processes using secure design principles"
+    },
+    {
+     "id": "3.2",
+     "title": "Understand the fundamental concepts of security models (e.g., Biba, Star Model, Bell-LaPadula)"
+    },
+    {
+     "id": "3.3",
+     "title": "Select controls based upon systems security requirements"
+    },
+    {
+     "id": "3.4",
+     "title": "Understand security capabilities of Information Systems (IS) (e.g., memory protection, Trusted Platform Module (TPM), encryption/decryption)"
+    },
+    {
+     "id": "3.5",
+     "title": "Assess and mitigate the vulnerabilities of security architectures, designs, and solution elements"
+    },
+    {
+     "id": "3.6",
+     "title": "Select and determine cryptographic solutions"
+    },
+    {
+     "id": "3.7",
+     "title": "Understand methods of cryptanalytic attacks"
+    },
+    {
+     "id": "3.8",
+     "title": "Apply security principles to site and facility design"
+    },
+    {
+     "id": "3.9",
+     "title": "Design site and facility security controls"
+    },
+    {
+     "id": "3.10",
+     "title": "Manage the information system lifecycle"
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Communication and Network Security",
+   "weight": 13,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Apply secure design principles in network architectures"
+    },
+    {
+     "id": "4.2",
+     "title": "Secure network components"
+    },
+    {
+     "id": "4.3",
+     "title": "Implement secure communication channels according to design"
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Identity and Access Management (IAM)",
+   "weight": 13,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Control physical and logical access to assets"
+    },
+    {
+     "id": "5.2",
+     "title": "Design identification and authentication strategy (e.g., people, devices, and services)"
+    },
+    {
+     "id": "5.3",
+     "title": "Federated identity with a third-party service"
+    },
+    {
+     "id": "5.4",
+     "title": "Implement and manage authorization mechanisms"
+    },
+    {
+     "id": "5.5",
+     "title": "Manage the identity and access provisioning lifecycle"
+    },
+    {
+     "id": "5.6",
+     "title": "Implement authentication systems"
+    }
+   ]
+  },
+  {
+   "id": "6.0",
+   "title": "Security Assessment and Testing",
+   "weight": 12,
+   "children": [
+    {
+     "id": "6.1",
+     "title": "Design and validate assessment, test, and audit strategies"
+    },
+    {
+     "id": "6.2",
+     "title": "Conduct security control testing"
+    },
+    {
+     "id": "6.3",
+     "title": "Collect security process data (e.g., technical and administrative)"
+    },
+    {
+     "id": "6.4",
+     "title": "Analyze test output and generate report"
+    },
+    {
+     "id": "6.5",
+     "title": "Conduct or facilitate security audits"
+    }
+   ]
+  },
+  {
+   "id": "7.0",
+   "title": "Security Operations",
+   "weight": 13,
+   "children": [
+    {
+     "id": "7.1",
+     "title": "Understand and comply with investigations"
+    },
+    {
+     "id": "7.2",
+     "title": "Conduct logging and monitoring activities"
+    },
+    {
+     "id": "7.3",
+     "title": "Perform configuration management (CM) (e.g., provisioning, baselining, automation)"
+    },
+    {
+     "id": "7.4",
+     "title": "Apply foundational security operations concepts"
+    },
+    {
+     "id": "7.5",
+     "title": "Apply resource protection"
+    },
+    {
+     "id": "7.6",
+     "title": "Conduct incident management"
+    },
+    {
+     "id": "7.7",
+     "title": "Operate and maintain detection and preventative measures"
+    },
+    {
+     "id": "7.8",
+     "title": "Implement and support patch and vulnerability management"
+    },
+    {
+     "id": "7.9",
+     "title": "Understand and participate in change management processes"
+    },
+    {
+     "id": "7.10",
+     "title": "Implement recovery strategies"
+    },
+    {
+     "id": "7.11",
+     "title": "Implement disaster recovery (DR) processes"
+    },
+    {
+     "id": "7.12",
+     "title": "Test disaster recovery plans (DRP)"
+    },
+    {
+     "id": "7.13",
+     "title": "Participate in Business Continuity (BC) planning and exercises"
+    },
+    {
+     "id": "7.14",
+     "title": "Implement and manage physical security"
+    },
+    {
+     "id": "7.15",
+     "title": "Address personnel safety and security concerns"
+    }
+   ]
+  },
+  {
+   "id": "8.0",
+   "title": "Software Development Security",
+   "weight": 10,
+   "children": [
+    {
+     "id": "8.1",
+     "title": "Understand and integrate security in the Software Development Life Cycle (SDLC)"
+    },
+    {
+     "id": "8.2",
+     "title": "Identify and apply security controls in software development ecosystems"
+    },
+    {
+     "id": "8.3",
+     "title": "Assess the effectiveness of software security"
+    },
+    {
+     "id": "8.4",
+     "title": "Assess security impact of acquired software"
+    },
+    {
+     "id": "8.5",
+     "title": "Define and apply secure coding guidelines and standards"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "cybird",
+   "title": "CISSP question bank",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Drew Klauser",
+   "url": "https://github.com/CyBirdSecurity/CISSP"
+  },
+  {
+   "id": "examcopilot",
+   "title": "ExamCopilot CISSP questions",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 ExamCopilot Contributors",
+   "url": "https://github.com/nobleqbit/examcopilot"
+  },
+  {
+   "id": "cloudanimal",
+   "title": "CISSP 2027 Prep",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Joe Cook",
+   "url": "https://github.com/cloudanimal/cissp-2027-prep",
+   "note": "Written for the April 2027 outline; questions the author marks as new in 2027 are left out."
+  },
+  {
+   "id": "alphabet",
+   "title": "AlphabetSoup quiz decks",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2024 thestateofcybersecurity",
+   "url": "https://github.com/thestateofcybersecurity/AlphabetSoup"
+  },
+  {
+   "id": "sherpa",
+   "title": "Awesome Cert Sherpa",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2025 ThanhNguyxn",
+   "url": "https://github.com/ThanhNguyxnOrg/awesome-cert-sherpa"
+  },
+  {
+   "id": "patrick",
+   "title": "Security Zero to Hero CISSP practice questions",
+   "license": "CC BY 4.0",
+   "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/security-zero-to-hero",
+   "url": "https://github.com/PatrickWiloak/security-zero-to-hero",
+   "note": "Five questions on topics new in the 2027 outline are left out."
+  }
+ ],
+ "questionFiles": [
+  "questions/cybird.json",
+  "questions/examcopilot.json",
+  "questions/cloudanimal.json",
+  "questions/alphabet.json",
+  "questions/sherpa.json",
+  "questions/patrick.json"
+ ],
+ "questionCount": 2038,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Questions are mapped to exam domains only, not to individual objectives"
+  ]
+ }
+}

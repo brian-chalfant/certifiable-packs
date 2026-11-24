@@ -1,0 +1,176 @@
+{
+ "format": 1,
+ "id": "comptia-project-plus-pk0-005",
+ "title": "CompTIA Project+ PK0-005",
+ "subtitle": "Exam objectives document version 7.0",
+ "exam": {
+  "questions": 95,
+  "minutes": 90,
+  "passScore": 710,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Project Management Concepts",
+   "weight": 33,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Explain the basic characteristics of a project and various methodologies and frameworks used in IT projects."
+    },
+    {
+     "id": "1.2",
+     "title": "Compare and contrast Agile vs. Waterfall concepts."
+    },
+    {
+     "id": "1.3",
+     "title": "Given a scenario, apply the change control process throughout the project life cycle."
+    },
+    {
+     "id": "1.4",
+     "title": "Given a scenario, perform risk management activities."
+    },
+    {
+     "id": "1.5",
+     "title": "Given a scenario, perform issue management activities."
+    },
+    {
+     "id": "1.6",
+     "title": "Given a scenario, apply schedule development and management activities and techniques."
+    },
+    {
+     "id": "1.7",
+     "title": "Compare and contrast quality management concepts and performance management concepts."
+    },
+    {
+     "id": "1.8",
+     "title": "Compare and contrast communication management concepts."
+    },
+    {
+     "id": "1.9",
+     "title": "Given a scenario, apply effective meeting management techniques."
+    },
+    {
+     "id": "1.10",
+     "title": "Given a scenario, perform basic activities related to team and resource management."
+    },
+    {
+     "id": "1.11",
+     "title": "Explain important project procurement and vendor selection concepts."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Project Life Cycle Phases",
+   "weight": 30,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Explain the value of artifacts in the discovery/concept preparation phase for a project."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, perform activities during the project initiation phase."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, perform activities during the project planning phase."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, perform activities during the project execution phase."
+    },
+    {
+     "id": "2.5",
+     "title": "Explain the importance of activities performed during the closing phase."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Tools and Documentation",
+   "weight": 19,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Given a scenario, use the appropriate tools throughout the project life cycle."
+    },
+    {
+     "id": "3.2",
+     "title": "Compare and contrast various project management productivity tools."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, analyze quality and performance charts to inform project decisions."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Basics of IT and Governance",
+   "weight": 18,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Summarize basic environmental, social, and governance (ESG) factors related to project management activities."
+    },
+    {
+     "id": "4.2",
+     "title": "Explain relevant information security concepts impacting project management concepts."
+    },
+    {
+     "id": "4.3",
+     "title": "Explain relevant compliance and privacy considerations impacting project management."
+    },
+    {
+     "id": "4.4",
+     "title": "Summarize basic IT concepts relevant to IT project management."
+    },
+    {
+     "id": "4.5",
+     "title": "Explain operational change-control processes during an IT project."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan Project+ PK0-005 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/project-plus",
+   "url": "https://github.com/prof-rizwan/project-plus",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  },
+  {
+   "id": "jorge",
+   "title": "Project+ PK0-005 questions",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Jorge Suarez, https://github.com/jorgeasaurus/projectplus-pk0-005-questions",
+   "url": "https://github.com/jorgeasaurus/projectplus-pk0-005-questions"
+  },
+  {
+   "id": "chief",
+   "title": "Project+ Without The Bullshit practice questions",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 ChiefGyk3D",
+   "url": "https://github.com/ChiefGyk3D/ProjectPlus-Without-The-Bullshit"
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json",
+  "questions/jorge.json",
+  "questions/chief.json"
+ ],
+ "questionCount": 680,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Fewer than 10 questions for 1 of 24 objectives"
+  ]
+ },
+ "icon": "assets/icons/project-plus.webp"
+}

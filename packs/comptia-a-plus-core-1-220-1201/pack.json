@@ -1,0 +1,239 @@
+{
+ "format": 1,
+ "id": "comptia-a-plus-core-1-220-1201",
+ "title": "CompTIA A+ Core 1 220-1201",
+ "subtitle": "Exam objectives document version 4.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 675,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Mobile Devices",
+   "weight": 13,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a scenario, monitor mobile device hardware and use appropriate replacement techniques."
+    },
+    {
+     "id": "1.2",
+     "title": "Compare and contrast accessories and connectivity options for mobile devices."
+    },
+    {
+     "id": "1.3",
+     "title": "Given a scenario, configure basic mobile device network connectivity and provide application support."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Networking",
+   "weight": 23,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Compare and contrast Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) ports, protocols, and their purposes."
+    },
+    {
+     "id": "2.2",
+     "title": "Explain wireless networking technologies."
+    },
+    {
+     "id": "2.3",
+     "title": "Summarize services provided by networked hosts."
+    },
+    {
+     "id": "2.4",
+     "title": "Explain common network configuration concepts."
+    },
+    {
+     "id": "2.5",
+     "title": "Compare and contrast common networking hardware devices."
+    },
+    {
+     "id": "2.6",
+     "title": "Given a scenario, configure basic wired/wireless small office/home office (SOHO) networks."
+    },
+    {
+     "id": "2.7",
+     "title": "Compare and contrast internet connection types, network types, and their characteristics."
+    },
+    {
+     "id": "2.8",
+     "title": "Explain networking tools and their purposes."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Hardware",
+   "weight": 25,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Compare and contrast display components and attributes."
+    },
+    {
+     "id": "3.2",
+     "title": "Summarize basic cable types and their connectors, features, and purposes."
+    },
+    {
+     "id": "3.3",
+     "title": "Compare and contrast RAM characteristics."
+    },
+    {
+     "id": "3.4",
+     "title": "Compare and contrast storage devices."
+    },
+    {
+     "id": "3.5",
+     "title": "Given a scenario, install and configure motherboards, central processing units (CPUs), and add-on cards."
+    },
+    {
+     "id": "3.6",
+     "title": "Given a scenario, install the appropriate power supply."
+    },
+    {
+     "id": "3.7",
+     "title": "Given a scenario, deploy and configure multifunction devices/printers and settings."
+    },
+    {
+     "id": "3.8",
+     "title": "Given a scenario, perform appropriate printer maintenance."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Virtualization and Cloud Computing",
+   "weight": 11,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain virtualization concepts."
+    },
+    {
+     "id": "4.2",
+     "title": "Summarize cloud computing concepts."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Hardware and Network Troubleshooting",
+   "weight": 28,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Given a scenario, troubleshoot motherboards, RAM, CPUs, and power."
+    },
+    {
+     "id": "5.2",
+     "title": "Given a scenario, troubleshoot drive and RAID issues."
+    },
+    {
+     "id": "5.3",
+     "title": "Given a scenario, troubleshoot video, projector, and display issues."
+    },
+    {
+     "id": "5.4",
+     "title": "Given a scenario, troubleshoot common mobile device issues."
+    },
+    {
+     "id": "5.5",
+     "title": "Given a scenario, troubleshoot network issues."
+    },
+    {
+     "id": "5.6",
+     "title": "Given a scenario, troubleshoot printer issues."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan A+ Core 1 220-1201 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/a-plus-c1",
+   "url": "https://github.com/prof-rizwan/a-plus-c1",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  },
+  {
+   "id": "derian",
+   "title": "Derian's Cyber Class",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Derian Farley",
+   "url": "https://github.com/derianfarley/derians-cyber-class"
+  },
+  {
+   "id": "dankam",
+   "title": "CompTIA A+ Study Kit",
+   "license": "CC BY 4.0",
+   "attribution": "DanKam0001, https://github.com/DanKam0001/comptia-a-plus-study-kit",
+   "url": "https://github.com/DanKam0001/comptia-a-plus-study-kit",
+   "note": "Answer options placed in a fixed pseudo-random order."
+  },
+  {
+   "id": "trevor",
+   "title": "CompTIA Certifications Study",
+   "license": "CC BY-SA 4.0",
+   "attribution": "Copyright (c) 2026 Trevor Dunn, https://github.com/trevorwdunn/comptia-certifications-study",
+   "url": "https://github.com/trevorwdunn/comptia-certifications-study",
+   "note": "Written for the retired 220-1101/1102 exams; mapped to the current objectives."
+  },
+  {
+   "id": "mercury",
+   "title": "A+ Arcade",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Jack Powell",
+   "url": "https://github.com/Mercury101999/aplus-arcade",
+   "note": "Written for the retired 220-1101/1102 exams; mapped to the current objectives."
+  },
+  {
+   "id": "loopback",
+   "title": "Loopback 1201",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 shanemckenney",
+   "url": "https://github.com/shanemckenney/Loopback-1201"
+  },
+  {
+   "id": "sophiaalk",
+   "title": "CompTIA A+ Core 1 practice",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Sophia Alikhani",
+   "url": "https://github.com/sophiaalk/comptia-a-plus-core1"
+  },
+  {
+   "id": "porcse",
+   "title": "CompTIA A+ Core 1 study app",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Matthew Sheaffer",
+   "url": "https://github.com/Porcse51115-ux/comptia-aplus-core1",
+   "note": "Written for the retired 220-1101/1102 exams; mapped to the current objectives."
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json",
+  "questions/derian.json",
+  "questions/dankam.json",
+  "questions/trevor.json",
+  "questions/mercury.json",
+  "questions/loopback.json",
+  "questions/sophiaalk.json",
+  "questions/porcse.json"
+ ],
+ "questionCount": 1415,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Fewer than 10 questions for 1 of 27 objectives"
+  ]
+ },
+ "icon": "assets/icons/a-plus.webp"
+}

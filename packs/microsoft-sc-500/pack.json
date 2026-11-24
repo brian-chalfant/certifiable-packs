@@ -1,0 +1,120 @@
+{
+ "format": 1,
+ "id": "microsoft-sc-500",
+ "title": "Microsoft Cloud and AI Security Engineer SC-500",
+ "subtitle": "Skills measured (undated study guide)",
+ "exam": {
+  "questions": 50,
+  "minutes": 120,
+  "passScore": 700,
+  "scaleMin": 1,
+  "scaleMax": 1000
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Manage identity, access, and governance",
+   "weight": 24,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Secure access to resources by using Microsoft Entra ID"
+    },
+    {
+     "id": "1.2",
+     "title": "Secure secrets and keys by using Azure Key Vault"
+    },
+    {
+     "id": "1.3",
+     "title": "Implement governance to enforce security and regulatory compliance"
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Secure storage, databases, and networking",
+   "weight": 28,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Implement security for storage accounts"
+    },
+    {
+     "id": "2.2",
+     "title": "Implement security for databases"
+    },
+    {
+     "id": "2.3",
+     "title": "Implement security for Azure network services"
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Secure compute",
+   "weight": 24,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Implement security for AI"
+    },
+    {
+     "id": "3.2",
+     "title": "Implement security for servers and virtual machines (VMs)"
+    },
+    {
+     "id": "3.3",
+     "title": "Implement security for application platform services"
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Manage and monitor security posture",
+   "weight": 24,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Manage security posture by using Defender for Cloud"
+    },
+    {
+     "id": "4.2",
+     "title": "Implement activity and event collection in Microsoft Sentinel"
+    },
+    {
+     "id": "4.3",
+     "title": "Implement Microsoft Security Copilot"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "utkarsh",
+   "title": "SC-500 Quiz",
+   "license": "MIT",
+   "attribution": "utkarsh121, https://github.com/utkarsh121/sc-500-quiz",
+   "url": "https://github.com/utkarsh121/sc-500-quiz"
+  },
+  {
+   "id": "savemycert",
+   "title": "SC-500 study guide sample questions",
+   "license": "CC BY 4.0",
+   "attribution": "SaveMyCert, https://github.com/savemycert/sc-500-study-guide",
+   "url": "https://github.com/savemycert/sc-500-study-guide"
+  }
+ ],
+ "questionFiles": [
+  "questions/utkarsh.json",
+  "questions/savemycert.json"
+ ],
+ "questionCount": 1040,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Questions are mapped to exam domains only, not to individual objectives",
+   "98% of the questions come from one source"
+  ]
+ },
+ "icon": "assets/icons/ms-associate.svg"
+}

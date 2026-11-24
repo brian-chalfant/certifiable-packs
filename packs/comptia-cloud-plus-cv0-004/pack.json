@@ -1,0 +1,227 @@
+{
+ "format": 1,
+ "id": "comptia-cloud-plus-cv0-004",
+ "title": "CompTIA Cloud+ CV0-004",
+ "subtitle": "Exam objectives document version 5.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 90,
+  "passScore": 750,
+  "scaleMin": 100,
+  "scaleMax": 900
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Cloud Architecture",
+   "weight": 23,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a scenario, use the appropriate cloud service model."
+    },
+    {
+     "id": "1.2",
+     "title": "Explain concepts related to service availability."
+    },
+    {
+     "id": "1.3",
+     "title": "Explain cloud networking concepts."
+    },
+    {
+     "id": "1.4",
+     "title": "Compare and contrast storage resources and technologies."
+    },
+    {
+     "id": "1.5",
+     "title": "Explain the purpose of cloud-native design concepts."
+    },
+    {
+     "id": "1.6",
+     "title": "Compare and contrast containerization concepts."
+    },
+    {
+     "id": "1.7",
+     "title": "Compare and contrast virtualization concepts."
+    },
+    {
+     "id": "1.8",
+     "title": "Summarize cost considerations related to cloud usage."
+    },
+    {
+     "id": "1.9",
+     "title": "Explain the importance of database concepts."
+    },
+    {
+     "id": "1.10",
+     "title": "Compare and contrast methods for optimizing workloads using cloud resources."
+    },
+    {
+     "id": "1.11",
+     "title": "Identify evolving technologies in the cloud."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Deployment",
+   "weight": 19,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Compare and contrast cloud deployment models."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, implement appropriate deployment strategies."
+    },
+    {
+     "id": "2.3",
+     "title": "Summarize aspects of cloud migration."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, use code to deploy and configure cloud resources."
+    },
+    {
+     "id": "2.5",
+     "title": "Given a set of requirements, provision the appropriate cloud resources."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Operations",
+   "weight": 17,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Given a scenario, configure appropriate resources to achieve observability."
+    },
+    {
+     "id": "3.2",
+     "title": "Given a scenario, configure appropriate scaling approaches."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, use appropriate backup and recovery methods."
+    },
+    {
+     "id": "3.4",
+     "title": "Given a scenario, manage the life cycle of cloud resources."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Security",
+   "weight": 19,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain vulnerability management concepts."
+    },
+    {
+     "id": "4.2",
+     "title": "Compare and contrast aspects of compliance and regulation."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, implement identity and access management."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, apply security best practices."
+    },
+    {
+     "id": "4.5",
+     "title": "Given a scenario, apply security controls in the cloud."
+    },
+    {
+     "id": "4.6",
+     "title": "Given a scenario, monitor suspicious activities to identify common attacks."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "DevOps Fundamentals",
+   "weight": 10,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Explain source control concepts."
+    },
+    {
+     "id": "5.2",
+     "title": "Explain concepts related to continuous integration/continuous deployment (CI/CD) pipelines."
+    },
+    {
+     "id": "5.3",
+     "title": "Explain concepts related to integration of systems."
+    },
+    {
+     "id": "5.4",
+     "title": "Explain the importance of tools used in DevOps environments."
+    }
+   ]
+  },
+  {
+   "id": "6.0",
+   "title": "Troubleshooting",
+   "weight": 12,
+   "children": [
+    {
+     "id": "6.1",
+     "title": "Given a scenario, troubleshoot deployment issues."
+    },
+    {
+     "id": "6.2",
+     "title": "Given a scenario, troubleshoot network issues."
+    },
+    {
+     "id": "6.3",
+     "title": "Given a scenario, troubleshoot security issues."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "rizwan",
+   "title": "Prof Rizwan Cloud+ CV0-004 question bank",
+   "license": "CC BY-NC-SA 4.0",
+   "attribution": "Copyright (c) 2026 Rizwan Virani, https://github.com/prof-rizwan/cloud-plus",
+   "url": "https://github.com/prof-rizwan/cloud-plus",
+   "note": "Explanation markup converted to plain text. Performance-based scenarios are split into one question per field."
+  },
+  {
+   "id": "irfan",
+   "title": "CompTIA Cloud+ CV0-004 study notes",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2025 CompTIA Cloud+ CV0-004 Study Repository Contributors",
+   "url": "https://github.com/irfanzulkifle/comptia-cloud-plus-cv0-004-study",
+   "note": "Practice questions taken from the per-objective study notes."
+  },
+  {
+   "id": "trevor",
+   "title": "CompTIA Certifications Study",
+   "license": "CC BY-SA 4.0",
+   "attribution": "Copyright (c) 2026 Trevor Dunn, https://github.com/trevorwdunn/comptia-certifications-study",
+   "url": "https://github.com/trevorwdunn/comptia-certifications-study"
+  }
+ ],
+ "questionFiles": [
+  "questions/rizwan.json",
+  "questions/irfan.json",
+  "questions/trevor.json"
+ ],
+ "questionCount": 1499,
+ "quality": {
+  "level": "green",
+  "reasons": [
+   "Every objective is well covered, from several sources"
+  ]
+ },
+ "icon": "assets/icons/cloud-plus.webp"
+}

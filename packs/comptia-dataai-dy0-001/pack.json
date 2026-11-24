@@ -1,0 +1,176 @@
+{
+ "format": 1,
+ "id": "comptia-dataai-dy0-001",
+ "title": "CompTIA DataAI DY0-001",
+ "subtitle": "Exam objectives document version 8.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 165,
+  "passScore": null,
+  "scaleMin": 0,
+  "scaleMax": 100
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Mathematics and Statistics",
+   "weight": 17,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a scenario, apply the appropriate statistical method or concept."
+    },
+    {
+     "id": "1.2",
+     "title": "Explain probability and synthetic modeling concepts and their uses."
+    },
+    {
+     "id": "1.3",
+     "title": "Explain the importance of linear algebra and basic calculus concepts."
+    },
+    {
+     "id": "1.4",
+     "title": "Compare and contrast various types of temporal models."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Modeling, Analysis, and Outcomes",
+   "weight": 24,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, use the appropriate exploratory data analysis (EDA) method or process."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, analyze common issues with data."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, apply data enrichment and augmentation techniques."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, conduct a model design iteration process."
+    },
+    {
+     "id": "2.5",
+     "title": "Given a scenario, analyze results of experiments and testing to justify final model recommendations and selection."
+    },
+    {
+     "id": "2.6",
+     "title": "Given a scenario, translate results and communicate via appropriate methods and mediums."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Machine Learning",
+   "weight": 24,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Given a scenario, apply foundational machine-learning concepts."
+    },
+    {
+     "id": "3.2",
+     "title": "Given a scenario, apply appropriate statistical supervised machine-learning concepts."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, apply tree-based supervised machine-learning concepts."
+    },
+    {
+     "id": "3.4",
+     "title": "Explain concepts related to deep learning."
+    },
+    {
+     "id": "3.5",
+     "title": "Explain concepts related to unsupervised machine learning."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Operations and Processes",
+   "weight": 22,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Explain the role of data science in various business functions."
+    },
+    {
+     "id": "4.2",
+     "title": "Explain the process of and purpose for obtaining different types of data."
+    },
+    {
+     "id": "4.3",
+     "title": "Explain data ingestion and storage concepts."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, implement common data-wrangling techniques."
+    },
+    {
+     "id": "4.5",
+     "title": "Given a scenario, implement best practices throughout the data science life cycle."
+    },
+    {
+     "id": "4.6",
+     "title": "Explain the importance of DevOps and MLOps principles in data science."
+    },
+    {
+     "id": "4.7",
+     "title": "Compare and contrast various deployment environments."
+    }
+   ]
+  },
+  {
+   "id": "5.0",
+   "title": "Specialized Applications of Data Science",
+   "weight": 13,
+   "children": [
+    {
+     "id": "5.1",
+     "title": "Compare and contrast optimization concepts."
+    },
+    {
+     "id": "5.2",
+     "title": "Explain the use and importance of natural language processing (NLP) concepts."
+    },
+    {
+     "id": "5.3",
+     "title": "Explain the use and importance of computer vision concepts."
+    },
+    {
+     "id": "5.4",
+     "title": "Explain the purpose of other specialized applications in data science."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "original",
+   "title": "Certifiable original questions",
+   "license": "Project-owned",
+   "attribution": "Written for this app",
+   "url": "https://www.comptia.org/en-us/certifications/dataai/",
+   "note": "Written for this app by an AI model against the official DY0-001 objectives; not independently reviewed. No openly licensed question bank was available for this exam."
+  }
+ ],
+ "questionFiles": [
+  "questions/original.json"
+ ],
+ "questionCount": 370,
+ "quality": {
+  "level": "yellow",
+  "reasons": [
+   "Only 370 questions for a 90-question exam",
+   "All questions come from a single source"
+  ]
+ },
+ "icon": "assets/icons/dataai.webp"
+}

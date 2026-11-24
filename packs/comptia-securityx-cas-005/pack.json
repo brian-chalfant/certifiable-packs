@@ -1,0 +1,167 @@
+{
+ "format": 1,
+ "id": "comptia-securityx-cas-005",
+ "title": "CompTIA SecurityX CAS-005",
+ "subtitle": "Exam objectives document version 7.0",
+ "exam": {
+  "questions": 90,
+  "minutes": 165,
+  "passScore": null,
+  "scaleMin": 0,
+  "scaleMax": 100
+ },
+ "objectives": [
+  {
+   "id": "1.0",
+   "title": "Governance, Risk, and Compliance",
+   "weight": 20,
+   "children": [
+    {
+     "id": "1.1",
+     "title": "Given a set of organizational security requirements, implement the appropriate governance components."
+    },
+    {
+     "id": "1.2",
+     "title": "Given a set of organizational security requirements, perform risk management activities."
+    },
+    {
+     "id": "1.3",
+     "title": "Explain how compliance affects information security strategies."
+    },
+    {
+     "id": "1.4",
+     "title": "Given a scenario, perform threat-modeling activities."
+    },
+    {
+     "id": "1.5",
+     "title": "Summarize the information security challenges associated with artificial intelligence (AI) adoption."
+    }
+   ]
+  },
+  {
+   "id": "2.0",
+   "title": "Security Architecture",
+   "weight": 27,
+   "children": [
+    {
+     "id": "2.1",
+     "title": "Given a scenario, analyze requirements to design resilient systems."
+    },
+    {
+     "id": "2.2",
+     "title": "Given a scenario, implement security in the early stages of the systems life cycle and throughout subsequent stages."
+    },
+    {
+     "id": "2.3",
+     "title": "Given a scenario, integrate appropriate controls in the design of a secure architecture."
+    },
+    {
+     "id": "2.4",
+     "title": "Given a scenario, apply security concepts to the design of access, authentication, and authorization systems."
+    },
+    {
+     "id": "2.5",
+     "title": "Given a scenario, securely implement cloud capabilities in an enterprise environment."
+    },
+    {
+     "id": "2.6",
+     "title": "Given a scenario, integrate Zero Trust concepts into system architecture design."
+    }
+   ]
+  },
+  {
+   "id": "3.0",
+   "title": "Security Engineering",
+   "weight": 31,
+   "children": [
+    {
+     "id": "3.1",
+     "title": "Given a scenario, troubleshoot common issues with identity and access management (IAM) components in an enterprise environment."
+    },
+    {
+     "id": "3.2",
+     "title": "Given a scenario, analyze requirements to enhance the security of endpoints and servers."
+    },
+    {
+     "id": "3.3",
+     "title": "Given a scenario, troubleshoot complex network infrastructure security issues."
+    },
+    {
+     "id": "3.4",
+     "title": "Given a scenario, implement hardware security technologies and techniques."
+    },
+    {
+     "id": "3.5",
+     "title": "Given a set of requirements, secure specialized and legacy systems against threats."
+    },
+    {
+     "id": "3.6",
+     "title": "Given a scenario, use automation to secure the enterprise."
+    },
+    {
+     "id": "3.7",
+     "title": "Explain the importance of advanced cryptographic concepts."
+    },
+    {
+     "id": "3.8",
+     "title": "Given a scenario, apply the appropriate cryptographic use case and/or technique."
+    }
+   ]
+  },
+  {
+   "id": "4.0",
+   "title": "Security Operations",
+   "weight": 22,
+   "children": [
+    {
+     "id": "4.1",
+     "title": "Given a scenario, analyze data to enable monitoring and response activities."
+    },
+    {
+     "id": "4.2",
+     "title": "Given a scenario, analyze vulnerabilities and attacks, and recommend solutions to reduce the attack surface."
+    },
+    {
+     "id": "4.3",
+     "title": "Given a scenario, apply threat-hunting and threat intelligence concepts."
+    },
+    {
+     "id": "4.4",
+     "title": "Given a scenario, analyze data and artifacts in support of incident response activities."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "stuecscott",
+   "title": "CompTIA SecurityX Trainer",
+   "license": "MIT",
+   "attribution": "stuecscott, https://github.com/stuecscott/CompTIA-Security-X-Trainer",
+   "url": "https://github.com/stuecscott/CompTIA-Security-X-Trainer",
+   "note": "The repository states the MIT licence in its README; it has no separate licence file."
+  },
+  {
+   "id": "alphabet",
+   "title": "AlphabetSoup quiz decks",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2024 thestateofcybersecurity",
+   "url": "https://github.com/thestateofcybersecurity/AlphabetSoup",
+   "note": "Not written for a specific exam version; mapped to the CAS-005 objectives."
+  }
+ ],
+ "questionFiles": [
+  "questions/stuecscott.json",
+  "questions/alphabet.json"
+ ],
+ "questionCount": 313,
+ "quality": {
+  "level": "red",
+  "reasons": [
+   "Fewer than 10 questions for 3 of 23 objectives",
+   "Only 313 questions for a 90-question exam",
+   "82% of the questions come from one source"
+  ]
+ },
+ "icon": "assets/icons/securityx.webp"
+}
