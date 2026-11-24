@@ -90,11 +90,11 @@
   "questions/original.json",
   "questions/wiloak.json"
  ],
- "questionCount": 254,
+ "questionCount": 253,
  "quality": {
   "level": "yellow",
   "reasons": [
-   "Only 254 questions for a 50-question exam",
+   "Only 253 questions for a 50-question exam",
    "88% of the questions come from one source"
   ]
  },

@@ -253,11 +253,11 @@
   },
   "comptia-tech-plus-fc0-u71": {
    "format": 1,
-   "hash": "7b4db33c27c44e329aa731e9f19bbc72fe16141e85e344a2cfe8a2c735534f98",
-   "published": 202611240109,
+   "hash": "58f3b1fc37a398fdd3333b5d8579d2fbbf2e58227d9417a1dfcef8402e3cbfae",
+   "published": 202611240403,
    "files": {
     "pack.json": "46cd2f1f02409f7404fb3c61c65665cda0356e628f3ae020fbfc648e46bec636",
-    "questions/original.json": "918fc1bdd3d4dbc9c8695508145419f36f4bbd6bdf4f1ff77ee27b00cd83a322",
+    "questions/original.json": "f97a4624700c8fe68513e199b8441cf39ffc4b6636f2a52a72169b8772c984dc",
     "questions/savemycert.json": "999e8e8d0ded4c3dc523541cd02fb32aaf5d699da3ff6e8680eea8b63928cb6e",
     "questions/trevor.json": "df51a0e051d0f50016a025d05126146b7c1cf8475bee32202c9b263917f66158"
    }
@@ -349,11 +349,11 @@
   },
   "microsoft-sc-100": {
    "format": 1,
-   "hash": "27cfa33d07041af59ecb320ec4db7950316e308c7a68247c0d7383c7ae089936",
-   "published": 202611240109,
+   "hash": "6e589408e886f7e35edde0f9225acdb70ab4ab928bc1636b97845ec96d1cdac6",
+   "published": 202611240403,
    "files": {
     "pack.json": "12857daf298fceee2fefc2c55204a448fd1ee624b6cc411b4467cbfdb1c90d0b",
-    "questions/original.json": "b45797811857e3290326a6f82744ce25b777b4f6eaa460544fe04689f125e5ac",
+    "questions/original.json": "1100d37159fa8d0008eacd7966db62567ccbf399693b5dbf8f1f467a4d2796ab",
     "questions/wiloak.json": "645c230ebba5915d30d5f575eeffc90d2cc55ae7cf9a283909b2478c45537d6c"
    }
   },
@@ -382,11 +382,11 @@
   },
   "microsoft-sc-401": {
    "format": 1,
-   "hash": "5f8272d3cba2a872446bd2b90215985be87931e255d1f116be144123292d440a",
-   "published": 202611240109,
+   "hash": "43f05097e3500b403dfd2e696cf9bc59c548491a28391726bc402ca528304a2b",
+   "published": 202611240403,
    "files": {
-    "pack.json": "a4c28b07b65b49a7f33106e2e5d38e7f62f9dac8b9909154ff99d50f241802dd",
-    "questions/original.json": "394666e27cae2c1565c0aeaebaaf43164c43871510a407605df5577c921cbae1",
+    "pack.json": "cacf2cbb972a4e0131aeebfbd5708085e716ca62b56adef91bd7efe0bbc38162",
+    "questions/original.json": "c244a6a84125c7bc3ac92fe5affb021e6971c87027e9ed6425c0fad65dbbe60a",
     "questions/wiloak.json": "f7c1a86c0291caa84861c48b1b3e2227845f43175bb78f3be2e1cf169c8ef0c5"
    }
   },
