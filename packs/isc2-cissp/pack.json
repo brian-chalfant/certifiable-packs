@@ -360,6 +360,14 @@
    "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/security-zero-to-hero",
    "url": "https://github.com/PatrickWiloak/security-zero-to-hero",
    "note": "Five questions on topics new in the 2027 outline are left out."
+  },
+  {
+   "id": "packt",
+   "title": "CISSP Domain 4 Video Boot Camp practice questions",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2019 Packt",
+   "url": "https://github.com/PacktPublishing/CISSP-Certification-Domain-4-Communication-and-Network-Security-Video-Boot-Camp-2022",
+   "note": "Domain 4 questions from Thor Pedersen's boot camp, released by Packt under the MIT licence."
   }
  ],
  "questionFiles": [
@@ -368,9 +376,10 @@
   "questions/cloudanimal.json",
   "questions/alphabet.json",
   "questions/sherpa.json",
-  "questions/patrick.json"
+  "questions/patrick.json",
+  "questions/packt.json"
  ],
- "questionCount": 2038,
+ "questionCount": 2068,
  "quality": {
   "level": "yellow",
   "reasons": [

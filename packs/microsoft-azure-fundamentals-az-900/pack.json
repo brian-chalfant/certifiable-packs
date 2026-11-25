@@ -127,6 +127,13 @@
    "attribution": "Yahya Younes, https://github.com/Yahya-Younes/ai-cloud-certification-hub",
    "url": "https://github.com/Yahya-Younes/ai-cloud-certification-hub",
    "note": "Drop-down and yes/no exercises are split into one question per item."
+  },
+  {
+   "id": "wiloak",
+   "title": "Cloud Zero to Hero AZ-900 practice questions",
+   "license": "CC BY 4.0",
+   "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/cloud-zero-to-hero",
+   "url": "https://github.com/PatrickWiloak/cloud-zero-to-hero"
   }
  ],
  "questionFiles": [
@@ -136,9 +143,10 @@
   "questions/kv.json",
   "questions/nxrth.json",
   "questions/siteq8.json",
-  "questions/yahya.json"
+  "questions/yahya.json",
+  "questions/wiloak.json"
  ],
- "questionCount": 1178,
+ "questionCount": 1215,
  "quality": {
   "level": "yellow",
   "reasons": [

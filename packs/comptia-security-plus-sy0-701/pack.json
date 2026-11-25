@@ -232,6 +232,13 @@
    "attribution": "Copyright (c) 2026 Gage Jarvis",
    "url": "https://github.com/dumbletor0day/securityplus-study",
    "note": "Short recall questions. Answer options placed in a fixed pseudo-random order."
+  },
+  {
+   "id": "wallix",
+   "title": "WallixCerts Security+ SY0-701 practice questions",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Chema Morandeira",
+   "url": "https://github.com/morandeirachema/WallixCerts"
   }
  ],
  "questionFiles": [
@@ -244,9 +251,10 @@
   "questions/trevor.json",
   "questions/quizcert.json",
   "questions/examice.json",
-  "questions/dumbletor.json"
+  "questions/dumbletor.json",
+  "questions/wallix.json"
  ],
- "questionCount": 3881,
+ "questionCount": 3933,
  "quality": {
   "level": "green",
   "reasons": [

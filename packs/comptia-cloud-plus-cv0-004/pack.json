@@ -209,14 +209,22 @@
    "license": "CC BY-SA 4.0",
    "attribution": "Copyright (c) 2026 Trevor Dunn, https://github.com/trevorwdunn/comptia-certifications-study",
    "url": "https://github.com/trevorwdunn/comptia-certifications-study"
+  },
+  {
+   "id": "wiloak",
+   "title": "Cloud Zero to Hero Cloud+ practice questions",
+   "license": "CC BY 4.0",
+   "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/cloud-zero-to-hero",
+   "url": "https://github.com/PatrickWiloak/cloud-zero-to-hero"
   }
  ],
  "questionFiles": [
   "questions/rizwan.json",
   "questions/irfan.json",
-  "questions/trevor.json"
+  "questions/trevor.json",
+  "questions/wiloak.json"
  ],
- "questionCount": 1499,
+ "questionCount": 1529,
  "quality": {
   "level": "green",
   "reasons": [

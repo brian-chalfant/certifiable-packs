@@ -132,15 +132,24 @@
    "attribution": "Copyright (c) 2026 Matteo Zordan",
    "url": "https://github.com/Kashim0-afk/QUIZCERT",
    "note": "English text of a bilingual (Italian/English) bank. Written for CS0-003; mapped to the CS0-004 objectives."
+  },
+  {
+   "id": "wallix",
+   "title": "WallixCerts CySA+ CS0-003 practice questions",
+   "license": "MIT",
+   "attribution": "Copyright (c) 2026 Chema Morandeira",
+   "url": "https://github.com/morandeirachema/WallixCerts",
+   "note": "Written for CS0-003; mapped to the CS0-004 objectives."
   }
  ],
  "questionFiles": [
   "questions/rizwan.json",
   "questions/sentry.json",
   "questions/alphabet.json",
-  "questions/quizcert.json"
+  "questions/quizcert.json",
+  "questions/wallix.json"
  ],
- "questionCount": 684,
+ "questionCount": 732,
  "quality": {
   "level": "green",
   "reasons": [

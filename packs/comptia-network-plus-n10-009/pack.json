@@ -205,6 +205,13 @@
    "license": "CC0 1.0",
    "attribution": "internationalgentleman-collab",
    "url": "https://github.com/internationalgentleman-collab/proletarinet"
+  },
+  {
+   "id": "wiloak",
+   "title": "Cloud Zero to Hero Network+ practice questions",
+   "license": "CC BY 4.0",
+   "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/cloud-zero-to-hero",
+   "url": "https://github.com/PatrickWiloak/cloud-zero-to-hero"
   }
  ],
  "questionFiles": [
@@ -215,9 +222,10 @@
   "questions/trevor.json",
   "questions/quizcert.json",
   "questions/techrevise.json",
-  "questions/proletarinet.json"
+  "questions/proletarinet.json",
+  "questions/wiloak.json"
  ],
- "questionCount": 1871,
+ "questionCount": 1900,
  "quality": {
   "level": "green",
   "reasons": [

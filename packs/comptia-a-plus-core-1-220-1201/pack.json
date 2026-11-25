@@ -216,6 +216,14 @@
    "attribution": "Copyright (c) 2026 Matthew Sheaffer",
    "url": "https://github.com/Porcse51115-ux/comptia-aplus-core1",
    "note": "Written for the retired 220-1101/1102 exams; mapped to the current objectives."
+  },
+  {
+   "id": "wiloak",
+   "title": "Cloud Zero to Hero A+ practice questions",
+   "license": "CC BY 4.0",
+   "attribution": "Patrick Wiloak, https://github.com/PatrickWiloak/cloud-zero-to-hero",
+   "url": "https://github.com/PatrickWiloak/cloud-zero-to-hero",
+   "note": "Questions 1 to 10 of a combined Core 1 / Core 2 set."
   }
  ],
  "questionFiles": [
@@ -226,9 +234,10 @@
   "questions/mercury.json",
   "questions/loopback.json",
   "questions/sophiaalk.json",
-  "questions/porcse.json"
+  "questions/porcse.json",
+  "questions/wiloak.json"
  ],
- "questionCount": 1415,
+ "questionCount": 1425,
  "quality": {
   "level": "green",
   "reasons": [
