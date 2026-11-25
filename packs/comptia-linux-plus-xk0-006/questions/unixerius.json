@@ -856,54 +856,6 @@
   "answerStatus": "draft"
  },
  {
-  "id": "ux-l05-q05",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "1.5"
-  ],
-  "prompt": "I would like to use \"cut\" to grab the second column from a file, with the following format:\n\nserver100,192.168.2.100,production,webserver\nserver100,192.168.2.100,production,webserver\nserver100,192.168.2.100,production,webserver\n\nSo for example: cat /var/inventory/servers.txt | cut ... ... ...\n\nWhat do I need to enter on the ... ... to only get the second column from this file?\n\nHINT: you will need two flags, each of which takes one value.",
-  "accept": [
-   "-d, -f2",
-   "-d, -f 2",
-   "-d , -f2",
-   "-d , -f 2",
-   "-d',' -f2",
-   "-d',' -f 2",
-   "-d ',' -f2",
-   "-d ',' -f 2",
-   "-d\",\" -f2",
-   "-d\",\" -f 2",
-   "-d \",\" -f2",
-   "-d \",\" -f 2",
-   "-f2 -d,",
-   "-f 2 -d,",
-   "-f2 -d ,",
-   "-f 2 -d ,",
-   "-f2 -d','",
-   "-f 2 -d','",
-   "-f2 -d ','",
-   "-f 2 -d ','",
-   "-f2 -d\",\"",
-   "-f 2 -d\",\"",
-   "-f2 -d \",\"",
-   "-f 2 -d \",\"",
-   "--delimiter=, --fields=2",
-   "--delimiter=',' --fields=2",
-   "--delimiter=\",\" --fields=2",
-   "--fields=2 --delimiter=,",
-   "cut -d, -f2",
-   "cut -d , -f 2",
-   "cut -d ',' -f 2",
-   "cut -d ',' -f2",
-   "cut -d \",\" -f 2",
-   "cut -d \",\" -f2"
-  ],
-  "caseSensitive": true,
-  "explanation": "`-d,` sets the comma as field delimiter and `-f2` selects the second field.",
-  "answerStatus": "draft"
- },
- {
   "id": "ux-l06-q01",
   "source": "unixerius",
   "type": "single",
@@ -1003,12 +955,42 @@
  {
   "id": "ux-l06-q04",
   "source": "unixerius",
-  "type": "order",
+  "type": "match",
   "objectives": [
    "2.4"
   ],
-  "prompt": "For the following applications, which network protocols are used? \n\nPut them in the right order. At the top matches the first application, at the bottom matches the last application. \n\n* Using a web browser to visit web sites.\n* Sending email\n* Receiving email\n* Secure access to the shell of a remote Linux system.\n* Hostname resolution\n* Time / clock synchronization\n* Windows file sharing",
-  "options": [
+  "prompt": "Which network protocol does each of these applications use?",
+  "left": [
+   {
+    "id": "1",
+    "text": "Using a web browser to visit websites"
+   },
+   {
+    "id": "2",
+    "text": "Sending email"
+   },
+   {
+    "id": "3",
+    "text": "Receiving email"
+   },
+   {
+    "id": "4",
+    "text": "Secure access to the shell of a remote Linux system"
+   },
+   {
+    "id": "5",
+    "text": "Hostname resolution"
+   },
+   {
+    "id": "6",
+    "text": "Time / clock synchronization"
+   },
+   {
+    "id": "7",
+    "text": "Windows file sharing"
+   }
+  ],
+  "right": [
    {
     "id": "a",
     "text": "DNS"
@@ -1038,17 +1020,17 @@
     "text": "SSH"
    }
   ],
-  "answer": [
-   "b",
-   "f",
-   "d",
-   "g",
-   "a",
-   "c",
-   "e"
-  ],
+  "answer": {
+   "1": "b",
+   "2": "f",
+   "3": "d",
+   "4": "g",
+   "5": "a",
+   "6": "c",
+   "7": "e"
+  },
   "explanation": "Web = HTTP/HTTPS, sending mail = SMTP, receiving mail = POP3, remote shell = SSH, name resolution = DNS, time sync = NTP, Windows file sharing = SMB.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l06-q05",
@@ -1427,7 +1409,7 @@
    "b"
   ],
   "explanation": "Make a project directory, `vagrant init` to create the Vagrantfile, `vagrant up` to build and boot, `vagrant ssh` to use it, then `vagrant halt` and finally `vagrant destroy`.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l08-q05",
@@ -1472,7 +1454,7 @@
    "c"
   ],
   "explanation": "Get the source, write the Dockerfile, build the image, run a container from it, find it with `docker ps`, then kill it by container ID.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l09-q01",
@@ -1531,7 +1513,7 @@
    "b"
   ],
   "explanation": "A SAN is the most flexible and most expensive, followed by NAS, then DAS, with plain internal drives the cheapest and least flexible.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l09-q03",
@@ -1759,7 +1741,7 @@
    "b"
   ],
   "explanation": "Attach the device, find out its device path (e.g. with lsblk), partition it, then create file systems on the partitions.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l09-q10",
@@ -1768,7 +1750,7 @@
   "objectives": [
    "1.3"
   ],
-  "prompt": "The /etc/fstab file has a number of standard fields, left to right. Put the following field descriptions in the right order (left-most/first at the top, right-most/last at the bottom).",
+  "prompt": "The /etc/fstab file has a number of standard fields, left to right. Put the field descriptions in that order: the top of the list is the leftmost field.",
   "options": [
    {
     "id": "a",
@@ -1799,7 +1781,7 @@
    "b"
   ],
   "explanation": "fstab fields are: device, mount point, file system type, mount options, then the dump and fsck-pass numbers.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l10-q01",
@@ -1898,7 +1880,7 @@
   "objectives": [
    "1.3"
   ],
-  "prompt": "Put into the right order, layered from bottom to top, these LVM concepts. \n\nHow would these build on top of each other? Starting at the BOTTOM with the hardware, ending at the top with the file system.",
+  "prompt": "Arrange these LVM concepts as a stack, the way they build on each other. The top of the list is the top layer, where files are reached; the bottom of the list is the actual disk (hardware or virtual).",
   "options": [
    {
     "id": "a",
@@ -1933,7 +1915,7 @@
    "d",
    "e"
   ],
-  "explanation": "listed as a visual stack with the top layer first: mount point, file system, logical volume, volume group, physical volume, actual disk (hardware at the bottom). This keeps the form's stored order; if the form expects the list to start with the hardware, the correct key is the exact reverse.",
+  "explanation": "From the top: mount point, file system, logical volume, volume group, physical volume, and the actual disk at the bottom.",
   "answerStatus": "verified"
  },
  {
@@ -2028,7 +2010,7 @@
   "objectives": [
    "3.5"
   ],
-  "prompt": "Which key is used for which purpose? \n\nNote: it's annoying, but I cannot actually score your answers on this type of question/form. :(",
+  "prompt": "Which key is used for which purpose?",
   "left": [
    {
     "id": "1",
@@ -2092,7 +2074,7 @@
    "8": "c"
   },
   "explanation": "Signing is done with the signer's own private key and checked with the signer's public key. Secrets are encrypted with the recipient's public key and decrypted with the recipient's private key.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l10-q09",
@@ -2495,7 +2477,7 @@
   "source": "unixerius",
   "type": "order",
   "objectives": [],
-  "prompt": "What is the correct order (left to right) of the values in \"en_US.utf-8\"",
+  "prompt": "Put the parts of the locale name \"en_US.utf-8\" in order, as they appear from left to right. The top of the list is the leftmost part.",
   "options": [
    {
     "id": "a",
@@ -2516,7 +2498,7 @@
    "a"
   ],
   "explanation": "A locale name is language_COUNTRY.charset: `en` (language), `US` (country), `utf-8` (character set).",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l12-q06",
@@ -2686,25 +2668,6 @@
    "b"
   ],
   "explanation": "`visudo` locks the file and syntax-checks it before saving, so a typo cannot lock you out of sudo.",
-  "answerStatus": "verified"
- },
- {
-  "id": "ux-l13-q04",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "2.2",
-   "3.4"
-  ],
-  "prompt": "Which exact command line would you enter, to SEE user \"pete\"s expiry settings?",
-  "accept": [
-   "chage -l pete",
-   "sudo chage -l pete",
-   "chage --list pete",
-   "sudo chage --list pete"
-  ],
-  "caseSensitive": true,
-  "explanation": "`chage -l <user>` lists the password ageing and account expiry settings.",
   "answerStatus": "verified"
  },
  {
@@ -2891,7 +2854,7 @@
    "a"
   ],
   "explanation": "requisite fails immediately, required must pass but the rest of the stack still runs, sufficient can grant success early on its own, and optional barely affects the result.",
-  "answerStatus": "draft"
+  "answerStatus": "verified"
  },
  {
   "id": "ux-l14-q03",
@@ -3007,23 +2970,6 @@
    "b"
   ],
   "explanation": "REJECT sends an error back so the client fails immediately; DROP silently discards packets and leaves the client waiting for a timeout.",
-  "answerStatus": "draft"
- },
- {
-  "id": "ux-l14-q07",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "5.3",
-   "3.2"
-  ],
-  "prompt": "Tim is checking out their firewall rules because users are complaining that SSH to the server isn't working. He sees these rules are active. \n\nCopy and paste the WHOLE command with the mistake and then make the required CORRECTION.\n\niptables -A INPUT -i eth0 -p tcp --dport 21 -m state --state NEW,ESTABLISHED -j ACCEPT\niptables -A OUTPUT -o eth0 -p tcp --sport 21 -m state --state ESTABLISHED -j ACCEPT\niptables -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT \niptables -A OUTPUT -o eth0 -p tcp --sport 23 -m state --state ESTABLISHED -j ACCEPT\niptables -P INPUT DROP \niptables -P FORWARD DROP \niptables -P OUTPUT DROP",
-  "accept": [
-   "iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT",
-   "sudo iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT"
-  ],
-  "caseSensitive": true,
-  "explanation": "The OUTPUT rule for SSH replies uses source port 23 (telnet) instead of 22, so with OUTPUT policy DROP the server's SSH replies never leave. Change `--sport 23` to `--sport 22`.",
   "answerStatus": "draft"
  },
  {
@@ -4159,114 +4105,6 @@
   "answerStatus": "draft"
  },
  {
-  "id": "ux-bonus-q16",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "1.4"
-  ],
-  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
-  "prompt": "I want to SSH from the Ubuntu VM, to the Ubuntu VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
-  "image": "images/aeca5b9f-2a62-4b0f-b9e0-560332a910f5.png",
-  "accept": [
-   "10.0.2.4:22",
-   "127.0.0.1:22",
-   "localhost:22"
-  ],
-  "caseSensitive": true,
-  "explanation": "From the Ubuntu VM itself you connect straight to its own address (or loopback) on the normal SSH port 22; no NAT is involved.",
-  "answerStatus": "draft"
- },
- {
-  "id": "ux-bonus-q17",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "3.2"
-  ],
-  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
-  "prompt": "I want to SSH from 192.168.1.0/24, to the Ubuntu VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
-  "image": "images/aeca5b9f-2a62-4b0f-b9e0-560332a910f5.png",
-  "accept": [
-   "192.168.1.183:2222"
-  ],
-  "caseSensitive": true,
-  "explanation": "Ubuntu is only reachable from outside through the NAT router's port forward, which listens on 192.168.1.183:2222.",
-  "answerStatus": "draft"
- },
- {
-  "id": "ux-bonus-q18",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "3.2",
-   "1.4"
-  ],
-  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
-  "prompt": "I want to SSH from the Fedora VM, to the Ubuntu VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
-  "image": "images/aeca5b9f-2a62-4b0f-b9e0-560332a910f5.png",
-  "accept": [
-   "192.168.1.183:2222"
-  ],
-  "caseSensitive": true,
-  "explanation": "Fedora is also outside the NAT, so it too must use the port forward on 192.168.1.183:2222 (routed there via its gateway).",
-  "answerStatus": "draft"
- },
- {
-  "id": "ux-bonus-q20",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "1.4"
-  ],
-  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
-  "prompt": "I want to SSH from the Fedora VM, to the Fedora VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
-  "image": "images/6ec73213-dfeb-4cd1-a230-cfe4eb2e49d0.png",
-  "accept": [
-   "192.168.174.128:22",
-   "127.0.0.1:22",
-   "localhost:22"
-  ],
-  "caseSensitive": true,
-  "explanation": "From Fedora to itself you use its own address (or loopback) on the normal SSH port 22.",
-  "answerStatus": "draft"
- },
- {
-  "id": "ux-bonus-q21",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "1.4"
-  ],
-  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
-  "prompt": "I want to SSH from the 192.168.1.0/24, to the Fedora VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
-  "image": "images/6ec73213-dfeb-4cd1-a230-cfe4eb2e49d0.png",
-  "accept": [
-   "192.168.174.128:22"
-  ],
-  "caseSensitive": true,
-  "explanation": "Fedora sits behind an ordinary router, so its real address and the normal port 22 are reachable from 192.168.1.0/24.",
-  "answerStatus": "draft"
- },
- {
-  "id": "ux-bonus-q22",
-  "source": "unixerius",
-  "type": "text",
-  "objectives": [
-   "1.4",
-   "3.2"
-  ],
-  "context": "If you right-click the image, you can open it in a new window. That will give you a much better view of it. \n\nWrite your answers to these questions in the form \"IP:PORT\", e.g. \"172.16.33.5:443\". Do not add extra characters, just \"IP:PORT\".\n\nIMPORTANT: remember that the NAT port forward to SSH on Ubuntu only listens on 192.168.1.183:2222.",
-  "prompt": "I want to SSH from the Ubuntu VM, to the Fedora VM. Which IP and port can I use?\n\nWrite the answer as \"IP:PORT\".",
-  "image": "images/6ec73213-dfeb-4cd1-a230-cfe4eb2e49d0.png",
-  "accept": [
-   "192.168.174.128:22"
-  ],
-  "caseSensitive": true,
-  "explanation": "Outbound traffic from Ubuntu passes through the NAT router and is then routed normally, so Fedora's real address and port 22 are used.",
-  "answerStatus": "draft"
- },
- {
   "id": "ux-exam04-q01",
   "source": "unixerius",
   "type": "single",
@@ -4495,20 +4333,46 @@
  {
   "id": "ux-exam04-q08",
   "source": "unixerius",
-  "type": "order",
+  "type": "match",
   "objectives": [
    "3.3"
   ],
-  "prompt": "The screenshot below shows a list of files and directories with their file permissions.\n\nDrag and drop the numerical file permissions into the SAME ORDER as the files in the screenshot (first file/dir at the top of the list, etc).",
+  "prompt": "The screenshot shows a list of files and directories with their file permissions. Match each one to its numeric permissions.",
   "image": "images/exam-1-4-q08.png",
-  "options": [
+  "left": [
+   {
+    "id": "1",
+    "text": ". (current directory)"
+   },
+   {
+    "id": "2",
+    "text": ".. (parent directory)"
+   },
+   {
+    "id": "3",
+    "text": "MyFiles"
+   },
+   {
+    "id": "4",
+    "text": "hello.txt"
+   },
+   {
+    "id": "5",
+    "text": "script.sh"
+   },
+   {
+    "id": "6",
+    "text": "something"
+   }
+  ],
+  "right": [
    {
     "id": "a",
     "text": "750"
    },
    {
     "id": "b",
-    "text": "750 (with added ACL)"
+    "text": "750 with extended attributes (@)"
    },
    {
     "id": "c",
@@ -4527,16 +4391,16 @@
     "text": "4755"
    }
   ],
-  "answer": [
-   "c",
-   "e",
-   "a",
-   "d",
-   "b",
-   "f"
-  ],
-  "explanation": "Top to bottom: `.` drwxr-sr-x = 2755 (setgid), `..` drwxr-xr-x = 755, MyFiles drwxr-x--- = 750, hello.txt -rw-r--r-- = 644, script.sh -rwxr-x---@ = 750 with extended attributes/ACL, something -rwsr-xr-x = 4755 (setuid).",
-  "answerStatus": "draft"
+  "answer": {
+   "1": "c",
+   "2": "e",
+   "3": "a",
+   "4": "d",
+   "5": "b",
+   "6": "f"
+  },
+  "explanation": "`.` drwxr-sr-x = 2755 (setgid), `..` drwxr-xr-x = 755, MyFiles drwxr-x--- = 750, hello.txt -rw-r--r-- = 644, script.sh -rwxr-x---@ = 750; the @ means macOS extended attributes (an ACL shows as +), something -rwsr-xr-x = 4755 (setuid).",
+  "answerStatus": "verified"
  },
  {
   "id": "ux-exam04-q09",
