@@ -211,27 +211,6 @@
     "questions/trevor.json": "ab01cb05e383269255b295010054037c6515f0350c3663d96c35c3f75afeba74"
    }
   },
-  "comptia-security-plus-sy0-801": {
-   "format": 1,
-   "hash": "36130aebe304931704c715e4094230f53f8b75554acb10a55808dc45ba4c5514",
-   "published": 202611242321,
-   "files": {
-    "pack.json": "e195b1700ef37648bf34b486dcecc98215c8161e34434ff060df984b3995d585",
-    "questions/madeeasy.json": "d7c612b55b5f9908ab952a90abe170856aea76bf7dfd7b6bbad2d49cbf7dcb3b",
-    "questions/savemycert.json": "da66e29bb38a44a68d2bb127692c91d12401c9156a7c76342372fde5d2c3ef89",
-    "questions/secquest.json": "f15cd2852dd7c37e38dc0018772a85f9c37a57cf8fe20f7fd183198b60104004"
-   }
-  },
-  "comptia-securityx-cas-005": {
-   "format": 1,
-   "hash": "81933fa25d356446459d545b6056619f9c1c32bdbd521a91075d66b42472e8e4",
-   "published": 202611240109,
-   "files": {
-    "pack.json": "542cd846e08016c3ed9e8ce586f46ff2c0e5efc54a82a4a027abcb93975ca0bb",
-    "questions/alphabet.json": "b8a8b65fc0230388e8212895bb2a74cbf87beb74c8df824ef41cf7b961cd5dd8",
-    "questions/stuecscott.json": "c1b5fb5073badf4c3c0354d279cbfea41b1f32043fc5022ef650ed54b217591c"
-   }
-  },
   "comptia-server-plus-sk0-005": {
    "format": 1,
    "hash": "0f2de823142264ca6f7c052dd1ae0df80ce4e3923170eaf34cfcf385c673c62e",
@@ -260,17 +239,6 @@
     "questions/original.json": "f97a4624700c8fe68513e199b8441cf39ffc4b6636f2a52a72169b8772c984dc",
     "questions/savemycert.json": "999e8e8d0ded4c3dc523541cd02fb32aaf5d699da3ff6e8680eea8b63928cb6e",
     "questions/trevor.json": "df51a0e051d0f50016a025d05126146b7c1cf8475bee32202c9b263917f66158"
-   }
-  },
-  "ec-council-ceh-312-50": {
-   "format": 1,
-   "hash": "b8664c5b3a244dd186603d1cba8e2bc150198ea18d64b4f9ecda1c29f388ebf5",
-   "published": 202611242321,
-   "files": {
-    "pack.json": "364c12b90bd5b991e983ed19e3078e346e50327adf2144dc8752ad1bbc502462",
-    "questions/nat.json": "190064c59ed032bb1a92bf88786f4a355cdec3c4faff932a72f88d2eb81452ac",
-    "questions/psybeast.json": "3a6417ac58dadc667e4b8be773b7809432302d8b228705eb1174fd325e8aca80",
-    "questions/quizcert.json": "5526a1d479e74d2e517a138abf5bc3d80f31267b44e514af03dc7e103b564cab"
    }
   },
   "isc2-cissp": {
