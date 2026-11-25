@@ -3,10 +3,10 @@
  "packs": {
   "comptia-a-plus-core-1-220-1201": {
    "format": 1,
-   "hash": "c352d05ac01ad843598a0b5a9dda33fc6a789892bd401b5783acb869cb2e0f42",
-   "published": 202611240109,
+   "hash": "78dd629cc208da31210ccc4d7ee734034c87d35567bd70d1cb22a87be6fc318b",
+   "published": 202611242321,
    "files": {
-    "pack.json": "f9e8236c8caa80b37e804ea8389331a6c8e6c6a77a0c9d83a5599a8bf3fb4304",
+    "pack.json": "26ca8cd8ad3ae82ac9bb1d6fe297c38fb0f998637c3812e5a7a4282a525322c5",
     "questions/dankam.json": "a673883f851f324ba350c43293b88a6ca377a979138378541d5c2d26dbdd12c8",
     "questions/derian.json": "8295f92bc29ffbe9e41257d9ac3856bbd5185b4458e5e81698c38cbacd788302",
     "questions/loopback.json": "9ecf65f75a61890765eb4f50ad7208a4c79c54b15aab55d891d9185b36a8eb22",
@@ -19,10 +19,10 @@
   },
   "comptia-a-plus-core-2-220-1202": {
    "format": 1,
-   "hash": "5f934dd1a31ac30cdea33b60c0a4e91ecec66a1ee77da09aebebd781f82df94e",
-   "published": 202611240109,
+   "hash": "293c8603a4add8e68a69c0612f7b2d696942f05d73aba7895032d9b942865215",
+   "published": 202611242321,
    "files": {
-    "pack.json": "52013d62cb1352368e266ba88dbb1e71c7259249206eae99d44f89c617b25eaa",
+    "pack.json": "d03fcb1eea255f209235dc7cb1d1c1022fcaa626b732fa463664854a1e5dc4e7",
     "questions/dankam.json": "556daa29408ca322c1c5d4822eabcb67f461a9b31ec4a12122cabcef93ed9516",
     "questions/derian.json": "721ec91b19cb094ef0940e2123f43b5b6b510b095b818d19726ccab89bb8ebe4",
     "questions/keenan.json": "21a642fe69ea95a0fe3d3632a71c346563a44f4b988c942a22d5dc9342d407a1",
@@ -35,19 +35,19 @@
   },
   "comptia-autoops-plus-at0-001": {
    "format": 1,
-   "hash": "8d998e9fa51f3bb7c463d467faeb4a15d3cf0e1be791a93ab2e7ddd1361b7b36",
-   "published": 202611240109,
+   "hash": "522d9e4d91ff9e4f720885914f432a24fb36104d6bf4ea2c075fbc15a07def78",
+   "published": 202611242321,
    "files": {
-    "pack.json": "09968f3823841d2119b983fc73c39d0bba6e8697e0147277ef1bdcf477e51038",
+    "pack.json": "4eb59e36453f2019f76925f5b2680bc3a9da45999a43ef589418bcc7b30526b6",
     "questions/original.json": "5a54a06f1a929ae566b227beac61ad37eaec349c9af050c4ea7f49a4e3b47230"
    }
   },
   "comptia-cloud-plus-cv0-004": {
    "format": 1,
-   "hash": "b3172d80484c079e81af5c8a3184207247afafec487fe94a1d06e2305a9b7d75",
-   "published": 202611240109,
+   "hash": "f0b4d003236a101bc7aa929098633dcc1116926f1235f8c0134ba6650c237f20",
+   "published": 202611242321,
    "files": {
-    "pack.json": "e740a9530273893d6a6e9319eab482ab9c91eb8732ab66298cc38a8f0a337d98",
+    "pack.json": "595cd489b9b4a450e1e29dded5dbb46fb7e4caf2ca006d94268d3d0907d2cf48",
     "questions/irfan.json": "e035865ddc890aa6874bdff44c53c36867b9fb58481ab5a4e231267238b7ad25",
     "questions/rizwan.json": "f31267dab62f9a51225925fc7001374cb853b0e1a1af2f7e6dcc6e40e4ae8f0a",
     "questions/trevor.json": "45f40621cad413a39e0a8a96a310445e72491a941d911ee766c6c82f4b2866e9"
@@ -55,19 +55,19 @@
   },
   "comptia-cloudnetx-cnx-001": {
    "format": 1,
-   "hash": "00b43cbedc39d99970cb8d97a47d67b4438cab41519c39dfdf493563eb0c575c",
-   "published": 202611240109,
+   "hash": "329a8b347da84ecaf4ed71cc08834ccab08929a4c20b8fb029903246a29613dd",
+   "published": 202611242321,
    "files": {
-    "pack.json": "a8238f477e4075c22c98192fa000a3e7bbb429142721964b96e868a39d61540b",
+    "pack.json": "8481c84f6364fe53248ed617f0de3276c5ab4d7fc1f9d0201ef1bdf76708f705",
     "questions/original.json": "cb60a425b2bfd1270e3a7f1cee68b5d4adfcafa6e7db78901a1f0cd6edb55cb9"
    }
   },
   "comptia-cysa-plus-cs0-004": {
    "format": 1,
-   "hash": "b10c1199ffbe9986b392f56da466c76f8a6b5be613c40f641239928a19fc74ba",
-   "published": 202611240109,
+   "hash": "7b2f731e777381b8165cffea7e66ce302fa52323228ebfa61258dc0c4fbb767b",
+   "published": 202611242321,
    "files": {
-    "pack.json": "7bb4dd41bc5046b1755d92b2b5462942167c66bc385f09e48889a5776b5d2397",
+    "pack.json": "f747affdc4f77a7dd274b6ee8c2d4ee4656ba285288656e7fea13270b3799f31",
     "questions/alphabet.json": "df38a6f60509af430d6486977f43a1f0a5ec54e6eb336ebb75621b4966727e03",
     "questions/quizcert.json": "b92f435adf3ef080b109e7200ad4f06cc28831c3fd586029ad467ba201d4dbe2",
     "questions/rizwan.json": "c8343651bbf58013562ffe8dceb0b6960125af195c70b2d09737c49580cf4e4e",
@@ -76,10 +76,10 @@
   },
   "comptia-data-plus-da0-002": {
    "format": 1,
-   "hash": "0fa0aeb065d3036fd519648d4b3fee028818223b73470c9706b19bcada2c6aaa",
-   "published": 202611240109,
+   "hash": "d8fb7fcfd7634d4c1a700107b57ad7437bb4f29577e8442968b314a7d67a5734",
+   "published": 202611242321,
    "files": {
-    "pack.json": "970353e27f6967bda24e879e2109c5ac7be5b4e8ce30e37f7211e25e515d8352",
+    "pack.json": "ae4b2501968eae8f12fa9a7960681452c59c8ba9082ffcad900194bac0bca7bf",
     "questions/rizwan.json": "c61771dec4e398dcffdf0f8b98715cef5ac9afc7411a6cab45c7c8ad540ef909"
    }
   },
@@ -94,17 +94,17 @@
   },
   "comptia-datasys-plus-ds0-002": {
    "format": 1,
-   "hash": "a00a7c8e7e1a65b7399a306ed289a92aa196110bf363e27ce5aff10ed02990a8",
-   "published": 202611240109,
+   "hash": "955ac9d72320097f866ac9a9925b8597baec79ad8ddd5baa54800d3c654bb303",
+   "published": 202611242321,
    "files": {
-    "pack.json": "b517f0724650ffa1484fbb061096b63cf5fffab6b2728dba9d231dd96b2c6aff",
+    "pack.json": "5691ca7fd0948d2ecf8e047101e11deaed9c26c2b425d77c4a1a0798fdbbdefb",
     "questions/original.json": "dd2c20a84f22b73ce62c7e3c2c1dc0a0de8ce28559ac17153af82165776cfcec"
    }
   },
   "comptia-linux-plus-xk0-006": {
    "format": 1,
-   "hash": "333f4cf6d88ccc4be1ef9294d7685781de2532a847769448a7be25a6b035089d",
-   "published": 202611240109,
+   "hash": "77356fd28619bd55ee1bf251d86f9c25efc8b81418cd47a07f006589577887ba",
+   "published": 202611242321,
    "files": {
     "images/0104f946-68fd-49b7-ae1d-0f83583b4a4b.png": "b54b8933e2498a94b50fce94cafce97c726d8a9940275d829743f013b6bb14fb",
     "images/1c0b7b17-93a0-4448-b7d7-23cce83a7a6c.png": "dd11007101dfe723771c33cea7a8a84c3992e6e8f1187ff79b1cdf7f7c5b37da",
@@ -125,7 +125,7 @@
     "images/exam-1-4-q10.png": "9b7d815d67405161a413b01a03f46071b4a81bf9fc3d472b69ff540f9fefd17d",
     "images/exam-1-4-q12.png": "f86df3b90841a034ebb4656791bef393605666028defd911241f93ff06240a51",
     "images/f2c41f22-9c1f-49c2-97e4-a573ce66dd92.png": "130139f279153e2b0aa043a68ba439e035b2bfc96adddc36db9a231cbb30394d",
-    "pack.json": "6bb67843d6b82cba4103521fe03e0eb08a18464a96c8a3aa81cfc617a0131d90",
+    "pack.json": "6bf713633525accf22a3f2e11deb7e45a06eea083edd6dd5b1df67f83cc170dc",
     "questions/original.json": "2b76dec8c88be9d5208cda0e80376e62fd5bbf895e3f5fe726051240332024b4",
     "questions/rizwan.json": "e2882efc51c5f2e5773c47e8f9a630b8c02c499d2de59e1c299e82cb805af23a",
     "questions/skunkworks.json": "cbc6d6389eb7b1e74e1f8cab80263371888e66364a1c1c44fc9ad0175f637a15",
@@ -134,10 +134,10 @@
   },
   "comptia-network-plus-n10-009": {
    "format": 1,
-   "hash": "8dc3b71d1a27c72771b1bda286f27dd0340c4bce3ff8d74b2c8af8065fe427ee",
-   "published": 202611240109,
+   "hash": "9579ef1a6c824114a382ed89017ca416fc1012f5978be86b7d7c36b00f5b1340",
+   "published": 202611242321,
    "files": {
-    "pack.json": "0c05f379766a3803d0d1dfa9bd755585ecfb8d08693269ee3d63ecee0e69c4a6",
+    "pack.json": "3bc863d8b223d6adbdb44d270d457b86a434ee61d311e3ea4ea6a31220fd5e57",
     "questions/derian.json": "f9623c38c84fa44e41543eccd6a720c6578fa579dc7718db2c38a8f619639ebb",
     "questions/labbench.json": "27a41ef88cd2373e86631578367b233cae5eb24181b68d6eecdfe6654e2fe47b",
     "questions/ojing.json": "e53089c6e33092e26650701cfb78642f21eaea690cc2be8a1bb3aae8a69ac389",
@@ -150,10 +150,10 @@
   },
   "comptia-pentest-plus-pt0-003": {
    "format": 1,
-   "hash": "8c6ebed8bdbc90d94f4ec393f4a43a85e307caeeba404f0e3ec64963b2a0aff8",
-   "published": 202611240109,
+   "hash": "7fcccf25c69606d095a40631dc9e650420e7f97bc219429255ca0d8367f563b7",
+   "published": 202611242321,
    "files": {
-    "pack.json": "2996158fbe4aa0e47cd8240f883aff4cc7d5af04e2a586b0180ad0fc4d648e76",
+    "pack.json": "f08b6af9335288c3b088f4a6c4b5030ca14ce96a37e3e324fba75fe16b193903",
     "questions/alphabet.json": "002284882c04278aca1f54e529d605efcfa73ba07054b9924b211b24cdcc3d23",
     "questions/quizcert.json": "78bfd5955cae90f867dc9b8a67f41be86732124c3f3d15cf8306a571c0e3337b",
     "questions/rizwan.json": "79df47c47092482566271e9aa54fe8fa4909a56417efdf3b35d65e0d98dfa3af"
@@ -161,10 +161,10 @@
   },
   "comptia-project-plus-pk0-005": {
    "format": 1,
-   "hash": "ca9261ba19e68b12aac4565900d28d30e30937bc23ca052158e44d2d74bef4a6",
-   "published": 202611240109,
+   "hash": "a588b170bcabf06d2588d67ac22e0cd83aca89f7adf66fcd8573f436c76601e7",
+   "published": 202611242321,
    "files": {
-    "pack.json": "43da33df543061196bc6d37391c95925f5fd7036c1c8fb93881ef2c59b847d9c",
+    "pack.json": "e593f988b29944beee1619949041673998fb34517a281e64392b48b127c0326e",
     "questions/chief.json": "da7120ce88b4220fe22f62f01b76694c522f4d61f2afb535aa75143c4ef2e444",
     "questions/jorge.json": "a0a34e07f24cba64f8c17cd63a25432f63a7fd8c353dafa447379f5d128ebd7f",
     "questions/rizwan.json": "a02165239bcb678e718728a3e602ef98c7c5027f17de934e41763f393ac7ff56"
@@ -172,10 +172,10 @@
   },
   "comptia-secai-plus-cy0-001": {
    "format": 1,
-   "hash": "93e235b1221bb5406748f8d21d11b2601e6bc0f229ba892d52946f3f5bd0e25e",
-   "published": 202611240109,
+   "hash": "8c0e055da8ef0a6c2b4284b6f593f928ce5718408c8b85eecb43a6b8c64d92ee",
+   "published": 202611242321,
    "files": {
-    "pack.json": "3d0f6d1754ad4f412bbc8b0d67d650c72d23bc2974c2ca18b19cf30612ff80c0",
+    "pack.json": "f0be61d91588a7794b007e8aecb6294d4dd1f3258da866c4437a396075c9c3c1",
     "questions/furkan.json": "f6078ed6309a8896264e63bfe92cc5ca1429812065ac17bb2a0e52ace49728c1",
     "questions/kakata.json": "90935e319344dbc3816c21804b8babceba3083880679886a43046e5d334ec66f",
     "questions/keith.json": "625875510da84bf7abb35f8d53d73b102c1a94fa6424f59c8d2948a3b963eb63",
@@ -186,19 +186,19 @@
   },
   "comptia-secot-plus-sot-001": {
    "format": 1,
-   "hash": "9e1c7786c4fe3d16974bb401a6cffda0bb4a6dc943e34b007209f402d5e85e60",
-   "published": 202611240109,
+   "hash": "7c356d70e105be0bd49ae2cd41fd644534b8f449c88c8435f0879f9cd211398a",
+   "published": 202611242321,
    "files": {
-    "pack.json": "05aa53873801b5e56063c84b559cbc7bd271ad0d029684bf9ad5b589dc5dcbab",
+    "pack.json": "a52026b63f170222219bc6efdf96990a2ec666541d96a2a6a227e42712d8f03f",
     "questions/original.json": "ea15cb1c9111da63b8e0e58d1be44b5e3defcb7d5d79d4a2d43e69f8f5648809"
    }
   },
   "comptia-security-plus-sy0-701": {
    "format": 1,
-   "hash": "507ee9fe4dbca6debad2388055b685c8f1b9583cef20bd19ab83d431e3acc97f",
-   "published": 202611240109,
+   "hash": "1d6cdec4add55e16a2b074af0775baba8c22b7db684a0d8b1cccd6c31971790f",
+   "published": 202611242321,
    "files": {
-    "pack.json": "829e1d180bebfbdd9657623beb052c17ca519fc0cf4d44b04be707c78add92e1",
+    "pack.json": "4aa54b62127d8fca30430833bd3f51a07a6f6da2f6b73d0962f43b6ac3377734",
     "questions/cloudanimal.json": "88ff7fc847d3a9fe37e635054331694d9c372ac03d9577574de7d0d1193ad5a4",
     "questions/derian.json": "89f0e3527086c793262b02e90d70a192265a8376db6913f458c565609a6edb45",
     "questions/dumbletor.json": "f7a072c5af21d406d79a24121ff0d81260be553eff4d46787ba4d8d8db05b967",
@@ -213,10 +213,10 @@
   },
   "comptia-security-plus-sy0-801": {
    "format": 1,
-   "hash": "4ee176d890c76878c1af079c6003ae8b173502c93a9317b220991588827b5ef7",
-   "published": 202611240109,
+   "hash": "36130aebe304931704c715e4094230f53f8b75554acb10a55808dc45ba4c5514",
+   "published": 202611242321,
    "files": {
-    "pack.json": "3393c4cdf1592c7291dab349db9bb98ac6498c62a5dc2904c6f4bd33323e8752",
+    "pack.json": "e195b1700ef37648bf34b486dcecc98215c8161e34434ff060df984b3995d585",
     "questions/madeeasy.json": "d7c612b55b5f9908ab952a90abe170856aea76bf7dfd7b6bbad2d49cbf7dcb3b",
     "questions/savemycert.json": "da66e29bb38a44a68d2bb127692c91d12401c9156a7c76342372fde5d2c3ef89",
     "questions/secquest.json": "f15cd2852dd7c37e38dc0018772a85f9c37a57cf8fe20f7fd183198b60104004"
@@ -234,29 +234,29 @@
   },
   "comptia-server-plus-sk0-005": {
    "format": 1,
-   "hash": "393d71434cfa36d18c9e31b2783e730608a1b9ae41c9d9c7f7a3985bbb4b76db",
-   "published": 202611240109,
+   "hash": "0f2de823142264ca6f7c052dd1ae0df80ce4e3923170eaf34cfcf385c673c62e",
+   "published": 202611242321,
    "files": {
-    "pack.json": "2be04a2f34eb8bd2e05f1494536a5d8725a7eaa36f99dcbc191cc616d7588099",
+    "pack.json": "36febe1decdcb487cf294b223c68f67bac13a156af062382824e9e956e40b98b",
     "questions/rizwan.json": "d2b19e4a38923e3eda5a43ca37d6dbc0f3dd031931d652e5f0d8249c38aea88c",
     "questions/trevor.json": "61c5d5b3e15160a7b93d917f1b45fb6bf4235bc6f59f1bf170463e30863b298a"
    }
   },
   "comptia-server-plus-sk0-006": {
    "format": 1,
-   "hash": "db2329c22ae1ff90f1daa43f57f0e5aed79791bcf5787cf2f0c76f3c24bcb08c",
-   "published": 202611240325,
+   "hash": "d006b997658361e3498ccb38a8075f16739617d7c62803717d54e2951fd51234",
+   "published": 202611242321,
    "files": {
-    "pack.json": "ca5832fdd9bfd03cc3cfafecf46f902511f941d2f5597db5142c7c9c199a0b49",
+    "pack.json": "4f97970162906e4b5203e276bfa42806c7605a8b2bfb77a2408c3da682d798aa",
     "questions/original.json": "c10c36d047b115d640d0261e5ed0ceb75d999938d49f32a078b69794e49ed366"
    }
   },
   "comptia-tech-plus-fc0-u71": {
    "format": 1,
-   "hash": "58f3b1fc37a398fdd3333b5d8579d2fbbf2e58227d9417a1dfcef8402e3cbfae",
-   "published": 202611240403,
+   "hash": "a7370c7948ad153c1471670196d948baa1801751d1aee2766c8531320f709ec7",
+   "published": 202611242321,
    "files": {
-    "pack.json": "46cd2f1f02409f7404fb3c61c65665cda0356e628f3ae020fbfc648e46bec636",
+    "pack.json": "7410b27866726038aed92da2a88206da1258c52413e5073f8a849c50f04515c8",
     "questions/original.json": "f97a4624700c8fe68513e199b8441cf39ffc4b6636f2a52a72169b8772c984dc",
     "questions/savemycert.json": "999e8e8d0ded4c3dc523541cd02fb32aaf5d699da3ff6e8680eea8b63928cb6e",
     "questions/trevor.json": "df51a0e051d0f50016a025d05126146b7c1cf8475bee32202c9b263917f66158"
@@ -264,10 +264,10 @@
   },
   "ec-council-ceh-312-50": {
    "format": 1,
-   "hash": "8555e72a105817455e3e3c0cadefe864661de99470ee265bebc1d43aa33b2ad1",
-   "published": 202611240109,
+   "hash": "b8664c5b3a244dd186603d1cba8e2bc150198ea18d64b4f9ecda1c29f388ebf5",
+   "published": 202611242321,
    "files": {
-    "pack.json": "3f260912ab8f52312e25ba7983b9834cde48dba971646b83905abe1fa4ea4443",
+    "pack.json": "364c12b90bd5b991e983ed19e3078e346e50327adf2144dc8752ad1bbc502462",
     "questions/nat.json": "190064c59ed032bb1a92bf88786f4a355cdec3c4faff932a72f88d2eb81452ac",
     "questions/psybeast.json": "3a6417ac58dadc667e4b8be773b7809432302d8b228705eb1174fd325e8aca80",
     "questions/quizcert.json": "5526a1d479e74d2e517a138abf5bc3d80f31267b44e514af03dc7e103b564cab"
@@ -275,10 +275,10 @@
   },
   "isc2-cissp": {
    "format": 1,
-   "hash": "729b41cfe184296321cf0e0b25b3f5c58fe8dea30d090d7c808ebf65fb7cf916",
-   "published": 202611240109,
+   "hash": "b0b8c4d6202205440603797d57df10b61de33cc1e6272b69d27894d514158507",
+   "published": 202611242321,
    "files": {
-    "pack.json": "a229cdcf731247484e328996b2b6da4c9df5980e2055f48dd175e9a78e04b7a0",
+    "pack.json": "340bb640b4de83a0e96b832a3a15769efe4cca20654d366987dbff2d92d3b9a1",
     "questions/alphabet.json": "936c7bb9cb3f2926c2c0581c165e42b469116d27783ef29fb05b01ba15db4d7f",
     "questions/cloudanimal.json": "0e9089f5763ae1aa3e834267a8a66651a2b7186e76b5a0af4638ac29c9978192",
     "questions/cybird.json": "4fe1eb8d5933391bc8935262cdc65bc6869559dfa961c1e0a2a365e23c1c9805",
@@ -289,10 +289,10 @@
   },
   "microsoft-365-administrator-ab-650": {
    "format": 1,
-   "hash": "a62963096f64337fd171f08fdce6053e61f00e30a4a7a69090de233a9a6d8bec",
-   "published": 202611240109,
+   "hash": "81e6ad59c5264463e7ca3ca60248d806a95bfd453f62aecd6ef72c87156ad844",
+   "published": 202611242321,
    "files": {
-    "pack.json": "713138e6673f9fb40b5297439e4961da60e2b2fc765a5e18987573526aec63c5",
+    "pack.json": "1105873b46dc2c62c21bd3182c1186de1da448b59a3ad3bffbebb58dd615fdb2",
     "questions/ajay.json": "2048dc3dd58cc34874a37bba8b3b688125a213e65dba39d1951e49168c39287c",
     "questions/original.json": "fe8f8a73812b56c3ec0d124b1e4e242af82ac0252973efda36e4e58e9e55ec79",
     "questions/quizcert.json": "02f0549b251f75778b0efcdb92400bc7a9c97977ebc376967cca98abb5ba492d",
@@ -301,10 +301,10 @@
   },
   "microsoft-azure-administrator-az-104": {
    "format": 1,
-   "hash": "e594fbe770c07b4917d32a1ff622a6b347cc043e79dafde045ea11efb3e96262",
-   "published": 202611240109,
+   "hash": "fa9c404071c111605cea319d95ac9b621381efa5d7415f7b1797208050ccfddd",
+   "published": 202611242321,
    "files": {
-    "pack.json": "8fc310cf51790753ddedf6ca2920135adf36c689e84164eb2dda3433b64c4ea0",
+    "pack.json": "194d24c1bcc73ab601874a9de3569f9e4165f514b257689e33260910a20a3d20",
     "questions/coach.json": "175ec62b4f29f4ee85ddddacd011ce39f3b2aa9a374612df237848b3e01dcd89",
     "questions/cpowell.json": "8df83755487c52f92e474888bb59f0002f7d04dc915d19710ce2a8ce1e20dd54",
     "questions/kaseris.json": "199e922de905e103dfda3e9dfbc45a37b78e6c1dc63ece679deedb1eb329fb87",
@@ -313,10 +313,10 @@
   },
   "microsoft-azure-fundamentals-az-900": {
    "format": 1,
-   "hash": "d16e115792fb61e3bdc9398379885d8aa6b646a178c0606428136b0e5bf94955",
-   "published": 202611240109,
+   "hash": "20d3c7cb44aaba96c45f35001552c8d071f093d3bdcc97e94d59d7400abecb2d",
+   "published": 202611242321,
    "files": {
-    "pack.json": "a91392e83ef68bb2b2271bb712815727a6ffc9e7db108a29490c8ed2df17575f",
+    "pack.json": "f88a9b713dcc839b66e841e68dddce08bf6ee1cbe4e4429ecdaf1e7c5fe2ceef",
     "questions/ibrahim.json": "47d42065d71588f2212d21a89486403ce980723f24ab55264cec6e1d59014b9b",
     "questions/jamonygr.json": "c799f0e37af71c21a0b8257665aee4c92df478d578c67ab07d07eef022e2a556",
     "questions/kv.json": "95a06bb4a922f1cba59cb64507380964dc7cfbc0620ea091016ff3456563641e",
@@ -328,10 +328,10 @@
   },
   "microsoft-copilot-agent-administration-ab-900": {
    "format": 1,
-   "hash": "0341f0ce03b431900a913f6f5672f6265e9efa6708808a7a5b5638a89b143728",
-   "published": 202611240109,
+   "hash": "89d61242b8253d508b1b9be71a7731df669cd39240d6fdadafdfa47294633778",
+   "published": 202611242321,
    "files": {
-    "pack.json": "11e1b3a173bdce4b2de68d11ec7abc02b330a2c38ce0c1ea577cda5700387bb1",
+    "pack.json": "521cde3ca1ce13c3e701d05cacf760f3dba785267d5b217e83044c429d7e2915",
     "questions/original.json": "17372b0ea6896ff7bac56a89e1507a3364c3bf08e80e31a08e5577d23472718f",
     "questions/savemycert.json": "d684a6482d3b59e9decc9aa3cd0ff445d83c7355f8c2ed974b0f500218049a48",
     "questions/warner.json": "f9ed886bf9cc5e8d9dd476249fc7442f2d064530d6d17ed557b1778b7e72066c"
@@ -339,40 +339,40 @@
   },
   "microsoft-endpoint-administrator-md-102": {
    "format": 1,
-   "hash": "55049edc2a70eb09a407e5597ade9c0a060077eb0d2ddb24a682467b67d98172",
-   "published": 202611240109,
+   "hash": "ad735f1adc90f7172dddc55939c65a70f7ca388085a6c3d381135adf0360ac07",
+   "published": 202611242321,
    "files": {
-    "pack.json": "8128b1f5837f46e2cc982e8ad59a985cae641ffb197a53601427b5deb04504aa",
+    "pack.json": "ff0fa5c939c89d07a50a4569fe2e33140472a7fed3ffa7058eecde035e6e26f1",
     "questions/azhar.json": "666b33411d7bd56b86aa4304a73319d692116bf573dc4fe8707eca7eca9eb656",
     "questions/original.json": "ab66f97b89d4937841f03d021d2158962a9734efa113da7cc7b309c3ca9be749"
    }
   },
   "microsoft-sc-100": {
    "format": 1,
-   "hash": "6e589408e886f7e35edde0f9225acdb70ab4ab928bc1636b97845ec96d1cdac6",
-   "published": 202611240403,
+   "hash": "c992ddf4d1ec7b5c8422c0b76b675c40bc8f361a7eb57f0068754e4457647d53",
+   "published": 202611242321,
    "files": {
-    "pack.json": "12857daf298fceee2fefc2c55204a448fd1ee624b6cc411b4467cbfdb1c90d0b",
+    "pack.json": "5b4e41b93e3f993ff06dfbd57dae69052f3bcb8a4fd7133c65347909b22a1a2d",
     "questions/original.json": "1100d37159fa8d0008eacd7966db62567ccbf399693b5dbf8f1f467a4d2796ab",
     "questions/wiloak.json": "645c230ebba5915d30d5f575eeffc90d2cc55ae7cf9a283909b2478c45537d6c"
    }
   },
   "microsoft-sc-200": {
    "format": 1,
-   "hash": "5fb417a4fe362bbec04324d57954523e0d421ce1ac190493fa57a9262c5d7b9f",
-   "published": 202611240109,
+   "hash": "540c1a122a156ab2f64521291c8a12623df17735a910e9ba8cb2a7df8d4c3f71",
+   "published": 202611242321,
    "files": {
-    "pack.json": "3c979d0b7d9d32bb92062570a22c5d1477fc5e67a86cf319cf87f25b8274dac2",
+    "pack.json": "e47b3f471166ffe2b5ec2dcfaf8df8f2df57a44b89441273a81322df02defade",
     "questions/kr4k0w.json": "db41a3e1424e89d963ff48b4ea911ac2d836d5ae2d298713f221dd362bcff2e0",
     "questions/wiloak.json": "1afafa923fe9c113a338f3f766fd577038ebf117eb27e1b2d0248b3e065561c9"
    }
   },
   "microsoft-sc-300": {
    "format": 1,
-   "hash": "5e40e112600cffce0c823a213693c117305839cd537b0af7648649444ad2d4d8",
-   "published": 202611240109,
+   "hash": "580f5d49fb3624e1120ccc4859d8b35f39e9f50f873b53a20b559a7e6cfa5bc1",
+   "published": 202611242321,
    "files": {
-    "pack.json": "d731ba30e56113a6c15f7c44abb5a5c01aaaa9b929c9ff176eb4aed6e41b3b0f",
+    "pack.json": "7e326fffbca85793ffbd4b6c5e479f412f531652dafe1092d18ae9c3ec26ec36",
     "questions/examice.json": "64350b1e2e2e9233a2042cb45c0a50460137c35601f007b3c84d019911554df9",
     "questions/munn.json": "a17e5208e2b149e1031be655894de7932b90bcb362f5bbe3bc9dba36555ed600",
     "questions/original.json": "b4b51944524209f6016f9c2719ff64f03d18ce58ebcd40d17c59822745ab2417",
@@ -382,30 +382,30 @@
   },
   "microsoft-sc-401": {
    "format": 1,
-   "hash": "43f05097e3500b403dfd2e696cf9bc59c548491a28391726bc402ca528304a2b",
-   "published": 202611240403,
+   "hash": "f3e7cd165b026463f49a3a0c207b601fb0f46163ac39827d8e26aba9c14b7523",
+   "published": 202611242321,
    "files": {
-    "pack.json": "cacf2cbb972a4e0131aeebfbd5708085e716ca62b56adef91bd7efe0bbc38162",
+    "pack.json": "3cf69967ce0fb6a0e062c632a969937ad50706bc29dd1b06f4262f577e3a95da",
     "questions/original.json": "c244a6a84125c7bc3ac92fe5affb021e6971c87027e9ed6425c0fad65dbbe60a",
     "questions/wiloak.json": "f7c1a86c0291caa84861c48b1b3e2227845f43175bb78f3be2e1cf169c8ef0c5"
    }
   },
   "microsoft-sc-500": {
    "format": 1,
-   "hash": "f058c0cad4cd352571069c5fe30b9b5dd2bd7586c2bc81ac024ebc976a89b9ad",
-   "published": 202611240109,
+   "hash": "d45ffec8f4819759864d471185cd6b28d23cba175a45c5dd200903deec31223e",
+   "published": 202611242321,
    "files": {
-    "pack.json": "fc2499fe03896bc96d8a8bdc732eea90e2bce37741057a91fe3696934a90783b",
+    "pack.json": "6a0f34ced6c5e6a479384e50ed7604f7be931f98e7c51fe5535bf5ff5a514043",
     "questions/savemycert.json": "9061f01c504af2a2e188009ac8c9a7fb6f173f0d1aebbb586ce7c2730b302fc8",
     "questions/utkarsh.json": "450f0fc7b1b2ba022395d38a11eafe27390ddd1bcfefb369278ddf9dccbf00a3"
    }
   },
   "microsoft-sc-900": {
    "format": 1,
-   "hash": "33665820245eb3eed002bc88fe4f891b28797a24a1f0de3fbbad7c4a1eb020d6",
-   "published": 202611240109,
+   "hash": "a79b18b93633c639faeceeaa0b107864d08ad15b81d940e17c66810b74a8aac1",
+   "published": 202611242321,
    "files": {
-    "pack.json": "cd7622cb2642a8f3660df1eb3753846bd0939cad1c68c4a44bc21aebde3062a2",
+    "pack.json": "fd00693a1f04a1e74407335ac1a26b86fbc614e83d82941ae11e9255193551bc",
     "questions/mtfucf.json": "f8baac8ab1c8df2291b87eeafd702c103853bcba956e296cf1de2661eb46e20b",
     "questions/original.json": "11021ec89e33df6f427ab265b402ce380b5b3cf789cd5845bc10749a284209e6",
     "questions/pathfinder.json": "5daac6ac53fee067df57bf7ffd20ce6cbf1d502db87af653f44ca1904fea3e7c",
@@ -416,10 +416,10 @@
   },
   "microsoft-windows-server-administrator-az-802": {
    "format": 1,
-   "hash": "c11befc9b1fabf2bbe1bccbef8d656dffce8eaf00b7cec30809024d82a43f7b4",
-   "published": 202611240325,
+   "hash": "ed29aed59f3565006a96949d6d83ee26eef3bcef92c73bbe93ef56582a3e77be",
+   "published": 202611242321,
    "files": {
-    "pack.json": "c20f6d46ee6fa9e458419d3497b889d199d8f98fdd22e9d3d812bad1a62229a8",
+    "pack.json": "cf430e798b0b8c43fc035eb476715cd760ebf646932fc286b48cd4f5a8da3cba",
     "questions/original.json": "f5af2bff89dba3bcdb71e2b87928bae998bce3d92c3d78c984a3a988dfa90171"
    }
   }

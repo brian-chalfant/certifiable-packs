@@ -376,5 +376,6 @@
   "reasons": [
    "Questions are mapped to exam domains only, not to individual objectives"
   ]
- }
+ },
+ "icon": "assets/icons/cissp.webp"
 }
